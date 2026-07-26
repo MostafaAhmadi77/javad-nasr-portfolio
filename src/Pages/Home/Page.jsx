@@ -81,7 +81,7 @@ function Home() {
           />
         </div>
       </header>
-      <main className="text-white  border border-primary-orange rounded-2xl   backdrop-blur-xl bg-white/2">
+      <main className="text-white  border border-primary-orange rounded-2xl   backdrop-blur-xl bg-white/2 sm:mt-6">
         <div className="flex flex-col xl:flex-row items-center justify-between gap-12 p-5 sm:p-8 lg:p-10">
           <div className="w-full xl:max-w-[28rem] flex flex-col gap-5 text-center xl:text-left">
             <section className="text-primary-orange tracking-[3px]">
