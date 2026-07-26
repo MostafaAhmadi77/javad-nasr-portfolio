@@ -132,7 +132,7 @@ function Home() {
         <div className="Divider">
           <Divider title="AREAS OF EXPERTISE" />
         </div>
-        <div className="flex flex-wrap  items-center justify-center text-center gap-8 p-4 md:flex-nowrap  lg:flex-nowrap">
+        <div className="flex flex-wrap  items-center justify-center text-center gap-8 p-4 md:overflow-hidden  lg:flex-nowrap">
           {textIcon.map((item) => {
             return (
               <div
