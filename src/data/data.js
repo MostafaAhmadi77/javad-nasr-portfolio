@@ -6,12 +6,12 @@ import Button from "../Components/Button/Button";
 import { RiDonutChartFill, RiOrganizationChart } from "react-icons/ri";
 import { TiBusinessCard } from "react-icons/ti";
 import { TbChartHistogram } from "react-icons/tb";
-import img1 from "../assets/Images/main-img/img1.png";
-import img2 from "../assets/Images/main-img/img2.png";
-import img3 from "../assets/Images/main-img/img3.png";
-import img4 from "../assets/Images/main-img/img4.png";
-import img5 from "../assets/Images/main-img/img5.png";
-import img6 from "../assets/Images/main-img/img6.png";
+import img2 from "../assets/Images/mainimg/img2.png";
+import img3 from "../assets/Images/mainimg/img3.png";
+import img1 from "../assets/Images/mainimg/img1.png";
+import img4 from "../assets/Images/mainimg/img4.png";
+import img5 from "../assets/Images/mainimg/img5.png";
+import img6 from "../assets/Images/mainimg/img6.png";
 
 export const brand = [
   {
