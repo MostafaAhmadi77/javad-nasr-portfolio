@@ -55,14 +55,14 @@ function Home() {
               Trusted by forward-thinking brands
             </p>
 
-            <div className="flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-5 mt-6 text-lg sm:text-xl">
+            <div className="flex flex-wrap justify-center  lg:justify-start gap-x-8 gap-y-5 mt-6 text-lg sm:text-xl lg:flex-wrap">
               {brand.map((item) => {
                 const Icon = item.Icon;
 
                 return (
                   <span
                     key={item.title}
-                    className="flex items-center  gap-1 text-gray-300 hover:text-primary-orange transition 2xl:text-2xl"
+                    className="flex items-center    gap-1 text-gray-300 hover:text-primary-orange transition sm:w-[4rem]   2xl:text-2xl"
                   >
                     <Icon />
                     {item.title}
@@ -81,7 +81,7 @@ function Home() {
           />
         </div>
       </header>
-      <main className="text-white  border border-primary-orange rounded-2xl   backdrop-blur-xl bg-white/2 sm:mt-6 lgg:mt-0">
+      <main className="text-white  border border-primary-orange rounded-2xl   backdrop-blur-xl bg-white/2 ss:mt-6 sm:mt-6 lgg:mt-0">
         <div className="flex flex-col xl:flex-row items-center justify-between gap-12 p-5 sm:p-8 lg:p-10">
           <div className="w-full xl:max-w-[28rem] flex flex-col gap-5 text-center xl:text-left">
             <section className="text-primary-orange tracking-[3px]">
