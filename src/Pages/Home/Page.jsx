@@ -1,6 +1,6 @@
 import { GoArrowRight } from "react-icons/go";
 // import { Link } from "react-router";
-import HeroImage from "/run/media/oak/Disk-D/پروزه طراحی سایت/پروژه استادجون😍/project/src/assets/Images/H1.png";
+import HeroImage from "../../assets/Images/H1.png";
 import { brand, textIcon } from "../../data/data";
 import Button from "../../Components/Button/Button";
 import CartIcon from "../../Components/Card/CartIcons/CartIcon";
