@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+
+
+
+@font-face {
+  font-family: 'CormorantGaramond-Bold';
+  src: url("./../src/assets/Fonts/Cormorant-Garamond/CormorantGaramond-Bold.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GreatVibes-Regular';
+  src: url("./assets/Fonts/GreatVibes-Regular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}@font-face {
+  font-family: 'PTSerif-Regular';
+  src: url("./assets/Fonts/PT_Serif/PTSerif-Regular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@theme{
+    --color-primary-orange:#FB5701;
+    --font-family-CormorantGaramondBold:"CormorantGaramond-Bold",sans-serif;
+    --font-family-GreatVibesRegular:"GreatVibes-Regular",sans-serif;
+    --font-family-PTSerif-Regular:"PTSerif-Regular", sans-serif;
+    --breakpoint-ss: 25rem,
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* IE */
+body {
+  -ms-overflow-style: none;
+}
