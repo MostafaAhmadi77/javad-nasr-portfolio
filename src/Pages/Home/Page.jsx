@@ -55,14 +55,14 @@ function Home() {
               Trusted by forward-thinking brands
             </p>
 
-            <div className="flex flex-wrap justify-center  lg:justify-start gap-x-8 gap-y-5 mt-6 text-lg sm:text-xl lg:flex-wrap">
+            <div className="flex flex-wrap justify-center w-full lg:justify-start gap-x-5 lg:gap-3 gap-y-5 mt-6 text-lg sm:text-xl lg:flex-wrap">
               {brand.map((item) => {
                 const Icon = item.Icon;
 
                 return (
                   <span
                     key={item.title}
-                    className="flex items-center    gap-1 text-gray-300 hover:text-primary-orange transition sm:w-[4rem]   2xl:text-2xl"
+                    className="flex items-center    gap-1 text-gray-300 hover:text-primary-orange transition sm:w-[4rem] sm:w-auto   2xl:text-2xl"
                   >
                     <Icon />
                     {item.title}
