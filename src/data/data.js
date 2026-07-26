@@ -103,10 +103,10 @@ export const textIcon = [
   },
 ]
 export const imgData = [
-  {id:1, img:"src/assets/Images/main-img/1.png", title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
-  {id:2, img:"src/assets/Images/main-img/2.png", title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
-  {id:3, img:"src/assets/Images/main-img/3.png", title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
-  {id:4, img:"src/assets/Images/main-img/4.png", title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
-  {id:5, img:"src/assets/Images/main-img/5.png", title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
-  {id:6, img:"src/assets/Images/main-img/6.png", title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
+  {id:1, img:"src/assets/Images/main-img/img1.png", title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
+  {id:2, img:"src/assets/Images/main-img/img2.png", title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
+  {id:3, img:"src/assets/Images/main-img/img3.png", title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
+  {id:4, img:"src/assets/Images/main-img/img4.png", title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
+  {id:5, img:"src/assets/Images/main-img/img5.png", title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
+  {id:6, img:"src/assets/Images/main-img/img6.png", title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
 ]
