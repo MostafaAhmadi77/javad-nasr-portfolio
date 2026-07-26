@@ -2,7 +2,6 @@ import { BiLogoUpwork } from "react-icons/bi";
 import { FaSlack } from "react-icons/fa";
 import { FaWebflow } from "react-icons/fa6";
 import { SiLoom, SiNotion } from "react-icons/si";
-import Button from "../Components/Button/Button";
 import { RiDonutChartFill, RiOrganizationChart } from "react-icons/ri";
 import { TiBusinessCard } from "react-icons/ti";
 import { TbChartHistogram } from "react-icons/tb";

@@ -208,6 +208,13 @@ function Home() {
               <div
                 key={item.id}
                 className="
+                transition-all
+      duration-500
+      hover:-translate-y-4
+      hover:-translate-x-2
+      hover:border-primary-orange
+                hover:shadow-[15px_15px_20px_rgba(251,87,1,.18)]
+                
         flex
         flex-col
         justify-between

@@ -1,10 +1,8 @@
-
-
 function CartIcon({ icon, title, description }) {
   return (
     <>
       <div
-      className="
+        className="
       group
       w-full
       min-h-[280px]
@@ -26,21 +24,19 @@ function CartIcon({ icon, title, description }) {
       hover:border-primary-orange
       hover:shadow-[0_20px_50px_rgba(251,87,1,.18)]
       "
-    >
-      <div className="w-20 h-20 rounded-full border border-primary-orange/40 bg-primary-orange/5 flex items-center justify-center">
-        <span className="text-5xl sm:text-6xl text-primary-orange">
-          {icon}
-        </span>
+      >
+        <div className="w-20 h-20 rounded-full border border-primary-orange/40 bg-primary-orange/5 flex items-center justify-center">
+          <span className="text-5xl sm:text-6xl text-primary-orange">
+            {icon}
+          </span>
+        </div>
+
+        <h3 className="font-bold text-xl sm:text-2xl leading-snug">{title}</h3>
+
+        <p className="text-sm sm:text-base text-zinc-400 leading-7">
+          {description}
+        </p>
       </div>
-
-      <h3 className="font-bold text-xl sm:text-2xl leading-snug">
-        {title}
-      </h3>
-
-      <p className="text-sm sm:text-base text-zinc-400 leading-7">
-        {description}
-      </p>
-    </div>
     </>
   );
 }
