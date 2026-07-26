@@ -132,7 +132,7 @@ function Home() {
         <div className="Divider">
           <Divider title="AREAS OF EXPERTISE" />
         </div>
-        <div className="flex flex-wrap  items-center justify-center text-center place-items-center gap-8 p-4 md:grid   md:grid-cols-5  md:grid-rows-2 md:text-center lg:flex lg:flex-row lg:gap-3 lg:flex-nowrap">
+        <div className="flex flex-wrap  items-center justify-center text-center place-items-center gap-8 p-4 md:grid   md:grid-cols-5  md:grid-rows-2 md:text-center  lgg:flex lgg:flex-nowrap">
           {textIcon.map((item) => {
             return (
               <div
@@ -146,11 +146,11 @@ function Home() {
       
         "
               >
-                <span className="text-primary-orange text-5xl  lg:text-6xl">
+                <span className="text-primary-orange text-5xl  lg:text-5xl">
                   {<item.icon />}
                 </span>
 
-                <span className="mt-4 text-sm sm:text-base leading-5 ">
+                <span className="mt-4 text-sm sm:text-base leading-5 lg:text-1xl ">
                   {item.discription}
                 </span>
               </div>
@@ -168,3 +168,9 @@ export default Home;
 // sm:w-[45%]
 // lg:w-[22%]
 // 2xl:w-[8%]
+
+
+// lg:flex 
+// lg:flex-row 
+// lg:gap-3 
+//  lg:flex-nowrap

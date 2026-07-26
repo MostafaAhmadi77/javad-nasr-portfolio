@@ -30,7 +30,8 @@
     --font-family-CormorantGaramondBold:"CormorantGaramond-Bold",sans-serif;
     --font-family-GreatVibesRegular:"GreatVibes-Regular",sans-serif;
     --font-family-PTSerif-Regular:"PTSerif-Regular", sans-serif;
-    --breakpoint-ss: 25rem
+    --breakpoint-ss: 25rem ;
+    --breakpoint-lgg: 80rem
 }
 
 ::-webkit-scrollbar {
