@@ -1,11 +1,12 @@
 import { GoArrowRight } from "react-icons/go";
 // import { Link } from "react-router";
 import HeroImage from "../../assets/Images/H1.png";
-import { brand, textIcon } from "../../data/data";
+import { brand, imgData, textIcon } from "../../data/data";
 import Button from "../../Components/Button/Button";
 import CartIcon from "../../Components/Card/CartIcons/CartIcon";
 import { dataIcon } from "../../Components/Card/CartIcons/dataIcon/data";
 import Divider from "../../Components/Divider/Divider";
+import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 
 function Home() {
   return (
@@ -85,7 +86,7 @@ function Home() {
         <div className="flex flex-col xl:flex-row items-center justify-between gap-12 p-5 sm:p-8 lg:p-10">
           <div className="w-full xl:max-w-[28rem] flex flex-col gap-5 text-center xl:text-left">
             <section className="text-primary-orange tracking-[3px]">
-              ABOUT
+              <SectionTitle title="ABOUT" />
             </section>
 
             <section>
@@ -157,6 +158,103 @@ function Home() {
             );
           })}
         </div>{" "}
+        <hr className="text-primary-orange  mr-5 ml-5 " />
+        <div className="px-4 py-8 sm:px-6 lg:px-5">
+          <div
+            className="
+      flex
+      flex-col
+      items-center
+      gap-6
+      text-center
+
+      lg:flex-row
+      lg:justify-between
+      lg:items-center
+      lg:text-left
+    "
+          >
+            <section>
+              <SectionTitle title="FEATURED TRANSFORMATIONS" />
+            </section>
+
+            <section>
+              <Button
+                title="View All Case Studies"
+                icon={<GoArrowRight />}
+                style="
+          flex
+          items-center
+          justify-center
+          gap-3
+          text-sm
+          sm:text-base
+          lg:text-lg
+        "
+              />
+            </section>
+          </div>
+          <div
+            className="
+    flex
+    flex-wrap
+    justify-center
+    lg:justify-between
+    gap-6
+    mt-6
+  "
+          >
+            {imgData.map((item) => (
+              <div
+                key={item.id}
+                className="
+        flex
+        flex-col
+        justify-between
+        border
+        border-orange-950
+        rounded-2xl
+        overflow-hidden
+
+        w-full
+        sm:w-[48%]
+        lg:w-[31%]
+        xl:w-[31%]
+      "
+              >
+                <section>
+                  <img
+                    className="w-full h-52 object-cover rounded-t-2xl"
+                    src={item.img}
+                    alt={item.title}
+                  />
+                </section>
+
+                <section className="px-4 py-4 flex-1">
+                  <span className="text-xs font-bold text-primary-orange">
+                    {item.title}
+                  </span>
+
+                  <br />
+
+                  <span className="text-base font-bold">
+                    {item.description}
+                  </span>
+                </section>
+
+                <section className="px-4 pb-4">
+                  <Button
+                    title="View Case Study"
+                    icon={<GoArrowRight />}
+                    style="flex items-center gap-3 text-primary-orange"
+                  />
+                </section>
+              </div>
+            ))}
+          </div>{" "}
+          <div></div>
+          <div></div>
+        </div>
       </main>
 
       <footer className="text-white">Footer</footer>
@@ -165,12 +263,3 @@ function Home() {
 }
 
 export default Home;
-// sm:w-[45%]
-// lg:w-[22%]
-// 2xl:w-[8%]
-
-
-// lg:flex 
-// lg:flex-row 
-// lg:gap-3 
-//  lg:flex-nowrap
