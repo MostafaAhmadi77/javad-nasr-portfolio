@@ -150,7 +150,7 @@ function Home() {
                   {<item.icon />}
                 </span>
 
-                <span className="mt-4 text-sm sm:text-base leading-7">
+                <span className="mt-4 text-sm sm:text-base leading-5 lg:text-[0.8rem]">
                   {item.discription}
                 </span>
               </div>
