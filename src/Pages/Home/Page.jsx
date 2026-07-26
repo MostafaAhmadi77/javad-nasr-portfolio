@@ -81,7 +81,7 @@ function Home() {
           />
         </div>
       </header>
-      <main className="text-white  border border-primary-orange rounded-2xl   backdrop-blur-xl bg-white/2 ss:mt-6 sm:mt-6 lgg:mt-0">
+      <main className="text-white  border border-primary-orange rounded-2xl   backdrop-blur-xl bg-white/2 ss:mt-6 sm:mt-6 lgg:mt-7 xl:mt-0">
         <div className="flex flex-col xl:flex-row items-center justify-between gap-12 p-5 sm:p-8 lg:p-10">
           <div className="w-full xl:max-w-[28rem] flex flex-col gap-5 text-center xl:text-left">
             <section className="text-primary-orange tracking-[3px]">
@@ -132,7 +132,7 @@ function Home() {
         <div className="Divider">
           <Divider title="AREAS OF EXPERTISE" />
         </div>
-        <div className="flex flex-wrap  items-center justify-center text-center place-items-center gap-8 p-7 sm:grid sm:grid-cols-5 md:grid   md:grid-cols-5  md:grid-rows-2 md:text-center  lgg:flex lgg:flex-nowrap">
+        <div className="flex flex-wrap  items-center justify-center text-center place-items-center gap-8 p-7 ss:grid ss:grid-cols-2   sm:grid sm:grid-cols-5 md:grid   md:grid-cols-5  md:grid-rows-2 md:text-center  lgg:flex lgg:flex-nowrap">
           {textIcon.map((item) => {
             return (
               <div
