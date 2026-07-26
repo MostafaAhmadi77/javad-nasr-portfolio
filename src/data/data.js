@@ -6,6 +6,12 @@ import Button from "../Components/Button/Button";
 import { RiDonutChartFill, RiOrganizationChart } from "react-icons/ri";
 import { TiBusinessCard } from "react-icons/ti";
 import { TbChartHistogram } from "react-icons/tb";
+import img1 from "../assets/Images/main-img/img1.png";
+import img2 from "../assets/Images/main-img/img2.png";
+import img3 from "../assets/Images/main-img/img3.png";
+import img4 from "../assets/Images/main-img/img4.png";
+import img5 from "../assets/Images/main-img/img5.png";
+import img6 from "../assets/Images/main-img/img6.png";
 
 export const brand = [
   {
@@ -103,10 +109,10 @@ export const textIcon = [
   },
 ]
 export const imgData = [
-  {id:1, img:"src/assets/Images/main-img/img1.png", title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
-  {id:2, img:"src/assets/Images/main-img/img2.png", title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
-  {id:3, img:"src/assets/Images/main-img/img3.png", title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
-  {id:4, img:"src/assets/Images/main-img/img4.png", title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
-  {id:5, img:"src/assets/Images/main-img/img5.png", title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
-  {id:6, img:"src/assets/Images/main-img/img6.png", title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
+  {id:1, img:  img1, title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
+  {id:2, img:  img2, title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
+  {id:3, img:  img3, title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
+  {id:4, img:  img4, title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
+  {id:5, img:  img5, title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
+  {id:6, img:  img6, title:"STRATEGY & TRANSFORMATION", description:"Steel Holding Company Strategic Transformation"},
 ]
