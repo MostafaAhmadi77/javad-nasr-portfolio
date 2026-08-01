@@ -13,7 +13,7 @@ import SecoundItems from "./components/SecoundItems";
 
 function Home() {
   return (
-    <main className="text-white  border border-primary-orange rounded-2xl   backdrop-blur-xl bg-white/2 ss:pt-6 sm:pt-6  xl:pt-0 ">
+    <main className="text-white  border border-primary-orange rounded-2xl m-3 mb-3   backdrop-blur-xl bg-white/2 ss:pt-6 sm:pt-6  xl:pt-0 ">
       <div className="flex flex-col xl:flex-row items-center justify-between gap-12 p-5 sm:p-8 lg:p-10">
         <div className="w-full xl:max-w-[28rem] flex flex-col gap-5 text-center xl:text-left">
           <section className="text-primary-orange tracking-[3px]">
@@ -190,7 +190,7 @@ function Home() {
           ))}
         </div>{" "}
         <div>
-          <div className="w-full px-5 lg:px-10 py-10">
+          <div className="w-full px-5 lg:px-10 py-10 ">
             <MainTitle
               title="THE DDIES FRAMEWORK™"
               des="A proven approach to transform strategy into sustainable results."
@@ -200,7 +200,7 @@ function Home() {
               {/* line */}
               <div className="hidden lg:block absolute top-12 left-0 right-0 border-t border-dashed border-primary-orange opacity-50"></div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 relative z-10">
+              <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 gap-10 relative z-10">
                 {topicItems.map((item) => (
                   <TopicItems key={item.id} {...item} />
                 ))}
@@ -210,7 +210,7 @@ function Home() {
 
             <Title title="WHY ORGANIZATIONS CHOOSE TO WORK WITH ME" />
 
-            <section className="mt-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+            <section className="mt-12 grid grid-cols-1 sm:grid-cols-1  md:grid-cols-2 xl:grid-cols-4 gap-6">
               {secoundItems.map((item) => (
                 <SecoundItems key={item.id} {...item} />
               ))}
