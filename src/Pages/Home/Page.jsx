@@ -1,143 +1,75 @@
 import { GoArrowRight } from "react-icons/go";
 // import { Link } from "react-router";
-import HeroImage from "../../assets/Images/H1.png";
-import { brand, imgData, textIcon } from "../../data/data";
+import { imgData, secoundItems, textIcon, topicItems } from "../../data/data";
 import Button from "../../Components/Button/Button";
 import CartIcon from "../../Components/Card/CartIcons/CartIcon";
 import { dataIcon } from "../../Components/Card/CartIcons/dataIcon/data";
 import Divider from "../../Components/Divider/Divider";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
+import MainTitle from "./components/MainTitle";
+import TopicItems from "./components/TopicItems";
+import Title from "./components/Title";
+import SecoundItems from "./components/SecoundItems";
 
 function Home() {
   return (
-    <div className="bg-black flex flex-col p-3">
-      <header className="px-5 sm:px-8 lg:px-12 xl:px-10 pt-8 lg:pt-12 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 min-h-[calc(100vh-auto)] ">
-        <div className="w-full lg:w-1/2 flex flex-col gap-8 text-center lg:text-left">
-          <div className="flex flex-col gap-4">
-            <span className="text-primary-orange font-bold tracking-widest text-sm sm:text-base">
-              HELLO, I'M
+    <main className="text-white  border border-primary-orange rounded-2xl   backdrop-blur-xl bg-white/2 ss:pt-6 sm:pt-6  xl:pt-0 ">
+      <div className="flex flex-col xl:flex-row items-center justify-between gap-12 p-5 sm:p-8 lg:p-10">
+        <div className="w-full xl:max-w-[28rem] flex flex-col gap-5 text-center xl:text-left">
+          <section className="text-primary-orange tracking-[3px]">
+            <SectionTitle title="ABOUT" />
+          </section>
+
+          <section>
+            <p className="text-3xl sm:text-4xl lg:text-3xl font-family-PTSerif-Regular font-bold leading-tight">
+              Building Organizations That{" "}
+              <span className="text-primary-orange">Last</span>.
+            </p>
+          </section>
+
+          <section>
+            <span className="text-sm sm:text-base lg:text-[0.9rem] font-bold leading-8 text-zinc-300">
+              I partner with leadership teams to turn challenges into
+              opportunities through strategy, systems, and execution. My
+              approach combines deep analytical thinking with hands-on
+              implementation to deliver measurable and sustainable results.
             </span>
+          </section>
 
-            <h2 className="font-bold leading-tight">
-              <span className="text-white text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">
-                Javad <span className="text-primary-orange">Nasr</span>
-              </span>
-            </h2>
-
-            <p className="text-white font-semibold text-lg sm:text-xl xl:text-2xl">
-              Management Consultant |{" "}
-              <span className="text-primary-orange">Business Strategist </span>|
-              <br />
-              Oraganizational Transformation Partner
-            </p>
-
-            <p className="text-gray-300 max-w-95 mx-auto lg:mx-0 text-sm sm:text-base leading-8">
-              Helping organizations transform strategy into execution, build
-              scalable system, and achieve sustainable growth
-            </p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <section className="flex justify-center xl:justify-start">
             <Button
-              title="Let's Work Together"
+              link="/"
+              title="Learn more about me"
               icon={<GoArrowRight />}
-              style="flex justify-center items-center bg-primary-orange px-8 py-3 gap-3 rounded-2xl text-white  transition"
+              styleBtn="flex items-center gap-4 text-primary-orange"
             />
-
-            <Button
-              title="Explore Services"
-              icon={<GoArrowRight />}
-              style="flex justify-center items-center border border-withe px-10 py-3 gap-3 gap-3 rounded-2xl text-white hover:text-white transition"
-            />
-          </div>
-
-          <div className="text-white">
-            <p className="text-sm sm:text-base text-center lg:text-left">
-              Trusted by forward-thinking brands
-            </p>
-
-            <div className="flex flex-wrap justify-center w-full lg:justify-start gap-x-5 lg:gap-3 gap-y-5 mt-6 text-lg sm:text-xl lg:flex-wrap">
-              {brand.map((item) => {
-                const Icon = item.Icon;
-
-                return (
-                  <span
-                    key={item.title}
-                    className="flex items-center    gap-1 text-gray-300 hover:text-primary-orange transition sm:w-[4rem] sm:w-auto   2xl:text-2xl"
-                  >
-                    <Icon />
-                    {item.title}
-                  </span>
-                );
-              })}
-            </div>
-          </div>
+          </section>
         </div>
 
-        <div className="w-full lg:w-1/2 flex flex-col relative justify-center lg:justify-end">
-          <img
-            src={HeroImage}
-            alt="Javad Nasr"
-            className="w-full  h-auto object-contain"
-          />
-        </div>
-      </header>
-      <main className="text-white  border border-primary-orange rounded-2xl   backdrop-blur-xl bg-white/2 ss:mt-6 sm:mt-6 lgg:mt-7 xl:mt-0">
-        <div className="flex flex-col xl:flex-row items-center justify-between gap-12 p-5 sm:p-8 lg:p-10">
-          <div className="w-full xl:max-w-[28rem] flex flex-col gap-5 text-center xl:text-left">
-            <section className="text-primary-orange tracking-[3px]">
-              <SectionTitle title="ABOUT" />
-            </section>
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+          {dataIcon.map((data) => {
+            const Icon = data.icon;
 
-            <section>
-              <p className="text-3xl sm:text-4xl lg:text-3xl font-family-PTSerif-Regular font-bold leading-tight">
-                Building Organizations That{" "}
-                <span className="text-primary-orange">Last</span>.
-              </p>
-            </section>
-
-            <section>
-              <span className="text-sm sm:text-base lg:text-[0.9rem] font-bold leading-8 text-zinc-300">
-                I partner with leadership teams to turn challenges into
-                opportunities through strategy, systems, and execution. My
-                approach combines deep analytical thinking with hands-on
-                implementation to deliver measurable and sustainable results.
-              </span>
-            </section>
-
-            <section className="flex justify-center xl:justify-start">
-              <Button
-                link="/"
-                title="Learn more about me"
-                icon={<GoArrowRight />}
-                style="flex items-center gap-4 text-primary-orange"
-              />
-            </section>
-          </div>
-
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-            {dataIcon.map((data) => {
-              const Icon = data.icon;
-
-              return (
-                <CartIcon
-                  key={data.id}
-                  title={data.title}
-                  description={data.decription}
-                  icon={<Icon />}
-                />
-              );
-            })}
-          </div>
-        </div>{" "}
-        <div className="Divider">
-          <Divider title="AREAS OF EXPERTISE" />
-        </div>
-        <div className="flex flex-wrap  items-center justify-center text-center place-items-center gap-8 p-7 ss:grid ss:grid-cols-2   sm:grid sm:grid-cols-5 md:grid   md:grid-cols-5  md:grid-rows-2 md:text-center  lgg:flex lgg:flex-nowrap">
-          {textIcon.map((item) => {
             return (
-              <div
-                className="
+              <CartIcon
+                key={data.id}
+                title={data.title}
+                description={data.decription}
+                icon={<Icon />}
+              />
+            );
+          })}
+        </div>
+      </div>{" "}
+      <div className="Divider">
+        <Divider title="AREAS OF EXPERTISE" />
+      </div>
+      <div className="flex flex-wrap  items-center justify-center text-center place-items-center gap-8 p-7 ss:grid ss:grid-cols-2   sm:grid sm:grid-cols-5 md:grid   md:grid-cols-5  md:grid-rows-2 md:text-center  lgg:flex lgg:flex-nowrap">
+        {textIcon.map((item) => {
+          return (
+            <div
+              key={item.id}
+              className="
           flex  flex-col items-center justify-center  text-center w-full
           
           ss:w-[5%]
@@ -146,22 +78,22 @@ function Home() {
            2xl:w-[18%]
       
         "
-              >
-                <span className="text-primary-orange text-5xl  lg:text-5xl">
-                  {<item.icon />}
-                </span>
+            >
+              <span className="text-primary-orange text-5xl  lg:text-5xl">
+                {<item.icon />}
+              </span>
 
-                <span className="mt-4 text-sm sm:text-base leading-5 lg:text-1xl ">
-                  {item.discription}
-                </span>
-              </div>
-            );
-          })}
-        </div>{" "}
-        <hr className="text-primary-orange  mr-5 ml-5 " />
-        <div className="px-4 py-8 sm:px-6 lg:px-5">
-          <div
-            className="
+              <span className="mt-4 text-sm sm:text-base leading-5 lg:text-1xl ">
+                {item.discription}
+              </span>
+            </div>
+          );
+        })}
+      </div>{" "}
+      <hr className="text-primary-orange  mr-5 ml-5 " />
+      <div className="px-4 py-8 sm:px-6 lg:px-5">
+        <div
+          className="
       flex
       flex-col
       items-center
@@ -173,16 +105,16 @@ function Home() {
       lg:items-center
       lg:text-left
     "
-          >
-            <section>
-              <SectionTitle title="FEATURED TRANSFORMATIONS" />
-            </section>
+        >
+          <section>
+            <SectionTitle title="FEATURED TRANSFORMATIONS" />
+          </section>
 
-            <section>
-              <Button
-                title="View All Case Studies"
-                icon={<GoArrowRight />}
-                style="
+          <section>
+            <Button
+              title="View All Case Studies"
+              icon={<GoArrowRight />}
+              styleBtn="
           flex
           items-center
           justify-center
@@ -191,11 +123,11 @@ function Home() {
           sm:text-base
           lg:text-lg
         "
-              />
-            </section>
-          </div>
-          <div
-            className="
+            />
+          </section>
+        </div>
+        <div
+          className="
     flex
     flex-wrap
     justify-center
@@ -203,11 +135,11 @@ function Home() {
     gap-6
     mt-6
   "
-          >
-            {imgData.map((item) => (
-              <div
-                key={item.id}
-                className="
+        >
+          {imgData.map((item) => (
+            <div
+              key={item.id}
+              className="
                 transition-all
       duration-500
       hover:-translate-y-4
@@ -228,44 +160,65 @@ function Home() {
         lg:w-[31%]
         xl:w-[31%]
       "
-              >
-                <section>
-                  <img
-                    className="w-full h-52 object-cover rounded-t-2xl"
-                    src={item.img}
-                    alt={item.title}
-                  />
-                </section>
+            >
+              <section>
+                <img
+                  className="w-full h-52 object-cover rounded-t-2xl"
+                  src={item.img}
+                  alt={item.title}
+                />
+              </section>
 
-                <section className="px-4 py-4 flex-1">
-                  <span className="text-xs font-bold text-primary-orange">
-                    {item.title}
-                  </span>
+              <section className="px-4 py-4 flex-1">
+                <span className="text-xs font-bold text-primary-orange">
+                  {item.title}
+                </span>
 
-                  <br />
+                <br />
 
-                  <span className="text-base font-bold">
-                    {item.description}
-                  </span>
-                </section>
+                <span className="text-base font-bold">{item.description}</span>
+              </section>
 
-                <section className="px-4 pb-4">
-                  <Button
-                    title="View Case Study"
-                    icon={<GoArrowRight />}
-                    style="flex items-center gap-3 text-primary-orange"
-                  />
-                </section>
+              <section className="px-4 pb-4">
+                <Button
+                  title="View Case Study"
+                  icon={<GoArrowRight />}
+                  styleBtn="flex items-center gap-3 text-primary-orange"
+                />
+              </section>
+            </div>
+          ))}
+        </div>{" "}
+        <div>
+          <div className="w-full px-5 lg:px-10 py-20">
+            <MainTitle
+              title="THE DDIES FRAMEWORK™"
+              des="A proven approach to transform strategy into sustainable results."
+            />
+
+            <section className="relative mt-14">
+              {/* line */}
+              <div className="hidden lg:block absolute top-12 left-0 right-0 border-t border-dashed border-primary-orange opacity-50"></div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 relative z-10">
+                {topicItems.map((item) => (
+                  <TopicItems key={item.id} {...item} />
+                ))}
               </div>
-            ))}
-          </div>{" "}
-          <div></div>
-          <div></div>
-        </div>
-      </main>
+            </section>
 
-      <footer className="text-white">Footer</footer>
-    </div>
+            <Title title="WHY ORGANIZATIONS CHOOSE TO WORK WITH ME" />
+
+            <section className="mt-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+              {secoundItems.map((item) => (
+                <SecoundItems key={item.id} {...item} />
+              ))}
+            </section>
+          </div>{" "}
+        </div>
+        <div></div>
+      </div>
+    </main>
   );
 }
 

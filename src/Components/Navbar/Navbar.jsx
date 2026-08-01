@@ -1,8 +1,8 @@
-import React, { useState } from "react";
 import { GoArrowRight } from "react-icons/go";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { Link } from "react-router";
 import Button from "../Button/Button";
+import { useState } from "react";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,27 +12,36 @@ function Navbar() {
       <nav className="  bg-[#000000] text-white p-3  flex items-center justify-between relative z-50">
         <div>
           <h1 className="flex items-center gap-2">
-            <span className="text-[#FB5701] text-5xl">JN</span>
+            <span className="text-primary-orange text-5xl">JN</span>
             <span className="text-3xl"> Javad Nasr</span>
           </h1>
         </div>
 
         <div className="hidden lg:block">
           <ul className="2xl:text-[1.5rem] flex items-center gap-12 text-base cursor-pointer">
-            <li>Work</li>
-            <li>Services</li>
-            <li>About</li>
-            <li>Process</li>
-            <li>Insights</li>
+            <li>
+              <Link to="Work">Work</Link>
+            </li>
+            <li>
+              <Link to="services">Services</Link>
+            </li>
+            <li>
+              <Link to="about">About</Link>
+            </li>
+            <li>
+              <Link to="process">Process</Link>
+            </li>
+            <li>
+              <Link to="insights">Insights</Link>
+            </li>
           </ul>
         </div>
 
         <div className="hidden lg:block">
-          
           <Button
             title="Let's Work Together"
             icon={<GoArrowRight />}
-            style="flex items-center gap-4 border border-[#FB5701] px-5 py-3 rounded-2xl"
+            styleBtn="flex items-center gap-4 border border-[#FB5701] px-5 py-3 rounded-2xl"
           />
         </div>
 
@@ -65,24 +74,20 @@ function Navbar() {
         </div>
 
         <ul className="flex flex-col gap-8 p-8 text-lg">
-          <li className="cursor-pointer hover:text-[#FB5701] transition">
-            Work
+          <li>
+            <Link to="Work">Work</Link>
           </li>
-
-          <li className="cursor-pointer hover:text-[#FB5701] transition">
-            Services
+          <li>
+            <Link to="services">Services</Link>
           </li>
-
-          <li className="cursor-pointer hover:text-[#FB5701] transition">
-            About
+          <li>
+            <Link to="about">About</Link>
           </li>
-
-          <li className="cursor-pointer hover:text-[#FB5701] transition">
-            Process
+          <li>
+            <Link to="process">Process</Link>
           </li>
-
-          <li className="cursor-pointer hover:text-[#FB5701] transition">
-            Insights
+          <li>
+            <Link to="insights">Insights</Link>
           </li>
         </ul>
 
@@ -90,9 +95,8 @@ function Navbar() {
           <Button
             title="Let's Work Together"
             icon={<GoArrowRight />}
-            style="flex justify-center items-center gap-3 border border-[#FB5701] rounded-xl py-3"
+            styleBtn="flex justify-center items-center gap-3 border border-[#FB5701] rounded-xl py-3"
           />
-          
         </div>
       </div>
     </>
