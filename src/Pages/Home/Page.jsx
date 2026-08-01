@@ -190,7 +190,7 @@ function Home() {
           ))}
         </div>{" "}
         <div>
-          <div className="w-full px-5 lg:px-10 py-20">
+          <div className="w-full px-5 lg:px-10 py-10">
             <MainTitle
               title="THE DDIES FRAMEWORK™"
               des="A proven approach to transform strategy into sustainable results."
@@ -206,6 +206,7 @@ function Home() {
                 ))}
               </div>
             </section>
+            <div className="w-full border-t-2 border-primary-orange opacity-20 mt-10"></div>
 
             <Title title="WHY ORGANIZATIONS CHOOSE TO WORK WITH ME" />
 
@@ -216,7 +217,16 @@ function Home() {
             </section>
           </div>{" "}
         </div>
-        <div></div>
+
+
+
+        <div>
+          <div className="">
+            <section></section>
+            <section></section>
+            <section></section>
+          </div>
+        </div>
       </div>
     </main>
   );

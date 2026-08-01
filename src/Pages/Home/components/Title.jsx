@@ -8,7 +8,7 @@ export default function Title({ title }) {
       tracking-[6px]
       text-lg
       lg:text-2xl
-      mt-20
+      mt-10
       mb-10
     "
     >
