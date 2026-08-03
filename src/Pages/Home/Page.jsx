@@ -10,6 +10,7 @@ import MainTitle from "./components/MainTitle";
 import TopicItems from "./components/TopicItems";
 import Title from "./components/Title";
 import SecoundItems from "./components/SecoundItems";
+import PlanetEarth from "../../assets/Images/mainimg/Planet-Earth.png";
 
 function Home() {
   return (
@@ -91,7 +92,7 @@ function Home() {
         })}
       </div>{" "}
       <hr className="text-primary-orange  mr-5 ml-5 " />
-      <div className="px-4 py-8 sm:px-6 lg:px-5">
+      <div className="px-4 py- sm:px-6 lg:px-5">
         <div
           className="
       flex
@@ -220,13 +221,107 @@ function Home() {
 
 
 
-        <div>
-          <div className="">
-            <section></section>
-            <section></section>
-            <section></section>
+        <div className="px-4  sm:px-6 lg:px-10">
+          <div
+            className="
+      border
+      border-primary-orange
+      border-b-0
+      rounded-t-2xl
+      rounded-b-none
+      px-6
+      py-1
+
+      flex
+      flex-col
+      ss:pt-7
+      lg:flex-row
+
+      items-center
+      justify-between
+
+      
+      ss:gap-20
+      sm:gap-10
+    "
+          >
+            
+            <section className=" flex flex-col  text-center lg:text-left  ">
+              <h2
+                className="
+                
+          font-family-PTSerif-Regular
+          text-3xl
+          sm:text-2xl
+          lg:text-4xl
+          lgg:text-5xl
+          font-bold
+          leading-tight
+        "
+              >
+                Let's Build{" "}
+                <span className="text-primary-orange">What's Next</span>
+              </h2>
+
+              <p
+                className="
+          mt-4
+          text-gray-300
+          text-sm
+          sm:text-base
+          leading-7
+        "
+              >
+                Every successful transformation starts with a conversation.
+              </p>
+            </section>
+
+           
+            <section
+              className="
+        flex
+        justify-center
+        lg:justify-start
+      "
+            >
+              <Button
+                title="Book a Consultation"
+                icon={<GoArrowRight />}
+                styleBtn="
+          bg-primary-orange
+          rounded-2xl
+          px-7
+          py-4
+          flex
+          items-center
+          gap-3
+          whitespace-nowrap
+        "
+              />
+            </section>
+
+            
+            <section
+              className="
+        flex
+        justify-center
+        lg:justify-end
+      "
+            >
+              <img
+                src={PlanetEarth}
+                alt="Planet Earth"
+                className="
+          w-44
+          sm:w-56
+          lg:w-72
+          xl:w-80
+          object-contain
+        "
+              />
+            </section>
           </div>
-        </div>
+        </div>{" "}
       </div>
     </main>
   );

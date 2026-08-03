@@ -14,7 +14,7 @@ function MainLayout() {
           <Navbar />
           <Hero HeroImage={HeroImage} />
         </header>
-        <div className="w-full bg-black pt-3 pb-3">
+        <div className="w-full bg-black pt-3 pb-0">
           <Outlet />
         </div>
         <footer>Footer</footer>
