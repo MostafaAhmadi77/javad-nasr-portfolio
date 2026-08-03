@@ -4,7 +4,7 @@ import { brand } from "../../data/data";
 
 function Hero({HeroImage}) {
   return (
-    <div className="bg-black px-5 sm:px-8 lg:px-12 xl:px-10 pt-8 lg:pt-12 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 min-h-[calc(100vh-auto)] ">
+    <div className="bg-black  px-5 sm:px-8 lg:px-12 xl:px-10 pt-8 lg:pt-30 lg:pb-5 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 min-h-[calc(100vh-auto)] ">
       <div className="w-full lg:w-1/2 flex flex-col gap-8 text-center lg:text-left">
         <div className="flex flex-col gap-4">
           <span className="text-primary-orange font-bold tracking-widest text-sm sm:text-base">
