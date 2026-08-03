@@ -9,7 +9,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="  bg-[#000000] text-white p-3  flex items-center justify-between relative z-50">
+      <nav className=" w-full  bg-[#000000] text-white p-3  flex items-center justify-between fixed z-50">
         <div>
           <h1 className="flex items-center gap-2">
             <span className="text-primary-orange text-5xl">JN</span>

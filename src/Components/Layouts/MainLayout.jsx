@@ -6,18 +6,18 @@ import HeroImage from "../../assets/Images/H1.png";
 function MainLayout() {
   return (
     <>
-      <div className=" ">
+      <div className="bg-bla ">
         <header className="w-full bg-black ">
           <div className="sticky top-0  z-50">
             
           </div>
-          <Navbar />
+          <Navbar  />
           <Hero HeroImage={HeroImage} />
         </header>
         <div className="w-full bg-black pt-3 pb-0">
           <Outlet />
         </div>
-        <footer>Footer</footer>
+        <footer className="bg-black">Footer</footer>
       </div>
     </>
   );

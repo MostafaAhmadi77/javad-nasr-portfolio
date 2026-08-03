@@ -14,7 +14,7 @@ import PlanetEarth from "../../assets/Images/mainimg/Planet-Earth.png";
 
 function Home() {
   return (
-    <main className="text-white  border border-primary-orange rounded-2xl m-3 mb-3   backdrop-blur-xl bg-white/2 ss:pt-6 sm:pt-6  xl:pt-0 ">
+    <main className="text-white  border border-primary-orange rounded-2xl mr-4 ml-4  backdrop-blur-xl z-10 bg-white/2 ss:pt-6 sm:pt-6  xl:pt-0 ">
       <div className="flex flex-col xl:flex-row items-center justify-between gap-12 p-5 sm:p-8 lg:p-10">
         <div className="w-full xl:max-w-[28rem] flex flex-col gap-5 text-center xl:text-left">
           <section className="text-primary-orange tracking-[3px]">
@@ -224,9 +224,12 @@ function Home() {
         <div className="px-4  sm:px-6 lg:px-10">
           <div
             className="
+            -mb-px
       border
       border-primary-orange
-      border-b-0
+      border-b-black
+      
+      z-20
       rounded-t-2xl
       rounded-b-none
       px-6
