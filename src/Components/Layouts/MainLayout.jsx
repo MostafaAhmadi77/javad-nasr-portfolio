@@ -16,6 +16,7 @@ function MainLayout() {
         </header>
         <div className="w-full bg-black pt-3 pb-0">
           <Outlet />
+          <p>heeell</p>
         </div>
         <footer className="bg-black">Footer</footer>
       </div>
