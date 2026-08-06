@@ -3,6 +3,7 @@ import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { Link } from "react-router";
 import Button from "../Button/Button";
 import { useState } from "react";
+import Logo from "../../assets/Images/Logo.png"
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,9 +11,11 @@ function Navbar() {
   return (
     <>
       <nav className=" w-full  bg-[#000000] text-white p-3  flex items-center justify-between fixed z-50">
-        <div>
-          <h1 className="flex items-center gap-2">
-            <span className="text-primary-orange text-5xl">JN</span>
+        <div className="flex items-center justify-center">
+          <h1 className="flex items-center  gap-2">
+            <span className="text-primary-orange text-5xl">
+              <img className=" w-[4rem] h-[4rem]" src={Logo} alt="" />
+            </span>
             <span className="text-3xl"> Javad Nasr</span>
           </h1>
         </div>

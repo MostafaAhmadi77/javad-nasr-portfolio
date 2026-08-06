@@ -62,7 +62,7 @@ function Home() {
           }
         />
       </div>
-      <main className="text-white  border border-primary-orange rounded-2xl mr-4 ml-4  backdrop-blur-xl z-10 bg-white/2 ss:pt-6 sm:pt-6  xl:pt-0 ">
+      <main className="text-white  border border-primary-orange border-b-0 rounded-t-2xl mr-4 ml-4  backdrop-blur-xl  bg-white/2 ss:pt-6 sm:pt-6  xl:pt-0 ">
         <div className="flex flex-col xl:flex-row items-center justify-between gap-12 p-5 sm:p-8 lg:p-10">
           <div className="w-full xl:max-w-[28rem] flex flex-col gap-5 text-center xl:text-left">
             <section className="text-primary-orange tracking-[3px]">
@@ -319,6 +319,7 @@ function Home() {
           text-sm
           sm:text-base
           leading-7
+          pb-4
         "
                 >
                   Every successful transformation starts with a conversation.
@@ -348,7 +349,7 @@ function Home() {
                 />
               </section>
 
-              <section
+              {/* <section
                 className="
         flex
         justify-center
@@ -364,9 +365,10 @@ function Home() {
           lg:w-72
           xl:w-80
           object-contain
+          
         "
                 />
-              </section>
+              </section> */}
             </div>
           </div>{" "}
         </div>

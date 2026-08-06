@@ -1,6 +1,6 @@
 import { Outlet } from "react-router";
 import Navbar from "../Navbar/Navbar";
-import Hero from "../Hero/Hero";
+import Footer from "../Footer/Footer";
 
 
 function MainLayout() {
@@ -10,15 +10,17 @@ function MainLayout() {
         <header className="w-full bg-black ">
           <div className="sticky top-0  z-50">
             
-          </div>
           <Navbar  />
+          </div>
           
         </header>
         <div className="w-full bg-black pt-3 pb-0">
           <Outlet />
-          <p>heeell</p>
+       
         </div>
-        <footer className="bg-black">Footer</footer>
+        <footer className="bg-black text-white flex flex-1">
+          <Footer />
+        </footer>
       </div>
     </>
   );
