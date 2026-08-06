@@ -4,10 +4,8 @@ function Hero({
   HeroImage,
   titlePage,
   textHyper,
-  textHyperOrange,
-  textPageFirst,
-  textPagesecend,
-  textPageOrange,
+
+  
   textPageDescription,
   buttons,
   textPageEnd,
@@ -24,16 +22,11 @@ function Hero({
           <h2 className="font-bold leading-tight">
             <span className="text-white text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">
               {textHyper}{" "}
-              <span className="text-primary-orange">{textHyperOrange}</span>
+              
             </span>
           </h2>
 
-          <p className="text-white font-semibold text-lg sm:text-xl xl:text-2xl">
-            {textPageFirst} |{" "}
-            <span className="text-primary-orange">{textPageOrange} </span>|
-            <br />
-            {textPagesecend}
-          </p>
+        
 
           <p className="text-gray-300 max-w-95 mx-auto lg:mx-0 text-sm sm:text-base leading-8">
             {textPageDescription}

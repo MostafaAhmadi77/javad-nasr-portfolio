@@ -3,7 +3,7 @@ import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { Link } from "react-router";
 import Button from "../Button/Button";
 import { useState } from "react";
-import Logo from "../../assets/Images/Logo.png"
+import Logo from "../../assets/Images/Logo.png";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,19 +23,23 @@ function Navbar() {
         <div className="hidden lg:block">
           <ul className="2xl:text-[1.5rem] flex items-center gap-12 text-base cursor-pointer">
             <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
               <Link to="Work">Work</Link>
             </li>
             <li>
               <Link to="services">Services</Link>
             </li>
-            <li>
-              <Link to="about">About</Link>
-            </li>
+
             <li>
               <Link to="process">Process</Link>
             </li>
             <li>
               <Link to="insights">Insights</Link>
+            </li>
+            <li>
+              <Link to="about">About</Link>
             </li>
           </ul>
         </div>
