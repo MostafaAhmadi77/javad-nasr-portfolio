@@ -20,11 +20,16 @@ function Home() {
         <Hero
           HeroImage={HeroImg}
           titlePage="HELLO, I'M"
-          textHyper="Javad"
-          textHyperOrange="Nasr"
-          textPageFirst="Management Consultant"
-          textPagesecend="Oraganizational Transformation Partner"
-          textPageOrange="Business Strategist"
+          textHyper={
+            <div className="flex flex-col gap-10">
+              <h2 className="font-family-CormorantGaramondBold ">Javad <span className="text-primary-orange">Nasr</span></h2>
+              <span className="text-2xl line-clamp-none">
+                Management Consultant | <span className="text-primary-orange">Businness Strategist</span>  |
+                Organizational Transformation Partner
+              </span>
+
+            </div>
+          }
           textPageDescription="Helping organizations transform strategy into execution, build
             scalable system, and achieve sustainable growth"
           buttons={
