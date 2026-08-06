@@ -10,7 +10,6 @@ import MainTitle from "./components/MainTitle";
 import TopicItems from "./components/TopicItems";
 import Title from "./components/Title";
 import SecoundItems from "./components/SecoundItems";
-import PlanetEarth from "../../assets/Images/mainimg/Planet-Earth.png";
 import Hero from "../../Components/Hero/Hero";
 import HeroImg from "../../assets/Images/H1.png";
 
