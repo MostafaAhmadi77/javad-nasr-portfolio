@@ -8,13 +8,13 @@ function Services() {
         HeroImage={HeroImg}
         titlePage="SERVICES"
         textHyper={
-          <div className="font-family-CormorantGaramondBold text-6xl">
-            <section className="w-20 h-[0.1rem] bg-primary-orange mb-2"></section>
+          <div className=" flex  ss:flex-col ss:justify-center ss:items-center ss:text-3xl md:flex-col md:justify-start md:items-start md:text-5xl font-family-CormorantGaramondBold text-6xl">
+            <section className="w-full md:w-[30%] mb-6 h-[0.1rem] bg-[radial-gradient(circle,#FB5701_0%,#050302_99%)]"></section>
             <p>Strategic Solutions.</p>
             <span>
               Measurable <span className="text-primary-orange">Results.</span>
             </span>
-            <section className="w-20 h-[0.1rem] bg-primary-orange mt-2"></section>
+            <section className="w-[85%] md:w-[30%] mt-6 h-[0.1rem] bg-[radial-gradient(circle,#FB5701_0%,#050302_99%)]"></section>
           </div>
         }
         textPageDescription={
@@ -30,10 +30,10 @@ function Services() {
       <div className="py-2 flex flex-col items-center">
         <div className="w-full flex flex-col items-center gap-3">
           <div className="">
-            <span className="text-primary-orange  font-bold text-5xl ss:text-[0.3rem] sm:text-[0.8rem] xl:text-[1rem]  2xl:text-2xl">WHAT I DO</span>
+            <span className="text-primary-orange  font-bold text-5xl ss:text-[0.45rem] sm:text-[0.8rem] xl:text-[1rem]  2xl:text-2xl">WHAT I DO</span>
           </div>
           <Divider title={
-            <div className="text-white font-family-CormorantGaramondBold text-5xl ss:text-[0.4rem] sm:text-[1.2rem] lg:text-2xl xl:text-3xl">
+            <div className="text-white font-family-CormorantGaramondBold text-5xl ss:text-[0.45rem] sm:text-[1.2rem] lg:text-2xl xl:text-3xl">
               <p>Core consulting Services</p>
             </div>
           }  />

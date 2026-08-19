@@ -353,26 +353,6 @@ function Home() {
                 />
               </section>
 
-              {/* <section
-                className="
-        flex
-        justify-center
-        lg:justify-end
-      "
-              >
-                <img
-                  src={PlanetEarth}
-                  alt="Planet Earth"
-                  className="
-          w-44
-          sm:w-56
-          lg:w-72
-          xl:w-80
-          object-contain
-          
-        "
-                />
-              </section> */}
             </div>
           </div>{" "}
         </div>
