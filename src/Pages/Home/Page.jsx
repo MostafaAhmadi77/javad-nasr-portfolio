@@ -115,7 +115,7 @@ function Home() {
           </div>
         </div>{" "}
         <div className="Divider">
-          <Divider title="AREAS OF EXPERTISE" />
+          <Divider title="AREAS OF EXPERTISE" sizeText="" />
         </div>
         <div className="flex flex-wrap  items-center justify-center text-center place-items-center gap-8 p-7 ss:grid ss:grid-cols-2   sm:grid sm:grid-cols-5 md:grid   md:grid-cols-5  md:grid-rows-2 md:text-center  lgg:flex lgg:flex-nowrap">
           {textIcon.map((item) => {
@@ -261,7 +261,7 @@ function Home() {
                   ))}
                 </div>
               </section>
-              <div className="w-full border-t-2 border-primary-orange opacity-20 mt-10"></div>
+              <div className="w-full h-[0.1rem] bg-[radial-gradient(circle,#FB5701_0%,#050302_99%)] opacity-90 mt-10"></div>
 
               <Title title="WHY ORGANIZATIONS CHOOSE TO WORK WITH ME" />
 
