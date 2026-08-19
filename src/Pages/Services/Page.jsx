@@ -30,10 +30,10 @@ function Services() {
       <div className="py-2 flex flex-col items-center">
         <div className="w-full flex flex-col items-center gap-3">
           <div className="">
-            <span className="text-primary-orange  font-bold text-5xl sm:text-[0.8rem] xl:text-[1rem]  2xl:text-2xl">WHAT I DO</span>
+            <span className="text-primary-orange  font-bold text-5xl ss:text-[0.9rem] sm:text-[0.8rem] xl:text-[1rem]  2xl:text-2xl">WHAT I DO</span>
           </div>
           <Divider title={
-            <div className="text-white font-family-CormorantGaramondBold text-5xl sm:text-1xl lg:text-2xl xl:text-3xl">
+            <div className="text-white font-family-CormorantGaramondBold text-5xl ss:text-[0.9rem] sm:text-[1.2rem] lg:text-2xl xl:text-3xl">
               <p>Core consulting Services</p>
             </div>
           }  />
