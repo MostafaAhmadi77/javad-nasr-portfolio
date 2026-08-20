@@ -8,7 +8,7 @@ function Services() {
         HeroImage={HeroImg}
         titlePage="SERVICES"
         textHyper={
-          <div className=" flex  ss:flex-col ss:justify-center ss:items-center ss:text-3xl md:flex-col md:justify-start md:items-start md:text-5xl font-family-CormorantGaramondBold text-6xl">
+          <div className=" flex  ss:flex-col ss:justify-center ss:items-center ss:text-3xl md:flex-col md:justify-center md:items-center md:text-5xl lg:justify-start lg:items-start font-family-CormorantGaramondBold text-6xl">
             <section className="w-full md:w-[30%] mb-6 h-[0.1rem] bg-[radial-gradient(circle,#FB5701_0%,#050302_99%)]"></section>
             <p>Strategic Solutions.</p>
             <span>
