@@ -143,7 +143,9 @@ function Home() {
             );
           })}
         </div>{" "}
-        <hr className="text-primary-orange  mr-5 ml-5 " />
+        <br />
+        <div className="w-full h-[0.1rem] bg-[radial-gradient(circle,#FB5701_0%,#050302_99%)] mr-5 ml-5 "></div>
+        
         <div className="px-4 py- sm:px-6 lg:px-5">
           <div
             className="
@@ -157,6 +159,8 @@ function Home() {
       lg:justify-between
       lg:items-center
       lg:text-left
+
+      mt-5
     "
           >
             <section>
