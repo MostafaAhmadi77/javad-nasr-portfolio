@@ -68,12 +68,12 @@ function Navbar() {
       />
 
       <div
-        className={`fixed  flex flex-col justify-between  top-0 left-0 h-screen rounded-r-2xl rounded-tr-2xl w-72 bg-[#111111] text-white z-50 transform transition-transform duration-500 ease-in-out ${
+        className={`fixed  flex flex-col  top-0 left-0 h-screen rounded-r-2xl rounded-tr-2xl w-72 bg-[#111111] text-white z-50 transform transition-transform duration-500 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="">
-          <div className=" flex items-center justify-strat ss p-6 border-b border-gray-700">
+          <div className=" flex items-center justify-between ss p-6 border-b border-gray-700">
             <h2 className="text-2xl font-bold text-[#FB5701]">
               <img className="size-14" src={Logo} alt="" />
             </h2>
