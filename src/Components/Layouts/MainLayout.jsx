@@ -18,7 +18,7 @@ function MainLayout() {
           <Outlet />
        
         </div>
-        <footer className="bg-black text-white flex flex-1">
+        <footer className="bg-black text-white flex flex-1 z-10">
           <Footer />
         </footer>
       </div>

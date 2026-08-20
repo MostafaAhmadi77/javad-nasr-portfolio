@@ -68,37 +68,49 @@ function Navbar() {
       />
 
       <div
-        className={`fixed top-0 left-0 h-screen rounded-r-2xl rounded-tr-2xl w-72 bg-[#111111] text-white z-50 transform transition-transform duration-500 ease-in-out ${
+        className={`fixed  flex flex-col justify-between  top-0 left-0 h-screen rounded-r-2xl rounded-tr-2xl w-72 bg-[#111111] text-white z-50 transform transition-transform duration-500 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between p-6 border-b border-gray-700">
-          <h2 className="text-2xl font-bold text-[#FB5701]">JN</h2>
+        <div className="">
+          <div className="flex items-center justify-between p-6 border-b border-gray-700">
+            <h2 className="text-2xl font-bold text-[#FB5701]">
+              <img className="size-14" src={Logo} alt="" />
+            </h2>
 
-          <button onClick={() => setIsOpen(false)} className="text-3xl">
-            <HiOutlineX />
-          </button>
+            <button onClick={() => setIsOpen(false)} className="text-3xl">
+              <HiOutlineX />
+            </button>
+          </div>
+          <ul
+            className="flex flex-col gap-8 p-8 text-lg"
+            onClick={() => {
+              setIsOpen(false);
+            }}
+          >
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="Work">Work</Link>
+            </li>
+            <li>
+              <Link to="services">Services</Link>
+            </li>
+
+            <li>
+              <Link to="process">Process</Link>
+            </li>
+            <li>
+              <Link to="insights">Insights</Link>
+            </li>
+            <li>
+              <Link to="about">About</Link>
+            </li>
+          </ul>
         </div>
 
-        <ul className="flex flex-col gap-8 p-8 text-lg">
-          <li>
-            <Link to="Work">Work</Link>
-          </li>
-          <li>
-            <Link to="services">Services</Link>
-          </li>
-          <li>
-            <Link to="about">About</Link>
-          </li>
-          <li>
-            <Link to="process">Process</Link>
-          </li>
-          <li>
-            <Link to="insights">Insights</Link>
-          </li>
-        </ul>
-
-        <div className="px-8 mt-10">
+        <div className="px-8 my-10">
           <Button
             title="Let's Work Together"
             icon={<GoArrowRight />}
