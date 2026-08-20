@@ -299,7 +299,7 @@ function Home() {
       sm:gap-10
     "
             >
-              <section className=" flex flex-col  text-center lg:text-left  ">
+              <section className=" flex flex-col items-center justify-center text-center lg:text-left  ">
                 <h2
                   className="
                 
@@ -346,6 +346,7 @@ function Home() {
           px-7
           py-4
           flex
+          mb-12
           items-center
           gap-3
           whitespace-nowrap
