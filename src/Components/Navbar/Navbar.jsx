@@ -73,7 +73,7 @@ function Navbar() {
         }`}
       >
         <div className="">
-          <div className="flex items-center justify-between p-6 border-b border-gray-700">
+          <div className=" flex items-center justify-strat ss p-6 border-b border-gray-700">
             <h2 className="text-2xl font-bold text-[#FB5701]">
               <img className="size-14" src={Logo} alt="" />
             </h2>
@@ -110,7 +110,7 @@ function Navbar() {
           </ul>
         </div>
 
-        <div className="px-8 my-10">
+        <div className="px-8 mt-10">
           <Button
             title="Let's Work Together"
             icon={<GoArrowRight />}
