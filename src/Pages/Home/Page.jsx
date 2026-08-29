@@ -23,7 +23,7 @@ function Home() {
           textHyper={
             <div className="flex flex-col gap-10">
               <h2 className="font-family-CormorantGaramondBold ">Javad <span className="text-primary-orange">Nasr</span></h2>
-              <span className="text-2xl line-clamp-none  ss:text-[0.7rem] lg:text-2xl">
+              <span className="text-2xl line-clamp-none  ss:text-[0.8rem] lg:text-2xl">
                 Management Consultant | <span className="text-primary-orange">Businness Strategist</span>  |
                 Organizational Transformation Partner
               </span>
