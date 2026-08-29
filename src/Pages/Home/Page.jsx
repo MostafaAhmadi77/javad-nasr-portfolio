@@ -23,7 +23,7 @@ function Home() {
           textHyper={
             <div className="flex flex-col gap-10">
               <h2 className="font-family-CormorantGaramondBold ">Javad <span className="text-primary-orange">Nasr</span></h2>
-              <span className="text-2xl line-clamp-none">
+              <span className="text-2xl line-clamp-none  ss:text-[0.93rem] lg:text-2xl">
                 Management Consultant | <span className="text-primary-orange">Businness Strategist</span>  |
                 Organizational Transformation Partner
               </span>
@@ -46,24 +46,8 @@ function Home() {
           />
             </div>
           }
-          textPageEnd ="Trusted by forward-thinking brands"
-          brand={
-            <div className="flex gap-3 flex-wrap">
-              {brand.map((item) => {
-      const Icon = item.Icon;
-
-      return (
-        <span
-          key={item.title}
-          className="flex items-center gap-1 text-gray-300 hover:text-primary-orange transition"
-        >
-          <Icon />
-          {item.title}
-        </span>
-      );
-    })}
-            </div>
-          }
+          
+         
         />
       </div>
       <main className="text-white  border border-primary-orange border-b-0 rounded-t-2xl mr-4 ml-4  backdrop-blur-xl  bg-white/2 ss:pt-6 sm:pt-6  xl:pt-0 ">

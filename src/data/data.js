@@ -4,7 +4,7 @@ import { FaWebflow } from "react-icons/fa6";
 import { SiLoom, SiNotion } from "react-icons/si";
 import { RiDonutChartFill, RiOrganizationChart } from "react-icons/ri";
 import { TiBusinessCard } from "react-icons/ti";
-import { TbChartHistogram } from "react-icons/tb";
+import { TbChartHistogram, TbCompass, TbTargetArrow } from "react-icons/tb";
 import img2 from "../assets/Images/mainimg/img2.png";
 import img3 from "../assets/Images/mainimg/img3.png";
 import img1 from "../assets/Images/mainimg/img1.png";
@@ -13,10 +13,10 @@ import img5 from "../assets/Images/mainimg/img5.png";
 import img6 from "../assets/Images/mainimg/img6.png";
 import { BsPencil } from "react-icons/bs";
 import { CiSettings, CiSearch } from "react-icons/ci";
-import { PiGraduationCap } from "react-icons/pi";
+import { PiChartLineUp, PiGraduationCap, PiUsersThree } from "react-icons/pi";
 import { IoIosInfinite } from "react-icons/io";
 import { GiChessKnight } from "react-icons/gi";
-import { IoExtensionPuzzleOutline } from "react-icons/io5";
+import { IoExtensionPuzzleOutline, IoSettingsOutline } from "react-icons/io5";
 import { FaUsers } from "react-icons/fa";
 import { LuChartNoAxesCombined } from "react-icons/lu";
 
@@ -220,4 +220,90 @@ export const secoundItems = [
     des: "Focused on results that create lasing value.",
     icon: LuChartNoAxesCombined,
   },
+];
+
+export const dataServices = [
+  {
+    id: 1,
+    title: "Strategy Development",
+    description:
+      "Crafting bold, actionable strategies tht align visionwith market realities and drive competitive advantage",
+
+    itemService: [
+      "Business Strategy",
+      "Market & Competitive Analysis",
+      "Strategic Planning",
+      "Growth Strategy",
+    ],
+    icon:TbCompass
+  },
+  {
+    id: 2,
+    title: "Organizational Development",
+    description:
+      "Building agile, high performing organizations through structure,culture,and people",
+    itemService: [
+      "Organizational design",
+      "Change Management",
+      "Culture Transformation",
+      "Talent & Capability Building",
+    ],
+    icon:PiUsersThree
+  },
+  {
+    id: 3,
+    title: "Business Process Management",
+    description:
+      "Oprimizing processes to imporve efficiency, reduce costs, and enhance customer experience.",
+    itemService: [
+      "Process Mapping & Analysis",
+      "Process Redesign",
+      "Automation & Digitalization",
+      "Performance Improvement",
+    ],
+    icon:IoSettingsOutline
+  },
+    {
+    id: 4,
+    title: "Performance Management",
+    description:
+      "Implementing systems and kpls thar trun goals into measurable and sustainable results.",
+    itemService: [
+      "KPL Development",
+      "Performance Dashboards",
+      "OKR Implementation",
+      "Performance Optimaization",
+    ],
+    icon:PiChartLineUp
+    
+  },
+    {
+    id: 5,
+    title: "sales & Marketing Transformation",
+    description:
+      "Strengthening go-to-market strategies to accelerate growth and customer value.",
+    itemService: [
+      "Sales Strategy",
+      "Marketing Strategy",
+      "Customer Segmentation",
+      "Revenue Growth Management",
+    ],
+    icon:TbTargetArrow
+  },
+    {
+    id: 6,
+    title: "Leadership & Executive Advisory",
+    description:
+      "Empowering leaders with clarity, insight, and practical guidance to lead with impact",
+    itemService: [
+      "Executive Coaching",
+      "Leadership Development",
+      "Board Advisory",
+      "Pecision Support",
+    ],
+    icon:TbTargetArrow
+  },
+
+
+
 ];
