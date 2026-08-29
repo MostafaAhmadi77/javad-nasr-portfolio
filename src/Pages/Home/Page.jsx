@@ -1,6 +1,12 @@
 import { GoArrowRight } from "react-icons/go";
 // import { Link } from "react-router";
-import { brand, imgData, secoundItems, textIcon, topicItems } from "../../data/data";
+import {
+  brand,
+  imgData,
+  secoundItems,
+  textIcon,
+  topicItems,
+} from "../../data/data";
 import Button from "../../Components/Button/Button";
 import CartIcon from "../../Components/Card/CartIcons/CartIcon";
 import { dataIcon } from "../../Components/Card/CartIcons/dataIcon/data";
@@ -22,12 +28,16 @@ function Home() {
           titlePage="HELLO, I'M"
           textHyper={
             <div className="flex flex-col gap-10">
-              <h2 className="font-family-CormorantGaramondBold ">Javad <span className="text-primary-orange">Nasr</span></h2>
+              <h2 className="font-family-CormorantGaramondBold ">
+                Javad <span className="text-primary-orange">Nasr</span>
+              </h2>
               <span className="text-2xl line-clamp-none  ss:text-[0.85rem] lg:text-2xl">
-                Management Consultant | <span className="text-primary-orange">Businness Strategist</span>  |
-                Organizational Transformation Partner
+                Management Consultant |{" "}
+                <span className="text-primary-orange">
+                  Businness Strategist
+                </span>{" "}
+                | Organizational Transformation Partner
               </span>
-
             </div>
           }
           textPageDescription="Helping organizations transform strategy into execution, build
@@ -40,14 +50,12 @@ function Home() {
                 styleBtn="flex justify-center items-center bg-primary-orange px-8 py-3 gap-3 rounded-2xl text-white  transition"
               />
               <Button
-            title="Explore Services"
-            icon={<GoArrowRight />}
-            styleBtn="flex justify-center items-center border border-withe px-10 py-3 gap-3 gap-3 rounded-2xl text-white hover:text-white transition"
-          />
+                title="Explore Services"
+                icon={<GoArrowRight />}
+                styleBtn="flex justify-center items-center border border-withe px-10 py-3 gap-3 gap-3 rounded-2xl text-white hover:text-white transition"
+              />
             </div>
           }
-          
-         
         />
       </div>
       <main className="text-white  border border-primary-orange border-b-0 rounded-t-2xl mr-4 ml-4  backdrop-blur-xl  bg-white/2 ss:pt-6 sm:pt-6  xl:pt-0 ">
@@ -65,12 +73,16 @@ function Home() {
             </section>
 
             <section>
-              <span className="text-sm sm:text-base lg:text-[0.9rem] font-bold leading-8 text-zinc-300">
+              <div className="w-full max-w-2xl text-sm sm:text-base lg:text-[0.9rem] font-bold leading-8 text-zinc-300 text-justify">
                 I partner with leadership teams to turn challenges into
                 opportunities through strategy, systems, and execution. My
                 approach combines deep analytical thinking with hands-on
                 implementation to deliver measurable and sustainable results.
-              </span>
+                <span aria-hidden="true" className="invisible select-none">
+                  {" "}
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+              </div>
             </section>
 
             <section className="flex justify-center xl:justify-start">
@@ -129,7 +141,6 @@ function Home() {
         </div>{" "}
         <br />
         <div className="w-[95%] h-[0.1rem] bg-[radial-gradient(circle,#FB5701_0%,#050302_99%)] mr-5 ml-5 "></div>
-        
         <div className="px-4 py- sm:px-6 lg:px-5">
           <div
             className="
@@ -341,7 +352,6 @@ function Home() {
         "
                 />
               </section>
-
             </div>
           </div>{" "}
         </div>
