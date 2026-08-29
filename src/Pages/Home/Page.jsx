@@ -119,22 +119,24 @@ function Home() {
               <div
                 key={item.id}
                 className="
-          flex  flex-col items-center justify-center  text-center w-full
+          flex  flex-col items-center justify-center   text-center w-full
           
           ss:w-[5%]
           sm:w-[50%]
-           lg:w-[22%]
+           lg:w-[25%]
            2xl:w-[18%]
       
         "
               >
-                <span className="text-primary-orange text-5xl  lg:text-5xl">
-                  {<item.icon />}
-                </span>
+                <div className=" w-full flex flex-col  justify-center items-center ">
+                  <span className="text-primary-orange text-5xl   lg:text-5xl">
+                    {<item.icon />}
+                  </span>
 
-                <span className="mt-4 text-sm sm:text-base leading-5 lg:text-1xl ">
-                  {item.discription}
-                </span>
+                  <span className="mt-4 text-sm sm:text-base leading-5 lg:text-[13px] w-full">
+                    {item.discription}
+                  </span>
+                </div>
               </div>
             );
           })}

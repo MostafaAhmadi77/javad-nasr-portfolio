@@ -1,7 +1,7 @@
-import { BiLogoUpwork } from "react-icons/bi";
+import { BiBuoy, BiLogoUpwork } from "react-icons/bi";
 import { FaSlack } from "react-icons/fa";
 import { FaWebflow } from "react-icons/fa6";
-import { SiLoom, SiNotion } from "react-icons/si";
+import { SiGooglemarketingplatform, SiLoom, SiNotion } from "react-icons/si";
 import { RiDonutChartFill, RiOrganizationChart } from "react-icons/ri";
 import { TiBusinessCard } from "react-icons/ti";
 import { TbChartHistogram, TbCompass, TbTargetArrow } from "react-icons/tb";
@@ -94,8 +94,8 @@ export const textIcon = [
   },
   {
     id: 5,
-    discription: "Organizational Developmrnt",
-    icon: RiOrganizationChart,
+    discription: "Sales & Marketing Transformation",
+    icon: BiBuoy,
   },
   {
     id: 6,
