@@ -3,7 +3,7 @@ import Logo from "../../assets/Images/Logo.png";
 import Navigation from "./components/Navigation";
 import Services from "./components/Services";
 import Legal from "./components/Legal";
-import Team from "../../assets/Images/Team.png"
+
 import Connects from "./components/Connects";
 function Footer() {
   return (
