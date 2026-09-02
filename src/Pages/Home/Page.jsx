@@ -18,9 +18,11 @@ import Title from "./components/Title";
 import SecoundItems from "./components/SecoundItems";
 import Hero from "../../Components/Hero/Hero";
 import HeroImg from "../../assets/Images/H1.png";
-import { Tooltip } from "@mui/material";
+
+import { useState } from "react";
 
 function Home() {
+  const [activeCard, setActiveCard] = useState(null);
   return (
     <>
       <div className="">
@@ -192,75 +194,69 @@ function Home() {
   "
           >
             {imgData.map((item) => (
-              <div
-                key={item.id}
-                className="
-                group
-    flex
-    flex-col
-    justify-between
-    border
-    border-orange-950
-    rounded-2xl
-    overflow-hidden
-    w-full
-    sm:w-[48%]
-    lg:w-[31%]
-    xl:w-[31%]
-    transition-all
-    duration-500
-    hover:pb-5
-    hover:-translate-y-4
-    hover:-translate-x-2
-    hover:border-primary-orange
-    hover:shadow-[15px_15px_20px_rgba(251,87,1,.18)]
-      "
-              >
-                <section>
-                  <img
-                    className="w-full h-52 object-cover rounded-t-2xl"
-                    src={item.img}
-                    alt={item.title}
-                  />
-                </section>
+  <div
+    key={item.id}
+    onTouchStart={() => setActiveCard(item.id)}
+    className="
+      group
+      flex flex-col justify-between
+      border border-orange-950
+      rounded-2xl
+      overflow-hidden
+      w-full
+      sm:w-[48%]
+      lg:w-[31%]
 
-                <section className="px-4 py-4 flex-1">
-                  <span className="text-xs font-bold text-primary-orange">
-                    <abbr
-                      title={item.description}
-                      className="no-underline"
-                    >
-                      {item.title}
-                    </abbr>
-                  </span>
+      transition-all duration-500
 
-                  <br />
+      lg:hover:-translate-y-4
+      lg:hover:-translate-x-2
+      lg:hover:border-primary-orange
+      lg:hover:shadow-[15px_15px_20px_rgba(251,87,1,.18)]
+    "
+  >
 
-                  {/* <abbr className="text-base font-bold" title={item.description}>
-                    {item.description}
-                  </abbr> */}
-                </section>
+    <section>
+      <img
+        className="w-full h-52 object-cover rounded-t-2xl"
+        src={item.img}
+        alt={item.title}
+      />
+    </section>
 
-                <section
-                  className=" px-4
-    opacity-100
-    translate-y-0
+    <section className="px-4 py-4 flex-1">
+      <span className="text-xs font-bold text-primary-orange">
+        <abbr
+          title={item.description}
+          className="w-10 h-10 no-underline"
+        >
+          {item.title}
+        </abbr>
+      </span>
+    </section>
 
-    lg:opacity-0
-    lg:translate-y-3
-    lg:group-hover:opacity-100
-    lg:group-hover:translate-y-0
+    <section
+      className={`
+        px-4 pb-4
+        opacity-0
+        translate-y-3
+        transition-all duration-500 ease-out
 
-    transition-all
-    duration-500
-    ease-out"
-                >
-                  <Button
-                    title="View Case Study"
-                    icon={<GoArrowRight />}
-                    styleBtn="flex items-center gap-3 text-primary-orange"
-                  />
-                </section>
+        ${activeCard === item.id
+          ? "opacity-100 translate-y-0"
+          : ""}
+
+        lg:group-hover:opacity-100
+        lg:group-hover:translate-y-0
+      `}
+    >
+      <Button
+        title="View Case Study"
+        icon={<GoArrowRight />}
+        styleBtn="flex items-center gap-3 text-primary-orange"
+      />
+    </section>
+
               </div>
             ))}
           </div>{" "}
