@@ -49,7 +49,7 @@ export default function TopicItems({ id, title, des, icon: Icon }) {
         text-gray-400
       "
       >
-        {des}
+        
       </p>
     </div>
   );
