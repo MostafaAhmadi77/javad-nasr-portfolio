@@ -34,12 +34,11 @@ function Footer() {
 
 
       <div className="border border-primary-orange border-r-0 border-l-0 flex items-center gap-3 justify-center">
-        <section className="flex items-center gap-4 border-primary-orange border border-t-0 border-b-0 rounded-2xl pr-2 pl-2 "> 
+        <section className="flex items-center gap-2 border-primary-orange  p-2"> 
 
-        <img className="size-10" src={Team} alt="" />
-        <h3>Built pixel by pixel by  <span className="text-primary-orange">Oaktech</span></h3>
+        <span>©</span>
+        <h3>Built pixel by pixel by  <span className="text-primary-orange"> Oaktech</span></h3>
         </section>
-
       </div>
     </div>
     </>
