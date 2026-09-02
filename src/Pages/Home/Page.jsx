@@ -239,15 +239,19 @@ function Home() {
                 </section>
 
                 <section className="px-4 pb-4
-    opacity-0
-    translate-y-3
-    pointer-events-none
+
+    opacity-100
+    translate-y-0
+
+    lg:opacity-0
+    lg:translate-y-3
+
     transition-all
     duration-500
     ease-out
-    group-hover:opacity-100
-    group-hover:translate-y-0
-    group-hover:pointer-events-auto">
+
+    lg:group-hover:opacity-100
+    lg:group-hover:translate-y-0">
                   <Button
                     title="View Case Study"
                     icon={<GoArrowRight />}
