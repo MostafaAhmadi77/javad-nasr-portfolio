@@ -1,10 +1,20 @@
 import { BiBuoy, BiLogoUpwork } from "react-icons/bi";
-import { FaSlack } from "react-icons/fa";
+import { FaChess, FaSlack, FaWpforms } from "react-icons/fa";
 import { FaWebflow } from "react-icons/fa6";
-import { SiGooglemarketingplatform, SiLoom, SiNotion } from "react-icons/si";
+import {
+  SiGoogleearthengine,
+  SiGooglemarketingplatform,
+  SiLoom,
+  SiNotion,
+} from "react-icons/si";
 import { RiDonutChartFill, RiOrganizationChart } from "react-icons/ri";
 import { TiBusinessCard } from "react-icons/ti";
-import { TbChartHistogram, TbCompass, TbTargetArrow } from "react-icons/tb";
+import {
+  TbBrandBinance,
+  TbChartHistogram,
+  TbCompass,
+  TbTargetArrow,
+} from "react-icons/tb";
 import img2 from "../assets/Images/mainimg/img2.png";
 import img3 from "../assets/Images/mainimg/img3.png";
 import img1 from "../assets/Images/mainimg/img1.png";
@@ -13,7 +23,12 @@ import img5 from "../assets/Images/mainimg/img5.png";
 import img6 from "../assets/Images/mainimg/img6.png";
 import { BsPencil } from "react-icons/bs";
 import { CiSettings, CiSearch } from "react-icons/ci";
-import { PiChartLineUp, PiGraduationCap, PiUsersThree } from "react-icons/pi";
+import {
+  PiChartLineUp,
+  PiGraduationCap,
+  PiStudent,
+  PiUsersThree,
+} from "react-icons/pi";
 import { IoIosInfinite } from "react-icons/io";
 import { GiChessKnight } from "react-icons/gi";
 import { IoExtensionPuzzleOutline, IoSettingsOutline } from "react-icons/io5";
@@ -99,28 +114,28 @@ export const textIcon = [
   },
   {
     id: 6,
-    discription: "Organizational Developmrnt",
-    icon: RiOrganizationChart,
+    discription: "Brand Development",
+    icon: TbBrandBinance,
   },
   {
     id: 7,
-    discription: "Organizational Developmrnt",
-    icon: RiOrganizationChart,
+    discription: "Executive Education",
+    icon: PiStudent,
   },
   {
     id: 8,
-    discription: "Organizational Developmrnt",
-    icon: RiOrganizationChart,
+    discription: "Leadership Advisory",
+    icon: FaChess,
   },
   {
     id: 9,
-    discription: "Organizational Developmrnt",
-    icon: RiOrganizationChart,
+    discription: "Strategy Execution",
+    icon: SiGoogleearthengine,
   },
   {
     id: 10,
-    discription: "Organizational Developmrnt",
-    icon: RiOrganizationChart,
+    discription: "Market Research & Business Intelligence",
+    icon: FaWpforms,
   },
 ];
 export const imgData = [
@@ -128,7 +143,8 @@ export const imgData = [
     id: 1,
     img: img1,
     title: "STRATEGY & TRANSFORMATION",
-    description: "Steel Holding Company Strategic Transformation",
+    description:
+      "Supporting business leaders in defining strategic direction, identifying growth opportunities, and building competitive advantage through practical and executable strategies.",
   },
   {
     id: 2,
@@ -235,7 +251,7 @@ export const dataServices = [
       "Strategic Planning",
       "Growth Strategy",
     ],
-    icon:TbCompass
+    icon: TbCompass,
   },
   {
     id: 2,
@@ -248,7 +264,7 @@ export const dataServices = [
       "Culture Transformation",
       "Talent & Capability Building",
     ],
-    icon:PiUsersThree
+    icon: PiUsersThree,
   },
   {
     id: 3,
@@ -261,9 +277,9 @@ export const dataServices = [
       "Automation & Digitalization",
       "Performance Improvement",
     ],
-    icon:IoSettingsOutline
+    icon: IoSettingsOutline,
   },
-    {
+  {
     id: 4,
     title: "Performance Management",
     description:
@@ -274,10 +290,9 @@ export const dataServices = [
       "OKR Implementation",
       "Performance Optimaization",
     ],
-    icon:PiChartLineUp
-    
+    icon: PiChartLineUp,
   },
-    {
+  {
     id: 5,
     title: "sales & Marketing Transformation",
     description:
@@ -288,9 +303,9 @@ export const dataServices = [
       "Customer Segmentation",
       "Revenue Growth Management",
     ],
-    icon:TbTargetArrow
+    icon: TbTargetArrow,
   },
-    {
+  {
     id: 6,
     title: "Leadership & Executive Advisory",
     description:
@@ -301,9 +316,6 @@ export const dataServices = [
       "Board Advisory",
       "Pecision Support",
     ],
-    icon:TbTargetArrow
+    icon: TbTargetArrow,
   },
-
-
-
 ];

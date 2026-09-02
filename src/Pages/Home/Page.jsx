@@ -18,6 +18,7 @@ import Title from "./components/Title";
 import SecoundItems from "./components/SecoundItems";
 import Hero from "../../Components/Hero/Hero";
 import HeroImg from "../../assets/Images/H1.png";
+import { Tooltip } from "@mui/material";
 
 function Home() {
   return (
@@ -161,7 +162,7 @@ function Home() {
     "
           >
             <section>
-              <SectionTitle title="FEATURED TRANSFORMATIONS" />
+              <SectionTitle title="INDUSTRY EXPERTISE" />
             </section>
 
             <section>
@@ -194,25 +195,24 @@ function Home() {
               <div
                 key={item.id}
                 className="
-                transition-all
-      duration-500
-      hover:-translate-y-4
-      hover:-translate-x-2
-      hover:border-primary-orange
-                hover:shadow-[15px_15px_20px_rgba(251,87,1,.18)]
-                
-        flex
-        flex-col
-        justify-between
-        border
-        border-orange-950
-        rounded-2xl
-        overflow-hidden
-
-        w-full
-        sm:w-[48%]
-        lg:w-[31%]
-        xl:w-[31%]
+                group
+    transition-all
+    duration-500
+    hover:-translate-y-4
+    hover:-translate-x-2
+    hover:border-primary-orange
+    hover:shadow-[15px_15px_20px_rgba(251,87,1,.18)]
+    flex
+    flex-col
+    justify-between
+    border
+    border-orange-950
+    rounded-2xl
+    overflow-hidden
+    w-full
+    sm:w-[48%]
+    lg:w-[31%]
+    xl:w-[31%]
       "
               >
                 <section>
@@ -225,17 +225,29 @@ function Home() {
 
                 <section className="px-4 py-4 flex-1">
                   <span className="text-xs font-bold text-primary-orange">
+                    <abbr title={item.description} className="w-10 h-10 no-underline">
+
                     {item.title}
+                    </abbr>
                   </span>
 
                   <br />
 
-                  <span className="text-base font-bold">
+                  {/* <abbr className="text-base font-bold" title={item.description}>
                     {item.description}
-                  </span>
+                  </abbr> */}
                 </section>
 
-                <section className="px-4 pb-4">
+                <section className="px-4 pb-4
+    opacity-0
+    translate-y-3
+    pointer-events-none
+    transition-all
+    duration-500
+    ease-out
+    group-hover:opacity-100
+    group-hover:translate-y-0
+    group-hover:pointer-events-auto">
                   <Button
                     title="View Case Study"
                     icon={<GoArrowRight />}
