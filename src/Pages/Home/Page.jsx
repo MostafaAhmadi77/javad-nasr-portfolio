@@ -129,12 +129,12 @@ function Home() {
       
         "
               >
-                <div className=" w-full flex flex-col  justify-center items-center ">
-                  <span className="text-primary-orange text-5xl   lg:text-5xl">
+                <div className=" w-full flex flex-1  flex-col  justify-center items-center ">
+                  <span className="text-primary-orange text-5xl text-center   lg:text-5xl">
                     {<item.icon />}
                   </span>
 
-                  <span className="mt-4 text-sm sm:text-base leading-5 lg:text-[13px] w-full">
+                  <span className="mt-4 flex text-sm sm:text-base leading-5 lg:text-[13px] ">
                     {item.discription}
                   </span>
                 </div>
@@ -196,12 +196,6 @@ function Home() {
                 key={item.id}
                 className="
                 group
-    transition-all
-    duration-500
-    hover:-translate-y-4
-    hover:-translate-x-2
-    hover:border-primary-orange
-    hover:shadow-[15px_15px_20px_rgba(251,87,1,.18)]
     flex
     flex-col
     justify-between
@@ -213,6 +207,13 @@ function Home() {
     sm:w-[48%]
     lg:w-[31%]
     xl:w-[31%]
+    transition-all
+    duration-500
+    hover:pb-5
+    hover:-translate-y-4
+    hover:-translate-x-2
+    hover:border-primary-orange
+    hover:shadow-[15px_15px_20px_rgba(251,87,1,.18)]
       "
               >
                 <section>
@@ -225,9 +226,11 @@ function Home() {
 
                 <section className="px-4 py-4 flex-1">
                   <span className="text-xs font-bold text-primary-orange">
-                    <abbr title={item.description} className="w-10 h-10 no-underline">
-
-                    {item.title}
+                    <abbr
+                      title={item.description}
+                      className="no-underline"
+                    >
+                      {item.title}
                     </abbr>
                   </span>
 
@@ -238,16 +241,20 @@ function Home() {
                   </abbr> */}
                 </section>
 
-                <section className="px-4 pb-4
-    opacity-0
-    translate-y-3
-    pointer-events-none
+                <section
+                  className=" px-4
+    opacity-100
+    translate-y-0
+
+    lg:opacity-0
+    lg:translate-y-3
+    lg:group-hover:opacity-100
+    lg:group-hover:translate-y-0
+
     transition-all
     duration-500
-    ease-out
-    group-hover:opacity-100
-    group-hover:translate-y-0
-    group-hover:pointer-events-auto">
+    ease-out"
+                >
                   <Button
                     title="View Case Study"
                     icon={<GoArrowRight />}

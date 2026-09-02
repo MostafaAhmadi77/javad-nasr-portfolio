@@ -1,9 +1,4 @@
-export default function TopicItems({
-  id,
-  title,
-  des,
-  icon: Icon,
-}) {
+export default function TopicItems({ id, title, des, icon: Icon }) {
   return (
     <div
       className="
