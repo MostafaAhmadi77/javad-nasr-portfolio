@@ -20,7 +20,7 @@ function CartIcon({ icon, w="w-20", h="h-20", title, description, option, setylD
       
       
       ${styles}
-      items-start
+      
       
       
       transition-all

@@ -408,8 +408,8 @@ function Home() {
                     title={data.title}
                     description={data.decription}
                     icon={<Icon />}
-                    styles={" text-center flex flex-col items-center justify-center"}
-                    flex={" flex flex-col items-center justify-center"}
+                    styles={" text-center flex flex-col gap-2 items-center justify-center"}
+                    flex={" flex flex-col items-center gap-4 justify-center"}
                      data-aos="flip-up"
                   data-aos-duration="900"
                   data-aos-delay={index * 120}
