@@ -40,14 +40,14 @@ function Services() {
             <div>
               <span
                 data-aos="zoom-out"
-                className="text-primary-orange font-bold text-5xl ss:text-[0.45rem] sm:text-[0.8rem] xl:text-[1rem] 2xl:text-2xl"
+                className="text-primary-orange font-bold text-5xl ss:text-[1rem] sm:text-[0.8rem] xl:text-[1rem] 2xl:text-2xl"
               >
                 WHAT I DO
               </span>
             </div>
             <Divider
               title={
-                <div className="text-white font-family-CormorantGaramondBold text-5xl ss:text-[0.45rem] sm:text-[1.2rem] lg:text-2xl xl:text-3xl">
+                <div className="text-white font-family-CormorantGaramondBold text-5xl ss:text-[1rem] sm:text-[1.2rem] lg:text-2xl xl:text-3xl">
                   <p>Core consulting Services</p>
                 </div>
               }
@@ -62,16 +62,17 @@ function Services() {
                   key={item.id}
                   icon={<Icon />}
                   title={item.title}
-                  styles="h-full gap-6"
-                  flex="w-full flex items-center gap-5"
+                  styles="h-full gap-6 ss:items-center ss:text-center lg:items-start 
+                  lg:text-start"
+                  flex="w-full flex items-center ss:justify-center  gap-5"
                   description={item.description}
-                  setylDec={"w-[18rem] "}
+                  setylDec={"w-[18rem]"}
                   w={"w-auto"}
                   h={"h-auto p-1"}
                   option={
                     <div className="flex flex-col flex-1  gap-2 mt-auto">
                       {item.itemService.map((service, index) => (
-                        <p key={index} className="flex  items-center gap-2">
+                        <p key={index} className="flex  items-center ss:flex-col lg:flex-row gap-2">
                           <span className="text-primary-orange">
                             <HiOutlineCheckBadge />
                           </span>
