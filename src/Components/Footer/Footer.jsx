@@ -14,11 +14,11 @@ function Footer() {
       md:flex-row md:items-start">
         <div className="flex items-center ss:flex-col ss:items-center md:flex-row ">
           <img src={Logo} className="size-20 bg-cover" alt="" />
-          <section className="w-[16.5rem] flex flex-col justify-center ss:items-center ss:mt-2 md:items-start ">
+          <section className="w-[16.5rem] flex flex-col justify-center items-center sm:items-center ss:items-center ss:mt-2 md:items-start ">
             <span className="font-family-CormorantGaramondBold font-bold text-3xl">
               JAVAD NASR
             </span>
-            <span className="font-family-CormorantGaramondBold text-2xl md:text-[0.9rem]">
+            <span className="text-center font-family-CormorantGaramondBold text-2xl md:text-[0.9rem]">
               Management Consultant | Business Strategist | Organizational Transformation Partner
             </span>
           </section>
