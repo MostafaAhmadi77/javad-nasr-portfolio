@@ -897,7 +897,7 @@ function Home() {
           =================================================== */}
 
           <div
-          data-aos="fade-left"
+          data-aos="fade-up"
           data-aos-duration="900"
             className="
               px-4
