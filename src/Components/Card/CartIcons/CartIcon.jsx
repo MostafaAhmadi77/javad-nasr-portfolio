@@ -39,7 +39,7 @@ function CartIcon({ icon, w="w-20", h="h-20", title, description, option, setylD
             {title}
           </h3>
         </div>
-        <p className={`text-sm ${setylDec}   sm:text-base  text-zinc-400 leading-7`}>
+        <p className={`text-sm ${setylDec}   sm:text-base text-zinc-400 leading-7`}>
           {description}
         </p>
         <div className="text-white ">

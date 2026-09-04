@@ -316,7 +316,7 @@ export const dataServices = [
       "Board Advisory",
       "Pecision Support",
     ],
-    icon: TbTargetArrow,
+    icon: PiGraduationCap,
   },
 ];
 export const titleService = [
