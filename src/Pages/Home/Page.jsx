@@ -25,6 +25,7 @@ import SecoundItems from "./components/SecoundItems";
 import Hero from "../../Components/Hero/Hero";
 import HeroImg from "../../assets/Images/H1.png";
 import { TypeAnimation } from "react-type-animation";
+import Items from "../../Components/Item/Items";
 
 function Home() {
   const [activeCard, setActiveCard] = useState(null);
@@ -47,12 +48,12 @@ function Home() {
       AOS.refreshHard();
     };
 
-    // Refresh after initial render
+    
     const timer = setTimeout(() => {
       AOS.refreshHard();
     }, 300);
 
-    // Refresh after images/layout are loaded
+    
     window.addEventListener("load", refreshAOS);
     window.addEventListener("resize", refreshAOS);
 
@@ -402,14 +403,16 @@ function Home() {
               return (
                 <div
                   key={data.id}
-                  data-aos="flip-up"
-                  data-aos-duration="900"
-                  data-aos-delay={index * 120}
                 >
                   <CartIcon
                     title={data.title}
                     description={data.decription}
                     icon={<Icon />}
+                    styles={" text-center flex flex-col items-center justify-center"}
+                    flex={" flex flex-col items-center justify-center"}
+                     data-aos="flip-up"
+                  data-aos-duration="900"
+                  data-aos-delay={index * 120}
                   />
                 </div>
               );
@@ -770,8 +773,8 @@ function Home() {
                 data-aos-duration="1000"
               >
                 <MainTitle
-                  title="THE DDIES FRAMEWORK™"
-                  des="A proven approach to transform strategy into sustainable results."
+                  title="Consulting Methodology"
+                  des="THE DDIES FRAMEWORK™"
                 />
               </div>
 
@@ -779,57 +782,9 @@ function Home() {
                   FRAMEWORK
               ================================================= */}
 
-              <section className="relative mt-14">
+       
 
-                {/* LINE */}
-
-                <div
-                  className="
-                    hidden
-                    lg:block
-
-                    absolute
-                    top-12
-                    left-0
-                    right-0
-
-                    border-t
-                    border-dashed
-                    border-primary-orange
-
-                    opacity-50
-                  "
-                  data-aos="fade"
-                  data-aos-duration="1500"
-                />
-
-                {/* ITEMS */}
-
-                <div
-                  className="
-                    grid
-                    grid-cols-1
-                    sm:grid-cols-1
-                    lg:grid-cols-5
-
-                    gap-10
-
-                    relative
-                    z-10
-                  "
-                >
-                  {topicItems.map((item, index) => (
-                    <div
-                      key={item.id}
-                      data-aos="flip-left"
-                      data-aos-duration="800"
-                      data-aos-delay={index * 150}
-                    >
-                      <TopicItems {...item} />
-                    </div>
-                  ))}
-                </div>
-              </section>
+              <Items />
 
               {/* =================================================
                   DIVIDER
@@ -936,8 +891,7 @@ function Home() {
                 ss:gap-20
                 sm:gap-10
               "
-              // data-aos="zoom-in"
-              // data-aos-duration="1000"
+          
             >
 
               {/* =================================================
