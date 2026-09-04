@@ -86,20 +86,20 @@ function Services() {
           </div>
         </div>
         <div
-          className="w-full flex flex-col items-center 
+          className="bg-[#111111] w-full flex flex-col items-center 
         py-4 px-4 
         justify-between border border-primary-orange rounded-2xl"
         >
           <p
-            data-aos="fade-down"
-            data-aos-easing="linear"
-            data-aos-duration="1500"
+            data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom"
             className="text-primary-orange font-bold"
           >
             {" "}
             HOW I CREATE IMPACT
           </p>
           <h3
+          data-aos="zoom-in-down"
             className="text-white font-family-CormorantGaramondBold font-bold 
           text-3xl
           "
@@ -107,9 +107,10 @@ function Services() {
             A Holistic Approach to Transformation
           </h3>
           <div className="w-full">
-            <Items />
+            <Items colorText="text-white"/>
           </div>
         </div>
+        <div className=""></div>
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-export default function TopicItems({ id, title, des, icon: Icon }) {
+export default function TopicItems({ id, title, colorText="text-primary-orange", des, icon: Icon }) {
   return (
     <div
       className="
@@ -23,20 +23,21 @@ export default function TopicItems({ id, title, des, icon: Icon }) {
       "
       >
         <Icon
-          className="
-          text-primary-orange
+          className=
+          {`text-primary-orange
           text-5xl
-        "
+          
+        `}
         />
       </div>
 
       <h3
-        className="
-        mt-5
-        text-primary-orange
+        className=
+     {`   mt-5
+        ${colorText}
         font-semibold
-        tracking-wider
-      "
+        tracking-wider`}
+      
       >
         {`0${id}. ${title}`}
       </h3>

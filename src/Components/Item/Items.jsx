@@ -2,7 +2,7 @@ import React from "react";
 import { topicItems } from "../../data/data";
 import TopicItems from "../../Pages/Home/components/TopicItems";
 
-function Items() {
+function Items( {colorText}) {
   return (
     <>
       <section className="relative mt-14">
@@ -50,7 +50,7 @@ function Items() {
               data-aos-duration="800"
               data-aos-delay={index * 150}
             >
-              <TopicItems {...item} />
+              <TopicItems colorText={colorText} {...item} />
             </div>
           ))}
         </div>

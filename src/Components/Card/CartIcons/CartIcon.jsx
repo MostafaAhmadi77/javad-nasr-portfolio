@@ -35,7 +35,7 @@ function CartIcon({ icon, w="w-20", h="h-20", title, description, option, setylD
               {icon}
             </span>
           </div>
-          <h3 className="font-bold text-white  text-xl sm:text-2xl lg:text-[1rem] leading-snug">
+          <h3 className=" font-bold text-white  text-xl sm:text-2xl lg:text-[1rem] leading-snug">
             {title}
           </h3>
         </div>
