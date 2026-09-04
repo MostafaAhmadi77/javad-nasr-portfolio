@@ -1,16 +1,16 @@
-import { Icon } from "@mui/material";
-import ServiceCart from "../../Components/Card/ServicesCart/ServiceCart";
 import Divider from "../../Components/Divider/Divider";
 import Hero from "../../Components/Hero/Hero";
 import HeroImg from "../../assets/Images/H1.png";
-import { dataServices } from "../../data/data";
+import { dataServices, titleService } from "../../data/data";
 import CartIcon from "../../Components/Card/CartIcons/CartIcon";
 import Items from "../../Components/Item/Items";
 import { HiOutlineCheckBadge } from "react-icons/hi2";
+import Button from "../../Components/Button/Button";
+import { GoArrowRight } from "react-icons/go";
 function Services() {
   return (
     <>
-      <div className="px-5">
+      <div className="px-5 pb-5">
         <Hero
           HeroImage={HeroImg}
           titlePage="SERVICES"
@@ -35,7 +35,7 @@ function Services() {
           }
         />
 
-        <div className="py-2 flex flex-col">
+        <div className="py-2 flex flex-col ">
           <div className="w-full flex flex-col items-center gap-3">
             <div>
               <span
@@ -86,20 +86,21 @@ function Services() {
           </div>
         </div>
         <div
+          data-aos="zoom-in"
           className="bg-[#111111] w-full flex flex-col items-center 
         py-4 px-4 
         justify-between border border-primary-orange rounded-2xl"
         >
           <p
             data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom"
+            data-aos-anchor-placement="top-bottom"
             className="text-primary-orange font-bold"
           >
             {" "}
             HOW I CREATE IMPACT
           </p>
           <h3
-          data-aos="zoom-in-down"
+            data-aos="zoom-in-down"
             className="text-white font-family-CormorantGaramondBold font-bold 
           text-3xl
           "
@@ -107,10 +108,50 @@ function Services() {
             A Holistic Approach to Transformation
           </h3>
           <div className="w-full">
-            <Items colorText="text-white"/>
+            <Items colorText="text-white" />
           </div>
         </div>
-        <div className=""></div>
+        <div className="mt-5 flex gap-5">
+          <div data-aos="zoom-in-right" className="w-[50%] p-4 flex flex-col gap-2 items-center border bg-[#111111]  rounded-2xl">
+            <p className="font-family-CormorantGaramondBold text-white text-3xl ">
+              Why Organizations{" "}
+              <span className="text-primary-orange">Choose</span> My Services
+            </p>
+            <div className="flex flex-col">
+              {titleService.map((item) => (
+                <div className=" flex items-center gap-2">
+                  <span className="text-primary-orange text-2xl">
+                    <HiOutlineCheckBadge />
+                  </span>
+                  <span className="text-white pt-2">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div  
+          data-aos="zoom-in-left"
+          className="w-[50%] flex p-4 gap-3 border bg-[radial-gradient(circle,rgba(255,89,0,0.1)_40%,rgba(5,3,2,1)_99%)]  border-primary-orange rounded-2xl justify-center items-center ">
+            <div className=" flex flex-col justify-center items-center gap-3">
+              <div className="text-white flex flex-col justify-center items-center text-2xl font-family-CormorantGaramondBold">
+                <span>Ready to Transform</span>
+                <span className="text-primary-orange">Your Organization?</span>
+              </div>
+              <div className="text-white w-full">
+                <span>
+                  Let's discuss how we can achieve extraordinary results
+                  together
+                </span>
+              </div>
+              <div className="">
+                <Button
+                  title="Book a Consultation"
+                  styleBtn="w-[13rem] bg-primary-orange flex justify-center items-center gap-3 p-4 text-white rounded-2xl"
+                  icon={<GoArrowRight />}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

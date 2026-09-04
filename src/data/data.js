@@ -319,3 +319,9 @@ export const dataServices = [
     icon: TbTargetArrow,
   },
 ];
+export const titleService = [
+  "Strategic thinking with hands-on execution",
+  "Proven methodology with measurable outcomes",
+  "Tailored solutions for your unique challenges",
+  "Long-trem partnership for sustainable growth"
+]
