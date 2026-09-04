@@ -47,3 +47,7 @@ html {
 body {
   -ms-overflow-style: none;
 }
+html,
+body {
+  overflow-x: hidden;
+}

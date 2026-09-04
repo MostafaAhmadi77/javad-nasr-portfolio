@@ -77,7 +77,7 @@ function Home() {
           HERO
       ===================================================== */}
 
-<div
+<div className="overflow-x-hidden"
   data-aos="fade"
   data-aos-duration="1200"
 >
@@ -897,7 +897,7 @@ function Home() {
           =================================================== */}
 
           <div
-          data-aos="fade-up"
+          data-aos="fade-left"
           data-aos-duration="900"
             className="
               px-4
@@ -987,7 +987,7 @@ function Home() {
                     pb-4
                   "
                   data-aos="fade-up"
-                  data-aos-delay="1000"
+                  data-aos-delay="1300"
                 >
                   Every successful transformation starts
                   with a conversation.
