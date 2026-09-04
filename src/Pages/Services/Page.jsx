@@ -111,8 +111,8 @@ function Services() {
             <Items colorText="text-white" />
           </div>
         </div>
-        <div className="mt-5 flex gap-5">
-          <div data-aos="zoom-in-right" className="w-[50%] p-4 flex flex-col gap-2 items-center border bg-[#111111]  rounded-2xl">
+        <div className="mt-5 flex gap-5 ss:flex-col lg:flex-row ">
+          <div data-aos="zoom-in-right" className="w-[50%] ss:w-full ss:text-center ss:text-[0.9rem] p-4 flex flex-col gap-2 items-center border bg-[#111111]  rounded-2xl">
             <p className="font-family-CormorantGaramondBold text-white text-3xl ">
               Why Organizations{" "}
               <span className="text-primary-orange">Choose</span> My Services
@@ -130,7 +130,7 @@ function Services() {
           </div>
           <div  
           data-aos="zoom-in-left"
-          className="w-[50%] flex p-4 gap-3 border bg-[radial-gradient(circle,rgba(255,89,0,0.1)_40%,rgba(5,3,2,1)_99%)]  border-primary-orange rounded-2xl justify-center items-center ">
+          className="w-[50%] ss:w-full ss:text-center ss:text-[0.9rem] flex p-4 gap-3 border bg-[radial-gradient(circle,rgba(255,89,0,0.1)_40%,rgba(5,3,2,1)_99%)]  border-primary-orange rounded-2xl justify-center items-center ">
             <div className=" flex flex-col justify-center items-center gap-3">
               <div className="text-white flex flex-col justify-center items-center text-2xl font-family-CormorantGaramondBold">
                 <span>Ready to Transform</span>
