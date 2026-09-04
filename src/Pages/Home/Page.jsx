@@ -897,6 +897,8 @@ function Home() {
           =================================================== */}
 
           <div
+          data-aos="fade-up"
+          data-aos-duration="900"
             className="
               px-4
               sm:px-6
@@ -965,7 +967,7 @@ function Home() {
                     leading-tight
                   "
                   data-aos="fade-right"
-                  data-aos-delay="200"
+                  data-aos-delay="1000"
                 >
                   Let's Build{" "}
                   <span className="text-primary-orange">
@@ -985,7 +987,7 @@ function Home() {
                     pb-4
                   "
                   data-aos="fade-up"
-                  data-aos-delay="300"
+                  data-aos-delay="1000"
                 >
                   Every successful transformation starts
                   with a conversation.
