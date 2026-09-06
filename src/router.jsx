@@ -12,6 +12,8 @@ const router = createBrowserRouter([
             {
                 index:true,
                 element:<Home />
+                gfdgtgdgdte,
+                // nnnnnnnnnnnnnnnnnnnnnnnnnn
             },
             {
                 path:"/work",
