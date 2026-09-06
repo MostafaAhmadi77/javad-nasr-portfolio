@@ -43,7 +43,7 @@ function Divider({ title }) {
         className={`  font-bold tracking-[0.3em] uppercase whitespace-nowrap`}
         
       >
-        <h3 data-aos="zoom-in">{title}</h3>
+        <h3 data-aos="zoom-in" className="text-2xl">{title}</h3>
       </span>
 
       <div data-aos="fade-left" className="flex-1 h-px bg-[linear-gradient(to_left,#050302_0%,#FB5701_91%)] mr-6">
