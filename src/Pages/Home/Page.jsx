@@ -430,6 +430,7 @@ function Home() {
           data-aos-duration="1200"
         >
           <Divider
+          
             title="AREAS OF EXPERTISE"
             sizeText=""
           />
@@ -441,6 +442,7 @@ function Home() {
 
         <div
           className="
+          
             flex
             flex-wrap
             items-center
