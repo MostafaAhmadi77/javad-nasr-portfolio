@@ -1,11 +1,13 @@
-import React from 'react'
+import Hero from "../../Components/Hero/Hero";
 
 function About() {
   return (
-    <div>
-      <h1 className='text-2xl text-red-700'>hallo</h1>
-    </div>
-  )
+    <>
+      <div className="w-[4rem] h-[12rem] bg-amber-400">
+        <Hero titlePage="About"/>
+      </div>
+    </>
+  );
 }
 
-export default About
+export default About;

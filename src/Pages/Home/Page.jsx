@@ -8,7 +8,7 @@ import {
   imgData,
   secoundItems,
   textIcon,
-  topicItems,
+  
 } from "../../data/data";
 
 import Button from "../../Components/Button/Button";
@@ -18,7 +18,7 @@ import Divider from "../../Components/Divider/Divider";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 
 import MainTitle from "./components/MainTitle";
-import TopicItems from "./components/TopicItems";
+
 import Title from "./components/Title";
 import SecoundItems from "./components/SecoundItems";
 
