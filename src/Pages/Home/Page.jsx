@@ -8,7 +8,7 @@ import {
   imgData,
   secoundItems,
   textIcon,
-  
+
 } from "../../data/data";
 
 import Button from "../../Components/Button/Button";
@@ -430,6 +430,7 @@ function Home() {
           data-aos-duration="1200"
         >
           <Divider
+          
             title="AREAS OF EXPERTISE"
             sizeText=""
           />
@@ -441,6 +442,7 @@ function Home() {
 
         <div
           className="
+          
             flex
             flex-wrap
             items-center
