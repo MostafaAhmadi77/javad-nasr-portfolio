@@ -2,7 +2,9 @@ import React from 'react'
 
 function About() {
   return (
-    <div>About</div>
+    <div>
+      <h1 className='text-2xl text-red-700'>hallo</h1>
+    </div>
   )
 }
 
