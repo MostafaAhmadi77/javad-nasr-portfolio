@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import {  NavLink } from "react-router";
 
 function Navigation() {
   return (
@@ -6,22 +6,22 @@ function Navigation() {
       <span className="text-primary-orange ">NAVIGATION</span>
       <ul>
         <li>
-          <Link to="Work">Home</Link>
+          <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="/">Home</NavLink>
         </li>
         <li>
-          <Link to="services">Work</Link>
+          <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="services">Work</NavLink>
         </li>
         <li>
-          <Link to="about">Services</Link>
+          <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="about">Services</NavLink>
         </li>
         <li>
-          <Link to="process">Process</Link>
+          <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="process">Process</NavLink>
         </li>
         <li>
-          <Link to="insights">Insights</Link>
+          <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="insights">Insights</NavLink>
         </li>
         <li>
-          <Link to="insights">About</Link>
+          <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="about">About</NavLink>
         </li>
       </ul>
     </div>

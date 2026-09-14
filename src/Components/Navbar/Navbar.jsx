@@ -1,6 +1,6 @@
 import { GoArrowRight } from "react-icons/go";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
-import { Link } from "react-router";
+import { NavLink} from "react-router";
 import Button from "../Button/Button";
 import { useState } from "react";
 import Logo from "../../assets/Images/Logo.png";
@@ -23,23 +23,23 @@ function Navbar() {
         <div className="hidden lg:block">
           <ul className="2xl:text-[1.5rem] flex items-center gap-12 text-base cursor-pointer">
             <li>
-              <Link to="/">Home</Link>
+              <NavLink  className={(x)=>x.isActive ? 'text-primary-orange' :''} to="/">Home</NavLink>
             </li>
             <li>
-              <Link to="Work">Work</Link>
+              <NavLink  className={(x)=>x.isActive ? 'text-primary-orange' :''} to="Work">Work</NavLink>
             </li>
             <li>
-              <Link to="services">Services</Link>
+              <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="services">Services</NavLink>
             </li>
 
             <li>
-              <Link to="process">Process</Link>
+              <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="process">Process</NavLink>
             </li>
             <li>
-              <Link to="insights">Insights</Link>
+              <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="insights">Insights</NavLink>
             </li>
             <li>
-              <Link to="about">About</Link>
+              <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="about">About</NavLink>
             </li>
           </ul>
         </div>
@@ -48,7 +48,7 @@ function Navbar() {
           <Button
             title="Let's Work Together"
             icon={<GoArrowRight />}
-            styleBtn="flex items-center gap-4 border border-[#FB5701] px-5 py-3 rounded-2xl"
+            styleBtn="flex items-center gap-4 border border-pritext-primary-orange px-5 py-3 rounded-2xl"
           />
         </div>
 
@@ -74,7 +74,7 @@ function Navbar() {
       >
         <div className="">
           <div className=" flex items-center justify-between ss p-6 border-b border-gray-700">
-            <h2 className="text-2xl font-bold text-[#FB5701]">
+            <h2 className="text-2xl font-bold text-primary-orange">
               <img className="size-14" src={Logo} alt="" />
             </h2>
 
@@ -89,23 +89,23 @@ function Navbar() {
             }}
           >
             <li>
-              <Link to="/">Home</Link>
+              <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="/">Home</NavLink>
             </li>
             <li>
-              <Link to="Work">Work</Link>
+              <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="Work">Work</NavLink>
             </li>
             <li>
-              <Link to="services">Services</Link>
+              <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="services">Services</NavLink>
             </li>
 
             <li>
-              <Link to="process">Process</Link>
+              <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="process">Process</NavLink>
             </li>
             <li>
-              <Link to="insights">Insights</Link>
+              <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="insights">Insights</NavLink>
             </li>
             <li>
-              <Link to="about">About</Link>
+              <NavLink  className={(x)=>x.isActive ? 'text-primary-orange' :''}to="about">About</NavLink>
             </li>
           </ul>
         </div>
@@ -114,7 +114,7 @@ function Navbar() {
           <Button
             title="Let's Work Together"
             icon={<GoArrowRight />}
-            styleBtn="flex justify-center items-center gap-3 border border-[#FB5701] rounded-xl py-3"
+            styleBtn="flex justify-center items-center gap-3 border border-pritext-primary-orange rounded-xl py-3"
           />
         </div>
       </div>
