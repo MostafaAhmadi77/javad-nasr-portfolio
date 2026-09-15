@@ -1,5 +1,9 @@
+import HeroImg from "../../assets/Images/H1.png";
+
+
 function Hero({
   titlePage,
+  // HeroImage,
   textHyper,
 
   textPageDescription,
@@ -50,7 +54,7 @@ function Hero({
 
         <div className="w-full lg:w-1/2 flex flex-col relative justify-center lg:justify-end">
           <img
-            src="src/assets/Images/H1.png"
+            src={HeroImg}
             alt="Javad Nasr"
             className="w-full  h-auto object-contain"
           />

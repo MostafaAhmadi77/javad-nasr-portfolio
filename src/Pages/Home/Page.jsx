@@ -23,7 +23,7 @@ import Title from "./components/Title";
 import SecoundItems from "./components/SecoundItems";
 
 import Hero from "../../Components/Hero/Hero";
-// import HeroImg from "../../assets/Images/H1.png";
+import HeroImg from "../../assets/Images/H1.png";
 import { TypeAnimation } from "react-type-animation";
 import Items from "../../Components/Item/Items";
 
@@ -83,7 +83,7 @@ function Home() {
   data-aos-duration="1200"
 >
   <Hero
-    // HeroImage={HeroImg}
+    HeroImage={HeroImg}
     titlePage="HELLO, I'M"
 
     textHyper={
