@@ -26,7 +26,7 @@ function Navbar() {
               <NavLink  className={(x)=>x.isActive ? 'text-primary-orange' :''} to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink  className={(x)=>x.isActive ? 'text-primary-orange' :''} to="Work">Work</NavLink>
+              <NavLink  className={(x)=>x.isActive ? 'text-primary-orange' :''} to="caseStudies">CaseStudies</NavLink>
             </li>
             <li>
               <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="services">Services</NavLink>
