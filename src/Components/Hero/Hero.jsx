@@ -1,7 +1,7 @@
 
 
 function Hero({
-  HeroImage,
+  
   titlePage,
   textHyper,
 
@@ -50,7 +50,7 @@ function Hero({
 
       <div className="w-full lg:w-1/2 flex flex-col relative justify-center lg:justify-end">
         <img
-          src={HeroImage}
+          src="src/assets/Images/H1.png"
           alt="Javad Nasr"
           className="w-full  h-auto object-contain"
         />
