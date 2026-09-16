@@ -278,8 +278,11 @@ function Home() {
               xl:max-w-[28rem]
               flex
               flex-col
-              items-center
+
+              
+              
               justify-center
+              items-center
               gap-5
               text-center
               xl:text-left
@@ -338,7 +341,9 @@ function Home() {
                   font-bold
                   leading-8
                   text-zinc-300
-                  text-center
+                  sm:text-center
+                  md:text-center
+                  lg:text-justify
                
                 "
               >
