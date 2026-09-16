@@ -278,6 +278,8 @@ function Home() {
               xl:max-w-[28rem]
               flex
               flex-col
+              items-center
+              justify-center
               gap-5
               text-center
               xl:text-left
@@ -314,9 +316,9 @@ function Home() {
               >
                 Building Organizations That{" "}
                 <span className="text-primary-orange">
-                  Last
+                  Last.
                 </span>
-                .
+                
               </p>
             </section>
 
@@ -336,7 +338,8 @@ function Home() {
                   font-bold
                   leading-8
                   text-zinc-300
-                  text-justify
+                  text-center
+               
                 "
               >
                 I partner with leadership teams to turn
