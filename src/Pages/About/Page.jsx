@@ -1,6 +1,7 @@
 import { GoArrowRight } from "react-icons/go";
 import Hero from "../../Components/Hero/Hero";
 import Button from "../../Components/Button/Button";
+import Swiperjs from "./components/Swiperjs";
 
 function About() {
   return (
@@ -8,7 +9,7 @@ function About() {
       <Hero
         titlePage="ABOUT ME"
         textHyper={
-          <div>
+          <div className="flex flex-col ss:items-center md:items-center lg:items-start  ">
             <section className="w-full md:w-[30%] mb-6 h-[0.1rem] bg-[radial-gradient(circle,#FB5701_0%,#050302_99%)]"></section>
 
             <h1>
@@ -22,7 +23,7 @@ function About() {
         }
         textPageDescription={
           <div className="w-md text-justify ">
-            <span>
+            <span className="flex text-justify ss:items-center ss:text-center md:items-center lg:items-start">
               I partner with ieadership teams to turn challenges into
               opportunities through strategy, system, and execution.My approach
               combines deep analytical thinking with hande-on implementation to
@@ -54,6 +55,9 @@ function About() {
           />
         }
       />
+      <div className="logo pb-4">
+        <Swiperjs />
+      </div>
     </>
   );
 }
