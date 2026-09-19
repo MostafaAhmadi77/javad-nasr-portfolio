@@ -341,9 +341,8 @@ function Home() {
                   font-bold
                   leading-8
                   text-zinc-300
-                  sm:text-center
-                  md:text-center
-                  lg:text-justify
+                  lg:text-center
+                  xl:text-justify
                
                 "
               >
