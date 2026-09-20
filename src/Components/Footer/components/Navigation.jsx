@@ -1,28 +1,18 @@
 import {  NavLink } from "react-router";
+import headerData from "../../../data/headerData";
 
 function Navigation() {
   return (
     <div className="flex flex-col ss:items-center ss:justify-center md:items-start">
       <span className="text-primary-orange ">NAVIGATION</span>
       <ul>
-        <li>
-          <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="/caseStudies">CaseStudies</NavLink>
-        </li>
-        <li>
-          <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="about">Services</NavLink>
-        </li>
-        <li>
-          <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="process">Process</NavLink>
-        </li>
-        <li>
-          <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="insights">Insights</NavLink>
-        </li>
-        <li>
-          <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="about">About</NavLink>
-        </li>
+       
+{headerData.map(x=>(
+  <li>
+    <NavLink key={x.id} to={x.path}  className={(x)=>x.isActive ? 'text-primary-orange' :''}>{x.title}</NavLink>
+  </li>
+))}
+
       </ul>
     </div>
   );

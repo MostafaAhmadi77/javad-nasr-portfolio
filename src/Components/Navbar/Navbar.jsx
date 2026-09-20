@@ -4,6 +4,8 @@ import { NavLink} from "react-router";
 import Button from "../Button/Button";
 import { useState } from "react";
 import Logo from "../../assets/Images/Logo.png";
+import headerData from "../../data/headerData";
+
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -88,25 +90,12 @@ function Navbar() {
               setIsOpen(false);
             }}
           >
-            <li>
-              <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="Work">Work</NavLink>
-            </li>
-            <li>
-              <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="services">Services</NavLink>
-            </li>
-
-            <li>
-              <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="process">Process</NavLink>
-            </li>
-            <li>
-              <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="insights">Insights</NavLink>
-            </li>
-            <li>
-              <NavLink  className={(x)=>x.isActive ? 'text-primary-orange' :''}to="about">About</NavLink>
-            </li>
+   
+           {headerData.map(x=>(
+             <li>
+               <NavLink key={x.id} to={x.path}  className={(x)=>x.isActive ? 'text-primary-orange' :''}>{x.title}</NavLink>
+             </li>
+           ))}
           </ul>
         </div>
 
