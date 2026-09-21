@@ -22,8 +22,8 @@ function About() {
           </div>
         }
         textPageDescription={
-          <div className="w-md text-justify ">
-            <span className="flex text-justify ss:items-center ss:text-center md:items-center lg:items-start">
+          <div className="text-justify ">
+            <span className="flex text-justify ">
               I partner with ieadership teams to turn challenges into
               opportunities through strategy, system, and execution.My approach
               combines deep analytical thinking with hande-on implementation to

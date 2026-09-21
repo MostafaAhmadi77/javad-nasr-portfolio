@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-
 import { Autoplay } from "swiper/modules";
+
+import "swiper/css";
 
 // Images
 import img1 from "../../../assets/Images/logo/IMG_20260907_094750_542.jpg";
@@ -50,57 +50,79 @@ function Swiperjs() {
   ];
 
   return (
-    <Swiper
-      loop={true}
-      speed={6000}
-      autoplay={{
-        delay: 0,
-        disableOnInteraction: false,
-      }}
-      modules={[Autoplay]}
-      breakpoints={{
-        0: {
-          slidesPerView: 4,
-          spaceBetween: 30,
-        },
+    <div className="w-full overflow-hidden bg-black">
+      <Swiper
+        loop={true}
+        speed={6000}
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay]}
+        breakpoints={{
+          0: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+          },
 
-        640: {
-          slidesPerView: 4,
-          spaceBetween: 20,
-        },
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
 
-        768: {
-          slidesPerView: 4,
-          spaceBetween: 20,
-        },
+          768: {
+            slidesPerView:6,
+            spaceBetween: 20,
+          },
 
-        1024: {
-          slidesPerView: 5,
-          spaceBetween: 40,
-        },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+          },
 
-        1280: {
-          slidesPerView: 7,
-          spaceBetween: 40,
-        },
+          1280: {
+            slidesPerView: 9,
+            spaceBetween: 30,
+          },
 
-        1536: {
-          slidesPerView: 9,
-          spaceBetween: 40,
-        },
-      }}
-      className="mySwiper flex *:items-center p-4"
-    >
-      {images.map((image, index) => (
-        <SwiperSlide key={index}>
-          <img
-            src={image}
-            alt={`Logo ${index + 1}`}
-            className="w-full h-auto object-contain"
-          />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+          1536: {
+            slidesPerView: 9,
+            spaceBetween: 30,
+          },
+        }}
+        className="mySwiper w-full"
+      >
+        {images.map((image, index) => (
+          <SwiperSlide key={index}>
+            <div
+              className="
+                flex
+                items-center
+                justify-center
+                w-full
+                h-[90px]
+                sm:h-[100px]
+                md:h-[110px]
+                lg:h-[120px]
+                xl:h-[130px]
+                px-2
+              "
+            >
+              <img
+                src={image}
+                alt={`Logo ${index + 1}`}
+                className="
+                  w-full
+                  h-full
+                  object-contain
+                  block
+                "
+              />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 }
 
