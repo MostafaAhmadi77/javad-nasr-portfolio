@@ -327,7 +327,8 @@ function Home() {
 
             {/* DESCRIPTION */}
 
-            <section
+            <section That Aligns
+
               data-aos="fade-up"
               data-aos-delay="300"
             >
