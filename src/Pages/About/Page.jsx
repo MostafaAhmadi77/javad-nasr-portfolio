@@ -2,6 +2,7 @@ import { GoArrowRight } from "react-icons/go";
 import Hero from "../../Components/Hero/Hero";
 import Button from "../../Components/Button/Button";
 import Swiperjs from "./components/Swiperjs";
+import { Aboutmain } from "../../data/data";
 
 function About() {
   return (
@@ -55,11 +56,11 @@ function About() {
           />
         }
       />
-      <div className="swiperSlider logo pb-4">
+      <div className="swiperSlider logo pb-4 m-3">
         <Swiperjs />
       </div>
-      <div className="mainbar-About mr-3 ml-3 ">
-        <div className="w-ful border  border-primary-orange rounded-2xl p-4">
+      <div className="mainbar-About mr-3  ml-3 w-ful border  border-primary-orange rounded-2xl p-4 flex flex-col gap-6">
+        <div className="flex gap-7">
           <section className="w-[50%] h-120 border border-primary-orange rounded-2xl text-justify  bg-[linear-gradient(182deg,rgba(255,89,0,0.15)_00%,rgba(5,3,2,0.9)_90%),url('/src/assets/Images/About-img/About.png')]  bg-cover bg-center flex flex-col justify-end p-4">
             <span className="text-primary-orange text-8xl font-family-CormorantGaramondBold">
               ،،
@@ -70,11 +71,38 @@ function About() {
               discipline.
             </span>
           </section>
-          <section className="w-[50%]"></section>
+          <section className="w-[50%] h-120 border  bg-[linear-gradient(182deg,rgba(255,89,0,0.20)_0%,rgba(5,3,2,0.9)_99%)] border-primary-orange rounded-2xl flex flex-col gap-4  p-5">
+            <div className=" flex items-center ">
+              <span className="text-white font-family-CormorantGaramondBold  text-4xl ">
+                <span className="text-primary-orange text-5xl font-family-GreatVibesRegular">
+                  -
+                </span>
+                My<span className="text-primary-orange">Philosophy</span>
+              </span>
+            </div>
+            <div className="">
+              {Aboutmain.map((date) => {
+                return (
+                  <div className="flex items-center gap-4">
+                    <span className="text-primary-orange border  bg-[linear-gradient(2deg,rgba(255, 89, 0, 0.3) 0%, rgba(5, 3, 2, 1) 99%)] border-primary-orange p-2 rounded-full  text-5xl">
+                      {<date.Icon />}
+                    </span>
+                    <div className=" w-85 flex flex-col gap-2  ">
+                      <span className="text-white text-2xl font-bold">
+                        {date.title}
+                      </span>
+                      <span className="text-white mb-3 text-[0.8rem]">{date.description}</span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
         </div>
-        <div className=""></div>
-        <div className=""></div>
-        <div className=""></div>
+
+
+
+       
       </div>
     </>
   );
