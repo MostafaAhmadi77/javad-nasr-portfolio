@@ -55,8 +55,26 @@ function About() {
           />
         }
       />
-      <div className="logo pb-4">
+      <div className="swiperSlider logo pb-4">
         <Swiperjs />
+      </div>
+      <div className="mainbar-About mr-3 ml-3 ">
+        <div className="w-ful border  border-primary-orange rounded-2xl p-4">
+          <section className="w-[50%] h-120 border border-primary-orange rounded-2xl text-justify  bg-[linear-gradient(182deg,rgba(255,89,0,0.15)_00%,rgba(5,3,2,0.9)_90%),url('/src/assets/Images/About-img/About.png')]  bg-cover bg-center flex flex-col justify-end p-4">
+            <span className="text-primary-orange text-8xl font-family-CormorantGaramondBold">
+              ،،
+            </span>
+            <span className="text-white font-family-CormorantGaramondBold w-110 text- p-2 text-3xl">
+              Successful Organizations are not built by chance. They are
+              designed with clarity, led with purpose, and executed with
+              discipline.
+            </span>
+          </section>
+          <section className="w-[50%]"></section>
+        </div>
+        <div className=""></div>
+        <div className=""></div>
+        <div className=""></div>
       </div>
     </>
   );
