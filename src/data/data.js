@@ -34,6 +34,11 @@ import { GiChessKnight } from "react-icons/gi";
 import { IoExtensionPuzzleOutline, IoSettingsOutline } from "react-icons/io5";
 import { FaUsers } from "react-icons/fa";
 import { LuChartNoAxesCombined } from "react-icons/lu";
+import {
+  MdCenterFocusWeak,
+  MdHandshake,
+  MdOutlineNetworkWifi3Bar,
+} from "react-icons/md";
 
 export const brand = [
   {
@@ -323,5 +328,12 @@ export const titleService = [
   "Strategic thinking with hands-on execution",
   "Proven methodology with measurable outcomes",
   "Tailored solutions for your unique challenges",
-  "Long-trem partnership for sustainable growth"
-]
+  "Long-trem partnership for sustainable growth",
+];
+
+export const Aboutmain = [
+  { id: 1, Icon: MdHandshake, title: "Beyond Recommendations", description: "I don't just deliver advice, I work alongside your team until strategy becomes capability." },
+  { id: 2, Icon: MdOutlineNetworkWifi3Bar, title: "System that Scale", description: "I design systems and structures that enable organizations to grow, adapt, and thrive over time." },
+  { id: 3, Icon: MdCenterFocusWeak, title: "People at the center", description: "I believe in empowering people, building leadership, and creating a culture of accountability." },
+  { id: 4, Icon: TbTargetArrow, title: "Measurable Impact", description: "Every initiative is focused on delivering clear, measurable, and sustainable results." },
+];
