@@ -1,8 +1,9 @@
 import React from 'react'
-import casestudiesBtns from '../../data/casestudiesData'
+import {casestudiesBtns  , casestudiesTable} from '../../data/casestudiesData'
 import { GoArrowRight } from "react-icons/go";
 import Hero from "../../Components/Hero/Hero";
 import Button from "../../Components/Button/Button";
+import MainTable from './components/MainTable';
 
 
 
@@ -59,9 +60,9 @@ export default function CaseStudies() {
 
       <div className=' grid
                   grid-cols-1
-                  sm:grid-cols-1
-                  md:grid-cols-2
-                  xl:grid-cols-4   mr-3  ml-3 p-4  gap-4'>
+                  sm:grid-cols-2
+                  md:grid-cols-4
+                  xl:grid-cols-6   mr-3  ml-3 p-4  gap-2'>
         {casestudiesBtns.map(x=>(
              <Button
              key={x.id}
@@ -72,9 +73,9 @@ export default function CaseStudies() {
             items-center
             border
             border-primary-orange
-            px-10
-            py-3
-            gap-3
+            px-8
+            py-2
+            gap-2
             rounded-2xl
             text-primary-orange
             hover:text-white
@@ -83,11 +84,58 @@ export default function CaseStudies() {
             transition
             duration-300
           "
+          className={ x.index ?'text-white bg-primary-orange border-white ':'' } // نمیدونم چرا این کار نکرد
           />
         ))}
       </div>
     
-    
+
+    <div className='w-full flex flex-col  gap-10    mr-3  ml-3 p-4 '>
+       {casestudiesTable.map(x=>(
+        <MainTable key={x.id} {...x}/>
+       ))}
+    </div>
+     
+
+
+     {/* last part */}
+     <div className=' mt-5 pt-5 pb-5 pr-10 pl-10  flex flex-col sm:flex-row gap-10 w-full  mr-3  ml-3 p-4 border border-primary-orange rounded-2xl '>
+          
+          <div className=' w-full  sm:w-[50%] flex flex-col sm:items-start items-center  gap-5'>
+            <p className='text-primary-orange flex text-[0.8rem] '>
+             ---  READY TO CREATE YOUR SUCCESS STORY ?
+            </p>
+          <div>
+              <h1 className='text-white text-4xl font-family-CormorantGaramondBold'>Let's Bulid Transformation </h1>
+            <span className='text-primary-orange text-4xl font-family-CormorantGaramondBold ' >Together.</span>
+          </div>
+            <p className='text-gray-400 text-[0.8rem]'>Every organization has potential. Let's unlock yours.</p>
+          </div>
+
+
+          <div className='w-full sm:w-[25%] flex justify-center items-center'>
+            <Button title='Book a Consultation'  styleBtn="
+        
+            border
+            border-primary-orange
+            px-6
+            py-4
+            rounded-[0.5rem]
+            text-primary-orange
+            hover:text-white
+            hover:bg-primary-orange
+            hover:border-white
+            transition
+            duration-300
+          "/>
+          </div>
+
+
+          <div className='w-full sm:w-[25%]'>
+            <img  src="dist/assets/Planet Earth.png" alt="" />
+          </div>
+     </div>
+
     </>
   )
 }
