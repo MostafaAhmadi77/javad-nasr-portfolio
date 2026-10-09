@@ -134,6 +134,7 @@ export default function CaseStudies() {
           <div className='w-full sm:w-[25%]'>
             <img  src="dist/assets/Planet Earth.png" alt="" />
           </div>
+          
      </div>
 
     </>
