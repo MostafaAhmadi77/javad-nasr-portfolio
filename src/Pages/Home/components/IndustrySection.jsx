@@ -51,8 +51,8 @@ function IndustrySection() {
               <img
                 src={item.img}
                 alt={item.title}
-                width={600}
-                height={350}
+                width={700}
+                height={467}
                 loading="lazy"
                 decoding="async"
                 className="w-full h-52 object-cover rounded-t-2xl transition-transform duration-700 lg:group-hover:scale-105"
