@@ -1,6 +1,6 @@
 import Divider from "../../Components/Divider/Divider";
 import Hero from "../../Components/Hero/Hero";
-import HeroImg from "../../assets/Images/H1.png";
+import HeroImg from "../../assets/Images/H1.webp";
 import { dataServices, titleService } from "../../data/data";
 import CartIcon from "../../Components/Card/CartIcons/CartIcon";
 import Items from "../../Components/Item/Items";

@@ -3,7 +3,6 @@ import { FaChess, FaSlack, FaWpforms } from "react-icons/fa";
 import { FaWebflow } from "react-icons/fa6";
 import {
   SiGoogleearthengine,
-  SiGooglemarketingplatform,
   SiLoom,
   SiNotion,
 } from "react-icons/si";
@@ -15,12 +14,12 @@ import {
   TbCompass,
   TbTargetArrow,
 } from "react-icons/tb";
-import img2 from "../assets/Images/mainimg/img2.png";
-import img3 from "../assets/Images/mainimg/img3.png";
-import img1 from "../assets/Images/mainimg/img1.png";
-import img4 from "../assets/Images/mainimg/img4.png";
-import img5 from "../assets/Images/mainimg/img5.png";
-import img6 from "../assets/Images/mainimg/img6.png";
+import img2 from "../assets/Images/mainimg/m1/img2.webp";
+import img3 from "../assets/Images/mainimg/m1/img3.webp";
+import img1 from "../assets/Images/mainimg/m1/img1.webp";
+import img4 from "../assets/Images/mainimg/m1/img4.webp";
+import img5 from "../assets/Images/mainimg/m1/img5.webp";
+import img6 from "../assets/Images/mainimg/m1/img6.webp";
 import { BsPencil } from "react-icons/bs";
 import { CiSettings, CiSearch } from "react-icons/ci";
 import {
