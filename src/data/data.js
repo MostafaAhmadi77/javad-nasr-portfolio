@@ -14,12 +14,12 @@ import {
   TbCompass,
   TbTargetArrow,
 } from "react-icons/tb";
-import img2 from "../assets/Images/mainimg/img2.webp";
-import img3 from "../assets/Images/mainimg/img3.webp";
-import img1 from "../assets/Images/mainimg/img1.webp";
-import img4 from "../assets/Images/mainimg/img4.webp";
-import img5 from "../assets/Images/mainimg/img5.webp";
-import img6 from "../assets/Images/mainimg/img6.webp";
+import img2 from "../assets/Images/mainimg/m1/img2.webp";
+import img3 from "../assets/Images/mainimg/m1/img3.webp";
+import img1 from "../assets/Images/mainimg/m1/img1.webp";
+import img4 from "../assets/Images/mainimg/m1/img4.webp";
+import img5 from "../assets/Images/mainimg/m1/img5.webp";
+import img6 from "../assets/Images/mainimg/m1/img6.webp";
 import { BsPencil } from "react-icons/bs";
 import { CiSettings, CiSearch } from "react-icons/ci";
 import {
