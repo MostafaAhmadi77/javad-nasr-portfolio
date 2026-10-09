@@ -1,61 +1,54 @@
 @import "tailwindcss";
 
-
-
-
 @font-face {
   font-family: 'CormorantGaramond-Bold';
-  src: url("./../src/assets/Fonts/Cormorant-Garamond/CormorantGaramond-Bold.ttf") format('truetype');
-  font-weight: normal;
+  src: url("./assets/Fonts/Cormorant-Garamond/CormorantGaramond-Bold.woff2") format("woff2");
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'GreatVibes-Regular';
-  src: url("./assets/Fonts/GreatVibes-Regular.ttf") format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}@font-face {
-  font-family: 'PTSerif-Regular';
-  src: url("./assets/Fonts/PT_Serif/PTSerif-Regular.ttf") format('truetype');
+  src: url("./assets/Fonts/GreatVibes-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'PTSerif-Regular';
+  src: url("./assets/Fonts/PT_Serif/PTSerif-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
-@theme{
-    --color-primary-orange:#FB5701;
-    /* --color-primary-orange:#b84204; */
-    --font-family-CormorantGaramondBold:"CormorantGaramond-Bold",sans-serif;
-    --font-family-GreatVibesRegular:"GreatVibes-Regular",sans-serif;
-    --font-family-PTSerif-Regular:"PTSerif-Regular", sans-serif;
-    --breakpoint-ss: 13rem ;
-    --breakpoint-lgg: 84rem
+@theme {
+  --color-primary-orange: #FB5701;
+  --font-family-CormorantGaramondBold: "CormorantGaramond-Bold", sans-serif;
+  --font-family-GreatVibesRegular: "GreatVibes-Regular", sans-serif;
+  --font-family-PTSerif-Regular: "PTSerif-Regular", sans-serif;
+  --breakpoint-ss: 13rem;
+  --breakpoint-lgg: 84rem;
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
 
-/* Firefox */
 html {
   scrollbar-width: none;
 }
 
-/* IE */
 body {
   -ms-overflow-style: none;
 }
+
 html,
 body {
   overflow-x: hidden;
 }
-
-/* .mySwiper .swiper-slide { */
-  /* width: auto !important; */
-/* } */
 
 .mySwiper .swiper-wrapper {
   transition-timing-function: linear !important;
