@@ -24,11 +24,11 @@ function Home() {
       <HeroSection />
 
       <main className="text-white border border-primary-orange border-b-0 rounded-t-2xl mr-4 ml-4 backdrop-blur-xl bg-white/2 ss:pt-6 sm:pt-6 xl:pt-0">
-        <AboutSection />
-        <ExpertiseSection />
+        {/* <AboutSection /> */}
+        {/* <ExpertiseSection /> */}
         <IndustrySection />
-        <MethodologySection />
-        <CTASection />
+        {/* <MethodologySection /> */}
+        {/* <CTASection /> */}
       </main>
     </>
   );
