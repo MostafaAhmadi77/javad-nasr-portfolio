@@ -1,5 +1,5 @@
 
-import Logo from "../../assets/Images/Logo.png";
+import Logo from "../../assets/Images/Logo.webp";
 import Navigation from "./components/Navigation";
 import Services from "./components/Services";
 import Legal from "./components/Legal";
