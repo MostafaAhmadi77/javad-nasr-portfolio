@@ -4,26 +4,26 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 // Images
-import img1 from "../../../assets/Images/logo/IMG_20260907_094750_542.jpg";
-import img2 from "../../../assets/Images/logo/IMG_20260907_094750_607.jpg";
-import img3 from "../../../assets/Images/logo/IMG_20260907_094750_781.jpg";
-import img4 from "../../../assets/Images/logo/IMG_20260907_094750_822.jpg";
-import img5 from "../../../assets/Images/logo/IMG_20260907_094750_956.jpg";
-import img6 from "../../../assets/Images/logo/IMG_20260907_094751_009.jpg";
-import img7 from "../../../assets/Images/logo/IMG_20260907_094751_062.jpg";
-import img8 from "../../../assets/Images/logo/IMG_20260907_094751_110.jpg";
-import img9 from "../../../assets/Images/logo/IMG_20260907_094751_268.jpg";
-import img10 from "../../../assets/Images/logo/IMG_20260907_094751_403.jpg";
-import img11 from "../../../assets/Images/logo/IMG_20260907_094756_148.jpg";
-import img12 from "../../../assets/Images/logo/IMG_20260907_094800_618.jpg";
-import img13 from "../../../assets/Images/logo/IMG_20260907_094800_624.jpg";
-import img14 from "../../../assets/Images/logo/IMG_20260907_094800_685.jpg";
-import img15 from "../../../assets/Images/logo/IMG_20260907_094800_864.jpg";
-import img16 from "../../../assets/Images/logo/IMG_20260907_094800_875.jpg";
-import img17 from "../../../assets/Images/logo/IMG_20260907_094801_054.jpg";
-import img18 from "../../../assets/Images/logo/IMG_20260907_094801_236.jpg";
-import img19 from "../../../assets/Images/logo/IMG_20260907_094801_455.jpg";
-import img20 from "../../../assets/Images/logo/IMG_20260907_094801_497.jpg";
+import img1 from "../../../assets/Images/logo/IMG_20260907_094750_542.webp";
+import img2 from "../../../assets/Images/logo/IMG_20260907_094750_607.webp";
+import img3 from "../../../assets/Images/logo/IMG_20260907_094750_781.webp";
+import img4 from "../../../assets/Images/logo/IMG_20260907_094750_822.webp";
+import img5 from "../../../assets/Images/logo/IMG_20260907_094750_956.webp";
+import img6 from "../../../assets/Images/logo/IMG_20260907_094751_009.webp";
+import img7 from "../../../assets/Images/logo/IMG_20260907_094751_062.webp";
+import img8 from "../../../assets/Images/logo/IMG_20260907_094751_110.webp";
+import img9 from "../../../assets/Images/logo/IMG_20260907_094751_268.webp";
+import img10 from "../../../assets/Images/logo/IMG_20260907_094751_403.webp";
+import img11 from "../../../assets/Images/logo/IMG_20260907_094756_148.webp";
+import img12 from "../../../assets/Images/logo/IMG_20260907_094800_618.webp";
+import img13 from "../../../assets/Images/logo/IMG_20260907_094800_624.webp";
+import img14 from "../../../assets/Images/logo/IMG_20260907_094800_685.webp";
+import img15 from "../../../assets/Images/logo/IMG_20260907_094800_864.webp";
+import img16 from "../../../assets/Images/logo/IMG_20260907_094800_875.webp";
+import img17 from "../../../assets/Images/logo/IMG_20260907_094801_054.webp";
+import img18 from "../../../assets/Images/logo/IMG_20260907_094801_236.webp";
+import img19 from "../../../assets/Images/logo/IMG_20260907_094801_455.webp";
+import img20 from "../../../assets/Images/logo/IMG_20260907_094801_497.webp";
 
 function Swiperjs() {
   const images = [
@@ -71,7 +71,7 @@ function Swiperjs() {
           },
 
           768: {
-            slidesPerView:6,
+            slidesPerView: 6,
             spaceBetween: 20,
           },
 
@@ -111,6 +111,8 @@ function Swiperjs() {
               <img
                 src={image}
                 alt={`Logo ${index + 1}`}
+                loading="lazy"
+                decoding="async"
                 className="
                   w-full
                   h-full
