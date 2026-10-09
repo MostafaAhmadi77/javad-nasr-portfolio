@@ -1,11 +1,8 @@
 import HeroImg from "../../assets/Images/H1.webp";
 
-
 function Hero({
   titlePage,
-  // HeroImage,
   textHyper,
-
   textPageDescription,
   buttons,
   textPageEnd,
@@ -13,7 +10,9 @@ function Hero({
 }) {
   return (
     <div className="" data-aos="fade" data-aos-duration="1200">
-      <div className="bg-black  px-5 ss:pt-20 sm:px-8 sm:pt-24 lg:px-12 xl:px-10 pt-8 lg:pt-30 lg:pb-5  flex flex-col-reverse lg:flex-row items-center justify-between gap-12 min-h-[calc(100vh-auto)] ">
+      <div className="bg-black px-5 ss:pt-20 sm:px-8 sm:pt-24 lg:px-12 xl:px-10 pt-8 lg:pt-30 lg:pb-5 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 min-h-[calc(100vh-auto)]">
+        
+        {/* Left Content */}
         <div className="w-full lg:w-1/2 flex flex-col gap-8 text-center lg:text-left">
           <div className="flex flex-col gap-4">
             <span
@@ -23,21 +22,24 @@ function Hero({
               {titlePage}
             </span>
 
-            <h2 className="font-bold leading-tight" data-aos="fade-right"> 
-              <span
-                className="text-white text-5xl sm:text-6xl lg:text-7xl xl:text-8xl"
-                
-              >
-                {textHyper}{" "}
+            <h2 className="font-bold leading-tight" data-aos="fade-right">
+              <span className="text-white text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">
+                {textHyper}
               </span>
             </h2>
 
-            <p data-aos="zoom-in" className="text-gray-300 max-w-95 mx-auto lg:mx-0 text-sm sm:text-base leading-8">
+            <p
+              data-aos="zoom-in"
+              className="text-gray-300 max-w-95 mx-auto lg:mx-0 text-sm sm:text-base leading-8"
+            >
               {textPageDescription}
             </p>
           </div>
 
-          <div data-aos="zoom-in-down" className="flex flex-col ss:flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <div
+            data-aos="zoom-in-down"
+            className="flex flex-col ss:flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+          >
             {buttons}
           </div>
 
@@ -52,11 +54,16 @@ function Hero({
           </div>
         </div>
 
+        {/* Hero Image - LCP Element */}
         <div className="w-full lg:w-1/2 flex flex-col relative justify-center lg:justify-end">
           <img
             src={HeroImg}
             alt="Javad Nasr"
-            className="w-full  h-auto object-contain"
+            width={600}               
+            height={700}              
+            fetchPriority="high"      
+            decoding="async"
+            className="w-full h-auto object-contain"
           />
         </div>
       </div>
