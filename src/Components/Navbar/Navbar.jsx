@@ -24,25 +24,12 @@ function Navbar() {
 
         <div className="hidden lg:block">
           <ul className="2xl:text-[1.5rem] flex items-center gap-12 text-base cursor-pointer">
-            <li>
-              <NavLink  className={(x)=>x.isActive ? 'text-primary-orange' :''} to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink  className={(x)=>x.isActive ? 'text-primary-orange' :''} to="caseStudies">CaseStudies</NavLink>
-            </li>
-            <li>
-              <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="services">Services</NavLink>
-            </li>
-
-            <li>
-              <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="process">Process</NavLink>
-            </li>
-            <li>
-              <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="insights">Insights</NavLink>
-            </li>
-            <li>
-              <NavLink className={(x)=>x.isActive ? 'text-primary-orange' :''} to="about">About</NavLink>
-            </li>
+     
+           {headerData.map(x=>(
+             <li>
+               <NavLink key={x.id} to={x.path}  className={(x)=>x.isActive ? 'text-primary-orange' :''}>{x.title}</NavLink>
+             </li>
+           ))}
           </ul>
         </div>
 

@@ -4,10 +4,15 @@ import { FaArrowRight } from "react-icons/fa";
 
 
 
-export default function MainTable({id , img , shortTitle , longTitle , type , typeIcon , loc , locIcon , description , firstNum , firstTitle , secoundNum , secoundTitle , thirdNum , thirdTitle}) 
+export default function MainTable({id , img , shortTitle , longTitle , type , typeIcon , loc , locIcon , description , firstNum , firstTitle , secoundNum , secoundTitle , thirdNum , thirdTitle}) {
 
 
-{
+
+ const TypeIcon = typeIcon
+ const LocIcon = locIcon
+
+
+
   return (
     <div className= 'w-full text-amber-50 flex  md:flex-row sm:flex-row ss:flex-col  border border-gray-800 rounded-2xl gap-10'>
        
@@ -24,11 +29,11 @@ export default function MainTable({id , img , shortTitle , longTitle , type , ty
           <p className='text-gray-400 text-[0.9rem]' >{description}</p>
           <div className='flex justify-start items-center gap-10 text-gray-400 text-[0.9rem]'>
                <div className='flex justify-start items-center gap-5'>
-                  <span>{typeIcon}</span>
+                  <span><TypeIcon/></span>
                   <span>{type}</span>
                </div>
                  <div className='flex justify-start items-center gap-5'>
-                  <span>{locIcon}</span>
+                  <span><LocIcon/></span>
                   <span>{loc}</span>
                </div>
           </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import {casestudiesBtns  , casestudiesTable} from '../../data/casestudiesData'
+import {casestudiesBtns  , casestudiesTable} from '../../data/caseStudiesData'
 import { GoArrowRight } from "react-icons/go";
 import Hero from "../../Components/Hero/Hero";
 import Button from "../../Components/Button/Button";
