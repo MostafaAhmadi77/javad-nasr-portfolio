@@ -24,7 +24,7 @@ const casestudiesTable = [
           secoundNum:'18%' , secoundTitle:'Cost Reduction' , thirdNum:'2.3x' , thirdTitle:'Return on Investment'} , 
 
 
-         {id:'02', img:'../assets/Images/mainimg/img4.webp'
+         {id:'02', img:'../src/assets/Images/mainimg/img4.webp'
          ,shortTitle:'OPERATIONAL EXCELLENCE' , longTitle:'Process Optmization in Steel Complex' , 
          description:'Redesigned core production processes and implemented performance management systems to improve efficiency and reduce waste.' , type:'Steel Industry' , typeIcon:MdOutlineFactory  , loc:'Asia' , locIcon:CiLocationOn
           , firstNum:'30%' , firstTitle:'Increase in Productivity'  ,
@@ -32,7 +32,7 @@ const casestudiesTable = [
          }, 
 
 
-         {id:'03', img:'../assets/Images/mainimg/img5.webp'
+         {id:'03', img:'../src/assets/Images/mainimg/img5.webp'
          ,shortTitle:'ORGANIZATIONAL DEVELOPMENT' , longTitle:'Culture Transformation Program' , 
          description:'Partnered with leadership to build a high-performance culture through leadership development, engagement strategies and change initiatives. ' , type:'Diversified Holding' , typeIcon:MdOutlineFactory , loc:'Middle East' , locIcon:CiLocationOn 
           , firstNum:'40%' , firstTitle:'Increase in Employing Engangement '  ,
