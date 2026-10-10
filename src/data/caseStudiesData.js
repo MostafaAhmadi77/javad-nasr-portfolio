@@ -18,7 +18,7 @@ const casestudiesBtns= [
 
 
 const casestudiesTable = [
-         {id:'01', img:'../assets/Images/mainimg/m1/img3.webp'
+         {id:'01', img:'../src/assets/Images/mainimg/m1/img3.webp'
          ,shortTitle:'STRATEGY & TRANSFORMATION' , longTitle:'Industrial Group Strategy Transformation' , 
          description:'Helped a leading industrial group redefine its corporate strategy, optimize portfolio and build a clear growth roadmap for the next 5 years.' , type:'Manufacturing' , typeIcon:MdOutlineFactory , loc:'Middle East' , locIcon:CiLocationOn , firstNum:'25%' , firstTitle:'Review Growth (3years)'  ,
           secoundNum:'18%' , secoundTitle:'Cost Reduction' , thirdNum:'2.3x' , thirdTitle:'Return on Investment'} , 
