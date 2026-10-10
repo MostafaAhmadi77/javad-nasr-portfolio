@@ -3,8 +3,11 @@ import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { NavLink} from "react-router";
 import Button from "../Button/Button";
 import { useState } from "react";
-import Logo from "../../assets/Images/Logo.png";
+
+
 import headerData from "../../data/headerData";
+
+import Logo from "../../assets/Images/Logo.webp";
 
 
 function Navbar() {

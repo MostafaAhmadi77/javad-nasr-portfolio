@@ -61,7 +61,7 @@ function About() {
       </div>
       <div className="mainbar-About mr-3  ml-3 w-ful border  border-primary-orange rounded-2xl p-4 flex flex-col gap-6">
         <div className="flex gap-7">
-          <section className="w-[50%] h-120 border border-primary-orange rounded-2xl text-justify  bg-[linear-gradient(182deg,rgba(255,89,0,0.15)_00%,rgba(5,3,2,0.9)_90%),url('/src/assets/Images/About-img/About.png')]  bg-cover bg-center flex flex-col justify-end p-4">
+          <section className="w-[50%] h-120 border border-primary-orange rounded-2xl text-justify  bg-[linear-gradient(182deg,rgba(255,89,0,0.15)_00%,rgba(5,3,2,0.9)_90%),url('/src/assets/Images/About-img/About.webp')]  bg-cover bg-center flex flex-col justify-end p-4">
             <span className="text-primary-orange text-8xl font-family-CormorantGaramondBold">
               ،،
             </span>

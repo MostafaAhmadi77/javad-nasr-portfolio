@@ -18,13 +18,13 @@ const casestudiesBtns= [
 
 
 const casestudiesTable = [
-         {id:'01', img:'../dist/assets/img3-DWe2NzUF.png'
+         {id:'01', img:'../assets/Images/mainimg/m1/img3.webp'
          ,shortTitle:'STRATEGY & TRANSFORMATION' , longTitle:'Industrial Group Strategy Transformation' , 
          description:'Helped a leading industrial group redefine its corporate strategy, optimize portfolio and build a clear growth roadmap for the next 5 years.' , type:'Manufacturing' , typeIcon:MdOutlineFactory , loc:'Middle East' , locIcon:CiLocationOn , firstNum:'25%' , firstTitle:'Review Growth (3years)'  ,
           secoundNum:'18%' , secoundTitle:'Cost Reduction' , thirdNum:'2.3x' , thirdTitle:'Return on Investment'} , 
 
 
-         {id:'02', img:'../dist/assets/img4-DodD54tT.png'
+         {id:'02', img:'../assets/Images/mainimg/img4.webp'
          ,shortTitle:'OPERATIONAL EXCELLENCE' , longTitle:'Process Optmization in Steel Complex' , 
          description:'Redesigned core production processes and implemented performance management systems to improve efficiency and reduce waste.' , type:'Steel Industry' , typeIcon:MdOutlineFactory  , loc:'Asia' , locIcon:CiLocationOn
           , firstNum:'30%' , firstTitle:'Increase in Productivity'  ,
@@ -32,13 +32,13 @@ const casestudiesTable = [
          }, 
 
 
-         {id:'03', img:'../dist/assets/img5-BqCzuzBb.png'
+         {id:'03', img:'../assets/Images/mainimg/img5.webp'
          ,shortTitle:'ORGANIZATIONAL DEVELOPMENT' , longTitle:'Culture Transformation Program' , 
          description:'Partnered with leadership to build a high-performance culture through leadership development, engagement strategies and change initiatives. ' , type:'Diversified Holding' , typeIcon:MdOutlineFactory , loc:'Middle East' , locIcon:CiLocationOn 
           , firstNum:'40%' , firstTitle:'Increase in Employing Engangement '  ,
           secoundNum:'35%' , secoundTitle:'Leadership Effectiveness' , thirdNum:'20%' , thirdTitle:'Reduction in Turnover'
          }, 
-         {id:'04', img:'../dist/assets/manufacturing-dashboard-1400x1100.jpg'
+         {id:'04', img:'../assets/manufacturing-dashboard-1400x1100.jpg'
          ,shortTitle:'DIGITAL & PROCESS OPTIMIZATION' , longTitle:'Digital Transformation Roadmap' , 
          description:'Developed and executed a digital transformation roadmap , automating key process and enabling data-driven decision making.' ,type: 'Financial Services', typeIcon:MdOutlineFactory , loc:'Europe' , locIcon:CiLocationOn 
           , firstNum:'50%' , firstTitle:'Faster Process Execution'  ,
@@ -46,7 +46,7 @@ const casestudiesTable = [
          }, 
 
          
-         {id:'05', img:'../dist/assets/growth-chart-1400x1100.jpg'
+         {id:'05', img:'../assets/Images/manufacturing-dashboard-1400x1100.jpg'
          ,shortTitle:'SALES & GROWTH STRATEGY' , longTitle:'Go-to-Market Strategy & Growth Acceleration' , 
          description:'Designed and executed a go-to-market strategy that expanded market share and significantly increased top-line growth.' ,type: 'Construction', typeIcon:MdOutlineFactory , loc:'Middle East' , locIcon:CiLocationOn 
           , firstNum:'35%' , firstTitle:'Market Share Growth'  ,
