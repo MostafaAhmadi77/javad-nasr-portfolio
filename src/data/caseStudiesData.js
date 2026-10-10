@@ -1,6 +1,7 @@
 import { MdOutlineFactory } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
 import img3 from "../src/assets/Images/mainimg/m1/img3.webp";
+// تصویر را باید به این صورت فراخوانی کرده و استفاده کنید
 
 
 
