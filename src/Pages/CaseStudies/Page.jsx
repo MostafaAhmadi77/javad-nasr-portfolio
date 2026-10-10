@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import {casestudiesBtns  , casestudiesTable} from '../../data/caseStudiesData'
 import { GoArrowRight } from "react-icons/go";
 import Hero from "../../Components/Hero/Hero";
