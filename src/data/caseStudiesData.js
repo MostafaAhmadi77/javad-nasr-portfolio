@@ -3,7 +3,7 @@ import { CiLocationOn } from "react-icons/ci";
 import img3 from "../assets/Images/mainimg/m1/img3.webp";
 import img4 from "../assets/Images/mainimg/m1/img4.webp";
 import img5 from "../assets/Images/mainimg/m1/img5.webp";
-import img6 from "../assets/Images/mainimg/m1/img6.webp"
+// import img6 from "../assets/Images/mainimg/m1/img6.webp"
 import growth from "../assets/Images/growth-chart-1400x1100.jpg"
 import manuf from "../assets/Images/manufacturing-dashboard-1400x1100.jpg"
 
