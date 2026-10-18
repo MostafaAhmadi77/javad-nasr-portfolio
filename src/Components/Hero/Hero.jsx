@@ -63,7 +63,7 @@ function Hero({
             height={700}              
             fetchPriority="high"      
             decoding="async"
-            className="w-full h-auto object-contain"
+            className="w-full h-auto object-contain rounded-r-[12rem] "
           />
         </div>
       </div>

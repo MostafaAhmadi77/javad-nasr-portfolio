@@ -14,7 +14,7 @@ function MainLayout() {
           </div>
           
         </header>
-        <div className="w-full bg-black pt-3 pb-0">
+        <div className="w-full bg-black ">
           <Outlet />
        
         </div>
