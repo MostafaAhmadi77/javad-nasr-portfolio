@@ -4,6 +4,8 @@ import { GoArrowRight } from "react-icons/go";
 import Hero from "../../Components/Hero/Hero";
 import Button from "../../Components/Button/Button";
 import MainTable from './components/MainTable';
+import Swiperjs from '../About/components/Swiperjs';
+import planet from "../../assets/Images/PlanetEarth.png"
 
 
 
@@ -58,7 +60,7 @@ export default function CaseStudies() {
         }
       />
 
-      <div className=' grid
+      {/* <div className=' grid
                   grid-cols-1
                   sm:grid-cols-2
                   md:grid-cols-4
@@ -87,10 +89,11 @@ export default function CaseStudies() {
           className={ x.index ?'text-white bg-primary-orange border-white ':'' } // نمیدونم چرا این کار نکرد
           />
         ))}
-      </div>
+      </div> */}
+    <Swiperjs/>
     
 
-    <div className='w-full flex flex-col  gap-10    mr-3  ml-3 p-4 '>
+    <div className='w-full flex flex-col  gap-10 mt-10   mr-4  ml-4 mb-10 '>
        {casestudiesTable.map(x=>(
         <MainTable key={x.id} {...x}/>
        ))}
@@ -99,7 +102,7 @@ export default function CaseStudies() {
 
 
      {/* last part */}
-     <div className=' mt-5 pt-5 pb-5 pr-10 pl-10  flex flex-col sm:flex-row gap-10 w-full  mr-3  ml-3 p-4 border border-primary-orange rounded-2xl '>
+     <div className=' mt-10  mr-4 ml-4 pt-5 pb-5 pr-10 pl-10  flex flex-col sm:flex-row gap-10 w-full  mr-3  ml-3 p-4 border border-primary-orange rounded-2xl '>
           
           <div className=' w-full  sm:w-[50%] flex flex-col sm:items-start items-center  gap-5'>
             <p className='text-primary-orange flex text-[0.8rem] '>
@@ -131,8 +134,8 @@ export default function CaseStudies() {
           </div>
 
 
-          <div className='w-full sm:w-[25%]'>
-            <img  src="dist/assets/Planet Earth.png" alt="" />
+          <div className='w-full sm:w-[25%]  '>
+            <img  src={planet} alt="" />
           </div>
           
      </div>

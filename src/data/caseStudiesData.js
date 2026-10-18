@@ -1,8 +1,11 @@
 import { MdOutlineFactory } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
 import img3 from "../assets/Images/mainimg/m1/img3.webp";
-// تصویر را باید به این صورت فراخوانی کرده و استفاده کنید
-
+import img4 from "../assets/Images/mainimg/m1/img4.webp";
+import img5 from "../assets/Images/mainimg/m1/img5.webp";
+import img6 from "../assets/Images/mainimg/m1/img6.webp"
+import growth from "../assets/Images/growth-chart-1400x1100.jpg"
+import manuf from "../assets/Images/manufacturing-dashboard-1400x1100.jpg"
 
 
 const casestudiesBtns= [
@@ -25,7 +28,7 @@ const casestudiesTable = [
           secoundNum:'18%' , secoundTitle:'Cost Reduction' , thirdNum:'2.3x' , thirdTitle:'Return on Investment'} , 
 
 
-         {id:'02', img:'../src/assets/Images/mainimg/img4.webp'
+         {id:'02', img:img4
          ,shortTitle:'OPERATIONAL EXCELLENCE' , longTitle:'Process Optmization in Steel Complex' , 
          description:'Redesigned core production processes and implemented performance management systems to improve efficiency and reduce waste.' , type:'Steel Industry' , typeIcon:MdOutlineFactory  , loc:'Asia' , locIcon:CiLocationOn
           , firstNum:'30%' , firstTitle:'Increase in Productivity'  ,
@@ -33,13 +36,13 @@ const casestudiesTable = [
          }, 
 
 
-         {id:'03', img:'../src/assets/Images/mainimg/img5.webp'
+         {id:'03', img:img5
          ,shortTitle:'ORGANIZATIONAL DEVELOPMENT' , longTitle:'Culture Transformation Program' , 
          description:'Partnered with leadership to build a high-performance culture through leadership development, engagement strategies and change initiatives. ' , type:'Diversified Holding' , typeIcon:MdOutlineFactory , loc:'Middle East' , locIcon:CiLocationOn 
           , firstNum:'40%' , firstTitle:'Increase in Employing Engangement '  ,
           secoundNum:'35%' , secoundTitle:'Leadership Effectiveness' , thirdNum:'20%' , thirdTitle:'Reduction in Turnover'
          }, 
-         {id:'04', img:'../assets/manufacturing-dashboard-1400x1100.jpg'
+         {id:'04', img:manuf
          ,shortTitle:'DIGITAL & PROCESS OPTIMIZATION' , longTitle:'Digital Transformation Roadmap' , 
          description:'Developed and executed a digital transformation roadmap , automating key process and enabling data-driven decision making.' ,type: 'Financial Services', typeIcon:MdOutlineFactory , loc:'Europe' , locIcon:CiLocationOn 
           , firstNum:'50%' , firstTitle:'Faster Process Execution'  ,
@@ -47,7 +50,7 @@ const casestudiesTable = [
          }, 
 
          
-         {id:'05', img:'../assets/Images/manufacturing-dashboard-1400x1100.jpg'
+         {id:'05', img:growth
          ,shortTitle:'SALES & GROWTH STRATEGY' , longTitle:'Go-to-Market Strategy & Growth Acceleration' , 
          description:'Designed and executed a go-to-market strategy that expanded market share and significantly increased top-line growth.' ,type: 'Construction', typeIcon:MdOutlineFactory , loc:'Middle East' , locIcon:CiLocationOn 
           , firstNum:'35%' , firstTitle:'Market Share Growth'  ,

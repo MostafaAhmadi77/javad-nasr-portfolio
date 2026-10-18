@@ -14,7 +14,7 @@ export default function MainTable({id , img , shortTitle , longTitle , type , ty
 
 
   return (
-    <div className= 'w-full text-amber-50 flex  md:flex-row sm:flex-row ss:flex-col  border border-gray-800 rounded-2xl gap-10'>
+    <div className= 'w-full text-amber-50 flex  md:flex-row sm:flex-row ss:flex-col  border border-gray-800 rounded-2xl gap-10 '>
        
        <img src={img} className="w-full sm:w-[25%]"  />
        
@@ -40,7 +40,7 @@ export default function MainTable({id , img , shortTitle , longTitle , type , ty
        </div>
          
   
-       <div className='w-[35%] flex flex-col items-start justify-center gap-15 p-5 border-l-1 border-gray-700'>
+       <div className='w-[35%] flex flex-col items-start justify-center gap-15 pl-10 border-l-1 border-gray-700 ' >
             <div className='flex justify-center items-center gap-10'>
                  <div className='flex flex-col gap-5'>
                     <h2 className='text-4xl font-family-PTSerif-Regular text-primary-orange'>{firstNum}</h2>
