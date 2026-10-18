@@ -1,17 +1,16 @@
 // import React from 'react'
-import {casestudiesBtns  , casestudiesTable} from '../../data/caseStudiesData'
+import { casestudiesBtns, casestudiesTable } from "../../data/caseStudiesData";
 import { GoArrowRight } from "react-icons/go";
 import Hero from "../../Components/Hero/Hero";
 import Button from "../../Components/Button/Button";
-import MainTable from './components/MainTable';
-import Swiperjs from '../About/components/Swiperjs';
-import planet from "../../assets/Images/PlanetEarth.png"
-
-
+import MainTable from "./components/MainTable";
+import Swiperjs from "../About/components/Swiperjs";
+import planet from "../../assets/Images/PlanetEarth.png";
 
 export default function CaseStudies() {
   return (
     <>
+      .
       <Hero
         titlePage="Case Studies"
         textHyper={
@@ -30,7 +29,9 @@ export default function CaseStudies() {
         textPageDescription={
           <div className="text-justify ">
             <span className="flex text-justify ">
-         Real projects. Real impact. See how I partner with organizations to solve complex challenges and deliver measurable , lasing results.
+              Real projects. Real impact. See how I partner with organizations
+              to solve complex challenges and deliver measurable , lasing
+              results.
             </span>
           </div>
         }
@@ -56,68 +57,55 @@ export default function CaseStudies() {
             duration-300
           "
           />
-
         }
       />
+      {/* Swiper Silder */}
+      <div className="siwper-silder px-6">
+        <Swiperjs />
+      </div>
 
-      {/* <div className=' grid
-                  grid-cols-1
-                  sm:grid-cols-2
-                  md:grid-cols-4
-                  xl:grid-cols-6   mr-3  ml-3 p-4  gap-2'>
-        {casestudiesBtns.map(x=>(
-             <Button
-             key={x.id}
-            title={x.title}
-            styleBtn="
-            flex
-            justify-center
-            items-center
-            border
-            border-primary-orange
-            px-8
-            py-2
-            gap-2
-            rounded-2xl
-            text-primary-orange
-            hover:text-white
-            hover:bg-primary-orange
-            hover:border-white
-            transition
-            duration-300
-          "
-          className={ x.index ?'text-white bg-primary-orange border-white ':'' } // نمیدونم چرا این کار نکرد
-          />
+
+
+
+      
+      {/* casestudiesTable Sections */}
+      <div className="w-full flex flex-col  gap-10  p-5 ">
+        {casestudiesTable.map((x) => (
+          <MainTable key={x.id} {...x} />
         ))}
-      </div> */}
-    <Swiperjs/>
-    
-
-    <div className='w-full flex flex-col  gap-10 mt-10   mr-4  ml-4 mb-10 '>
-       {casestudiesTable.map(x=>(
-        <MainTable key={x.id} {...x}/>
-       ))}
-    </div>
-     
-
-
-     {/* last part */}
-     <div className=' mt-10  mr-4 ml-4 pt-5 pb-5 pr-10 pl-10  flex flex-col sm:flex-row gap-10 w-full  mr-3  ml-3 p-4 border border-primary-orange rounded-2xl '>
-          
-          <div className=' w-full  sm:w-[50%] flex flex-col sm:items-start items-center  gap-5'>
-            <p className='text-primary-orange flex text-[0.8rem] '>
-             ---  READY TO CREATE YOUR SUCCESS STORY ?
+      </div>
+      {/* last part */}
+      <div className="p-5">
+        <div className=" w-full  p-4   flex justify-between   gap-10   border border-primary-orange rounded-2xl 
+        ss:flex-col ss:justify-center ss:items-center ss:text-center
+        sm:flex-col sm:justify-center sm:text-center sm:items-center
+        xl:flex-row xl:justify-baseline xl:text-start xl:items-center
+        ">
+          <div className=" w-full flex flex-col   items-center  gap-5 
+          ss:self-center 
+          sm:self-center sm:w-[50%] sm:items-center
+          xl:self-start xl:w-[80%] xl:items-start
+          ">
+            <p className="text-primary-orange flex text-[0.8rem] ">
+              --- READY TO CREATE YOUR SUCCESS STORY ?
             </p>
-          <div>
-              <h1 className='text-white text-4xl font-family-CormorantGaramondBold'>Let's Bulid Transformation </h1>
-            <span className='text-primary-orange text-4xl font-family-CormorantGaramondBold ' >Together.</span>
-          </div>
-            <p className='text-gray-400 text-[0.8rem]'>Every organization has potential. Let's unlock yours.</p>
+            <div className="w-[24rem] ss:text-center sm:text-center xl:w-160 xl:text-start">
+              <span className=" text-white text-4xl font-family-CormorantGaramondBold">
+                Let's Bulid Transformation{" "}
+              </span>
+              <span className="text-primary-orange text-4xl font-family-CormorantGaramondBold ">
+                Together.
+              </span>
+            </div>
+            <p className="text-gray-400 text-[0.8rem] self-center xl:self-start">
+              Every organization has potential. Let's unlock yours.
+            </p>
           </div>
 
-
-          <div className='w-full sm:w-[25%] flex justify-center items-center'>
-            <Button title='Book a Consultation'  styleBtn="
+          <div className="w-full sm:w-[35%] flex justify-center items-center xl:w-[20%]">
+            <Button
+              title="Book a Consultation"
+              styleBtn="
         
             border
             border-primary-orange
@@ -130,16 +118,12 @@ export default function CaseStudies() {
             hover:border-white
             transition
             duration-300
-          "/>
+          "
+            />
           </div>
 
-
-          <div className='w-full sm:w-[25%]  '>
-            <img  src={planet} alt="" />
-          </div>
-          
-     </div>
-
+        </div>
+      </div>
     </>
-  )
+  );
 }
