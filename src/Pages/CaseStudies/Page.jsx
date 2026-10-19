@@ -90,10 +90,10 @@ export default function CaseStudies() {
               --- READY TO CREATE YOUR SUCCESS STORY ?
             </p>
             <div className="w-[24rem] ss:text-center sm:text-center xl:w-160 xl:text-start">
-              <span className=" text-white text-4xl font-family-CormorantGaramondBold">
+              <span className=" text-white text-4xl ss:text-[0.9rem] sm:text-4xl font-family-CormorantGaramondBold">
                 Let's Bulid Transformation{" "}
               </span>
-              <span className="text-primary-orange text-4xl font-family-CormorantGaramondBold ">
+              <span className="text-primary-orange text-4xl ss:text-[0.9rem] sm:text-4xl font-family-CormorantGaramondBold ">
                 Together.
               </span>
             </div>
