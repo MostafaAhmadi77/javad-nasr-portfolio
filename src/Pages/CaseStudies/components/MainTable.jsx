@@ -46,8 +46,9 @@ export default function MainTable({
         className="h-87.5 w-115.25 flex items-center justify-center
       ss:flex-col ss:h-62 ss:w-full
       sm:flex-col sm:h-62.5 sm:w-full 
-      md:flex-col md:h-62.5 md:w-full  
-      xl:flex-col xl:h-62.5 xl:w-full xl:items-start   
+      md:flex-col md:h-62.5 md:w-full 
+      xl:flex-col xl:h-62.5 xl:w-full xl:items-start  
+       
       lgg:w-175"
       >
         <div className="flex flex-col gap-5 ">
@@ -117,6 +118,8 @@ export default function MainTable({
          
          md:p-0 md:w-full md:h-60 md:justify-center md:items-center 
          md:gap-16 md:border-0 md:border-l-0 
+         md:flex-1
+         lg:p-5 lg:justify-center lg:items-center  
          xl:w-175 xl:h-64 xl:items-center xl:gap-12 xl:flex-1 xl:border-l
       "
       >
@@ -126,13 +129,16 @@ export default function MainTable({
               className="font-family-PTSerif-Regular text-4xl text-primary-orange 
             ss:self-center 
             sm:self-center 
-            xl:self-center "
+            lg:self-center
+            xl:self-center
+             "
             >
               {firstNum}
             </span>
             <span
-              className="text-[0.8rem] text-gray-400  sm:self-center flex-1 
+              className="text-[0.8rem] text-gray-400   flex-1 
               ss:text-center 
+              sm:self-center
               lgg:self-center"
             >
               {firstTitle}
@@ -143,6 +149,7 @@ export default function MainTable({
             <span
               className="font-family-PTSerif-Regular text-4xl text-primary-orange  flex-1  
             ss:self-center
+            lg:self-center
             lgg:self-center"
             >
               {secoundNum}
@@ -153,7 +160,7 @@ export default function MainTable({
           </div>
 
           <div className="flex flex-col gap-5">
-            <span className="font-family-PTSerif-Regular text-4xl text-primary-orange sm:self-center flex-1 ss:self-center  lgg:self-center">
+            <span className="font-family-PTSerif-Regular text-4xl text-primary-orange  flex-1 ss:self-center  sm:self-center lgg:self-center">
               {thirdNum}
             </span>
             <span className="text-[0.8rem] text-gray-400 ss:text-center lgg:self-center">
