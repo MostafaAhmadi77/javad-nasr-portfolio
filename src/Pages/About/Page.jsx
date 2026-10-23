@@ -6,7 +6,7 @@ import { Aboutmain } from "../../data/data";
 
 function About() {
   return (
-    <>
+    <div className="pb-5">
       <Hero
         titlePage="ABOUT ME"
         textHyper={
@@ -60,20 +60,21 @@ function About() {
         <Swiperjs />
       </div>
       <div className="mainbar-About mr-3  ml-3 w-ful border  border-primary-orange rounded-2xl p-4 flex flex-col gap-6">
-        <div className="flex gap-7 ss:flex-col md:flex-row">
+        <div className="flex gap-7 ss:flex-col sm:flexc md:flex-row">
           <section className="w-[50%] h-120 border border-primary-orange rounded-2xl text-justify  bg-[linear-gradient(182deg,rgba(255,89,0,0.15)_00%,rgba(5,3,2,0.9)_90%),url('/src/assets/Images/About-img/About.webp')]  
           bg-cover bg-center flex flex-col justify-end p-4
           ss:bg-center
           ss:w-full
+          sm:w-full
           
-          md:w-[50%]
+          md:
           
           
           ss:text-start">
             <span className="text-primary-orange text-8xl font-family-CormorantGaramondBold ss:block ">
               ،،
             </span>
-            <span className="text-white font-family-CormorantGaramondBold  text- p-2 text-3xl ss:text-[1.5rem] md:text-3xl   md:w-110 ">
+            <span className="text-white font-family-CormorantGaramondBold  text- p-2 text-3xl ss:text-[1.5rem] md:text-3xl  lg:w-110  ">
               Successful Organizations are not built by chance. They are
               designed with clarity, led with purpose, and executed with
               discipline.
@@ -81,7 +82,7 @@ function About() {
           </section>
           <section className="w-[50%] h-120 border  bg-[linear-gradient(182deg,rgba(255,89,0,0.20)_0%,rgba(5,3,2,0.9)_99%)]
            border-primary-orange rounded-2xl flex flex-col gap-4  p-5
-           ss:w-full ss:h-auto md:w-[50%]">
+           ss:w-full ss:h-auto sm:w-full sm:h-auto md:w-full">
             <div className=" flex items-center ss:justify-center md:justify-start">
               <span className="text-white font-family-CormorantGaramondBold  text-4xl ">
                 <span className="text-primary-orange text-5xl font-family-GreatVibesRegular">
@@ -118,7 +119,7 @@ function About() {
 
        
       </div>
-    </>
+    </div>
   );
 }
 
