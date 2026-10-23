@@ -52,29 +52,35 @@ export default function MainTable({
       lgg:w-175"
       >
         <div className="flex flex-col gap-5 ">
-          <div className=" flex gap-5  text-primary-orange
+          <div
+            className=" flex gap-5  text-primary-orange
           ss:items-center ss:justify-center
            xl:justify-start
-          ">
+          "
+          >
             <span className="rounded border border-primary-orange px-3 py-2">
               {id}
             </span>
             <span className="text-[0.9rem]">{shortTitle}</span>
           </div>
 
-          <h2 className=" font-family-CormorantGaramondBold text-2xl text-white 
+          <h2
+            className=" font-family-CormorantGaramondBold text-2xl text-white 
           ss:text-center 
           sm:text-center
           md:text-center
           xl:text-start
-           ">
+           "
+          >
             {longTitle}
           </h2>
 
-          <p className="text-[0.9rem] text-gray-400 ss:self-center sm:w-132 
+          <p
+            className="text-[0.9rem] text-gray-400 ss:self-center sm:w-132 
           ss:text-center 
           md:text-center
-          xl:text-start">
+          xl:text-start"
+          >
             {description}
           </p>
 
@@ -84,7 +90,6 @@ export default function MainTable({
           sm:self-center
           md:self-center
           xl:self-start"
-          
           >
             <div className="flex items-center gap-5">
               {TypeIcon && (
@@ -123,10 +128,12 @@ export default function MainTable({
          xl:w-175 xl:h-64 xl:items-center xl:gap-12 xl:flex-1 xl:border-l
       "
       >
-        <div className="flex items-center justify-center  gap-10 xl:gap-20 ">
-          <div className="flex flex-col  gap-5">
+        <div className="flex items-center justify-center  gap-10 ss:gap-3 sm:gap-20 xl:gap-20 ">
+          <div className="flex flex-col ss:gap-3  sm:gap-5">
+
             <span
               className="font-family-PTSerif-Regular text-4xl text-primary-orange 
+            ss:text-[0.9rem]
             ss:self-center 
             sm:self-center 
             lg:self-center
@@ -137,6 +144,7 @@ export default function MainTable({
             </span>
             <span
               className="text-[0.8rem] text-gray-400   flex-1 
+              ss:text-[0.7rem]
               ss:text-center 
               sm:self-center
               lgg:self-center"
@@ -145,25 +153,40 @@ export default function MainTable({
             </span>
           </div>
 
-          <div className="flex flex-col gap-5 ">
+          <div className="flex flex-col ss:gap-3 sm:gap-5 ">
             <span
-              className="font-family-PTSerif-Regular text-4xl text-primary-orange  flex-1  
+              className="font-family-PTSerif-Regular text-4xl text-primary-orange  flex-1              
+              ss:text-[0.9rem] 
             ss:self-center
             lg:self-center
             lgg:self-center"
             >
               {secoundNum}
             </span>
-            <span className="text-[0.8rem] text-gray-400 ss:text-center  lgg:self-center">
+            <span
+              className="text-[0.8rem] text-gray-400               
+              ss:text-[0.7rem] ss:text-center  
+              lgg:self-center"
+            >
               {secoundTitle}
             </span>
           </div>
 
-          <div className="flex flex-col gap-5">
-            <span className="font-family-PTSerif-Regular text-4xl text-primary-orange  flex-1 ss:self-center  sm:self-center lgg:self-center">
+          <div className="flex flex-col ss:gap-3 sm:gap-5">
+            <span
+              className="font-family-PTSerif-Regular text-4xl text-primary-orange  flex-1 ss:self-center  
+               ss:text-[0.9rem]
+                 sm:self-center
+                lgg:self-center"
+            >
               {thirdNum}
             </span>
-            <span className="text-[0.8rem] text-gray-400 ss:text-center lgg:self-center">
+            <span
+              className="text-[0.8rem] text-gray-400
+              ss:text-[0.7rem]
+              ss:text-center 
+              lgg:self-center"
+            >
               {thirdTitle}
             </span>
           </div>
