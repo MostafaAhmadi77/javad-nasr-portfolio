@@ -5,7 +5,7 @@ import Hero from "../../Components/Hero/Hero";
 import Button from "../../Components/Button/Button";
 import MainTable from "./components/MainTable";
 import Swiperjs from "../About/components/Swiperjs";
-import planet from "../../assets/Images/PlanetEarth.png";
+
 
 export default function CaseStudies() {
   return (
