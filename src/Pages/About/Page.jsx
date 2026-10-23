@@ -83,7 +83,7 @@ function About() {
           <section className="w-[50%] h-120 border  bg-[linear-gradient(182deg,rgba(255,89,0,0.20)_0%,rgba(5,3,2,0.9)_99%)]
            border-primary-orange rounded-2xl flex flex-col gap-4  p-5
            ss:w-full ss:h-auto sm:w-full sm:h-auto md:w-full">
-            <div className=" flex items-center ss:justify-center md:justify-start">
+            <div className=" flex items-center ss:justify-center md:justify-center lg:justify-start">
               <span className="text-white font-family-CormorantGaramondBold  text-4xl ">
                 <span className="text-primary-orange text-5xl font-family-GreatVibesRegular">
                   -
@@ -97,8 +97,12 @@ function About() {
                   <div className="flex items-center  gap-4 
                   ss:flex-col
                   ss:text-center
-                  md:flex-row
-                  md:text-start">
+                  md:flex-col
+                  md:text-center
+                  md:justify-center
+                  lg:flex-row
+                  lg:text-start
+                  lg:justify-start">
                     <span className="text-primary-orange border  bg-[linear-gradient(2deg,rgba(255, 89, 0, 0.3) 0%, rgba(5, 3, 2, 1) 99%)] border-primary-orange p-2 rounded-full  text-5xl">
                       {<date.Icon />}
                     </span>
