@@ -60,19 +60,29 @@ function About() {
         <Swiperjs />
       </div>
       <div className="mainbar-About mr-3  ml-3 w-ful border  border-primary-orange rounded-2xl p-4 flex flex-col gap-6">
-        <div className="flex gap-7">
-          <section className="w-[50%] h-120 border border-primary-orange rounded-2xl text-justify  bg-[linear-gradient(182deg,rgba(255,89,0,0.15)_00%,rgba(5,3,2,0.9)_90%),url('/src/assets/Images/About-img/About.webp')]  bg-cover bg-center flex flex-col justify-end p-4">
-            <span className="text-primary-orange text-8xl font-family-CormorantGaramondBold">
+        <div className="flex gap-7 ss:flex-col md:flex-row">
+          <section className="w-[50%] h-120 border border-primary-orange rounded-2xl text-justify  bg-[linear-gradient(182deg,rgba(255,89,0,0.15)_00%,rgba(5,3,2,0.9)_90%),url('/src/assets/Images/About-img/About.webp')]  
+          bg-cover bg-center flex flex-col justify-end p-4
+          ss:bg-center
+          ss:w-full
+          
+          md:w-[50%]
+          
+          
+          ss:text-start">
+            <span className="text-primary-orange text-8xl font-family-CormorantGaramondBold ss:block ">
               ،،
             </span>
-            <span className="text-white font-family-CormorantGaramondBold w-110 text- p-2 text-3xl">
+            <span className="text-white font-family-CormorantGaramondBold  text- p-2 text-3xl ss:text-[1.5rem] md:text-3xl   md:w-110 ">
               Successful Organizations are not built by chance. They are
               designed with clarity, led with purpose, and executed with
               discipline.
             </span>
           </section>
-          <section className="w-[50%] h-120 border  bg-[linear-gradient(182deg,rgba(255,89,0,0.20)_0%,rgba(5,3,2,0.9)_99%)] border-primary-orange rounded-2xl flex flex-col gap-4  p-5">
-            <div className=" flex items-center ">
+          <section className="w-[50%] h-120 border  bg-[linear-gradient(182deg,rgba(255,89,0,0.20)_0%,rgba(5,3,2,0.9)_99%)]
+           border-primary-orange rounded-2xl flex flex-col gap-4  p-5
+           ss:w-full ss:h-auto md:w-[50%]">
+            <div className=" flex items-center ss:justify-center md:justify-start">
               <span className="text-white font-family-CormorantGaramondBold  text-4xl ">
                 <span className="text-primary-orange text-5xl font-family-GreatVibesRegular">
                   -
@@ -83,11 +93,15 @@ function About() {
             <div className="">
               {Aboutmain.map((date) => {
                 return (
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center  gap-4 
+                  ss:flex-col
+                  ss:text-center
+                  md:flex-row
+                  md:text-start">
                     <span className="text-primary-orange border  bg-[linear-gradient(2deg,rgba(255, 89, 0, 0.3) 0%, rgba(5, 3, 2, 1) 99%)] border-primary-orange p-2 rounded-full  text-5xl">
                       {<date.Icon />}
                     </span>
-                    <div className=" w-85 flex flex-col gap-2  ">
+                    <div className="  flex flex-col gap-2 md:w-85 ">
                       <span className="text-white text-2xl font-bold">
                         {date.title}
                       </span>
