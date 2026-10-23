@@ -66,6 +66,8 @@ export default function MainTable({
 
           <h2
             className=" font-family-CormorantGaramondBold text-2xl text-white 
+            ss:px-2
+            sm:px-0
           ss:text-center 
           sm:text-center
           md:text-center
@@ -76,7 +78,7 @@ export default function MainTable({
           </h2>
 
           <p
-            className="text-[0.9rem] text-gray-400 ss:self-center sm:w-132 
+            className=" text-gray-400 ss:text-[0.8rem] ss:px-2 ss:self-center sm:px-0 sm:w-132 
           ss:text-center 
           md:text-center
           xl:text-start"
@@ -86,12 +88,13 @@ export default function MainTable({
 
           <div
             className="flex items-center justify-start gap-10 text-[0.9rem] text-gray-400 
+            ss:px-
           ss:self-center
           sm:self-center
           md:self-center
           xl:self-start"
           >
-            <div className="flex items-center gap-5">
+            <div className="flex items-center ss:gap-2  sm:gap-5">
               {TypeIcon && (
                 <span>
                   <TypeIcon />
@@ -100,14 +103,15 @@ export default function MainTable({
               <span>{type}</span>
             </div>
 
-            <div className="flex items-center gap-5">
+            <div className="flex items-center ss:gap-2 sm:gap-5">
               {LocIcon && (
-                <span>
+                <span className="sm:text-[1rem]">
                   <LocIcon />
                 </span>
               )}
               <span>{loc}</span>
             </div>
+
           </div>
         </div>
       </div>
@@ -130,11 +134,11 @@ export default function MainTable({
       >
         <div className="flex items-center justify-center  gap-10 ss:gap-3 sm:gap-20 xl:gap-20 ">
           <div className="flex flex-col ss:gap-3  sm:gap-5">
-
             <span
               className="font-family-PTSerif-Regular text-4xl text-primary-orange 
             ss:text-[0.9rem]
             ss:self-center 
+            sm:text-[2rem]
             sm:self-center 
             lg:self-center
             xl:self-center
@@ -146,6 +150,7 @@ export default function MainTable({
               className="text-[0.8rem] text-gray-400   flex-1 
               ss:text-[0.7rem]
               ss:text-center 
+              sm:text-[1rem]
               sm:self-center
               lgg:self-center"
             >
@@ -156,7 +161,8 @@ export default function MainTable({
           <div className="flex flex-col ss:gap-3 sm:gap-5 ">
             <span
               className="font-family-PTSerif-Regular text-4xl text-primary-orange  flex-1              
-              ss:text-[0.9rem] 
+              ss:text-[0.9rem]
+              sm:text-[2rem] 
             ss:self-center
             lg:self-center
             lgg:self-center"
@@ -166,6 +172,7 @@ export default function MainTable({
             <span
               className="text-[0.8rem] text-gray-400               
               ss:text-[0.7rem] ss:text-center  
+              sm:text-[1rem]
               lgg:self-center"
             >
               {secoundTitle}
@@ -176,6 +183,7 @@ export default function MainTable({
             <span
               className="font-family-PTSerif-Regular text-4xl text-primary-orange  flex-1 ss:self-center  
                ss:text-[0.9rem]
+               sm:text-[2rem]
                  sm:self-center
                 lgg:self-center"
             >
@@ -184,6 +192,7 @@ export default function MainTable({
             <span
               className="text-[0.8rem] text-gray-400
               ss:text-[0.7rem]
+              sm:text-[1rem]
               ss:text-center 
               lgg:self-center"
             >
