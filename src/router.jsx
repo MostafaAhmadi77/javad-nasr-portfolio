@@ -5,6 +5,7 @@ import NotFound from "./Components/404/NotFound";
 import Services from "./Pages/Services/Page";
 import About from "./Pages/About/Page"
 import CaseStudies from "./Pages/CaseStudies/Page";
+import DashboardAdmin from "./Pages/dashboardAdmin/Page";
 
 const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
             {
                 path:"/about",
                 element:<About />
+            },
+            {
+                path:"/dashboardAdmin",
+                element:<DashboardAdmin />
             },
             {
                 path:"/process",
