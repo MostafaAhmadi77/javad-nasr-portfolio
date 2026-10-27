@@ -1,14 +1,12 @@
 import { GoArrowRight } from "react-icons/go";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
-import { NavLink} from "react-router";
+import { NavLink, Link } from "react-router";
 import Button from "../Button/Button";
 import { useState } from "react";
-
 
 import headerData from "../../data/headerData";
 
 import Logo from "../../assets/Images/Logo.webp";
-
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,16 +25,26 @@ function Navbar() {
 
         <div className="hidden lg:block">
           <ul className="2xl:text-[1.5rem] flex items-center gap-12 text-base cursor-pointer">
-     
-           {headerData.map(x=>(
-             <li>
-               <NavLink key={x.id} to={x.path}  className={(x)=>x.isActive ? 'text-primary-orange' :''}>{x.title}</NavLink>
-             </li>
-           ))}
+            {headerData.map((x) => (
+              <li key={x.id}>
+                <NavLink
+                  to={x.path}
+                  className={(link) => (link.isActive ? "text-primary-orange" : "")}
+                >
+                  {x.title}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex items-center gap-3">
+          <Link
+            to="/dashboardAdmin"
+            className="border border-primary-orange text-primary-orange px-5 py-3 rounded-2xl"
+          >
+            Login
+          </Link>
           <Button
             title="Let's Work Together"
             icon={<GoArrowRight />}
@@ -80,16 +88,27 @@ function Navbar() {
               setIsOpen(false);
             }}
           >
-   
-           {headerData.map(x=>(
-             <li>
-               <NavLink key={x.id} to={x.path}  className={(x)=>x.isActive ? 'text-primary-orange' :''}>{x.title}</NavLink>
-             </li>
-           ))}
+            {headerData.map((x) => (
+              <li key={x.id}>
+                <NavLink
+                  to={x.path}
+                  className={(link) => (link.isActive ? "text-primary-orange" : "")}
+                >
+                  {x.title}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
 
-        <div className="px-8 mt-10">
+        <div className="px-8 mt-10 flex flex-col gap-3">
+          <Link
+            to="/dashboardAdmin"
+            onClick={() => setIsOpen(false)}
+            className="flex justify-center items-center gap-3 border border-primary-orange text-primary-orange rounded-xl py-3"
+          >
+            Login
+          </Link>
           <Button
             title="Let's Work Together"
             icon={<GoArrowRight />}

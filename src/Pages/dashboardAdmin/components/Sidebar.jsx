@@ -6,7 +6,7 @@ const items = [
   { key: "settings", label: "Settings" },
 ];
 
-function Sidebar({ activeTab, onSelect }) {
+function Sidebar({ activeTab, onSelect, onLogout }) {
   return (
     <aside className="border border-white/15 rounded-2xl p-4 bg-black h-fit">
       <div className="border-b border-white/10 pb-4 mb-4">
@@ -29,6 +29,15 @@ function Sidebar({ activeTab, onSelect }) {
           </button>
         ))}
       </nav>
+      {onLogout && (
+        <button
+          type="button"
+          onClick={onLogout}
+          className="w-full text-left px-4 py-2 rounded-xl text-white/70 hover:text-white hover:bg-white/10 mt-2"
+        >
+          Logout
+        </button>
+      )}
       <p className="text-white/40 text-xs mt-6">
         Strategy. Systems. Execution.
       </p>
