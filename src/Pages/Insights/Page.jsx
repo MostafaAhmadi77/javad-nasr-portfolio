@@ -1,35 +1,19 @@
 import { useState } from "react";
 import { GoArrowRight } from "react-icons/go";
 import HeroImg from "../../assets/Images/H1.webp";
-import insightsData, { topics } from "./data/insightsData";
+import insightsData from "./data/insightsData";
+import {
+  performanceAgendaHero,
+  performanceAgendaSystem,
+} from "./data/insightsImages";
 import "./insights.css";
 
-const featured = insightsData.find((item) => item.id === "strategy-execution-gap");
-const latest = insightsData.filter((item) => item.id !== "strategy-execution-gap");
-const trending = insightsData.filter((item) =>
-  ["organizational-agility", "culture-performance", "data-driven-decisions"].includes(item.id)
-);
-
-function InsightVisual({ title }) {
-  return (
-    <div className="insights-visual" aria-hidden="true">
-      <span className="insights-visual-ring" />
-      <span className="insights-visual-path" />
-      <span className="insights-visual-label">{title}</span>
-    </div>
-  );
-}
+const article = insightsData[0];
 
 function Insights() {
-  const [topic, setTopic] = useState("All Insights");
-  const [reading, setReading] = useState(null);
+  const [reading, setReading] = useState(false);
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
-
-  const filteredLatest =
-    topic === "All Insights"
-      ? latest
-      : latest.filter((item) => item.category === topic);
 
   if (reading) {
     return (
@@ -37,25 +21,28 @@ function Insights() {
         <div className="max-w-4xl mx-auto">
           <button
             type="button"
-            onClick={() => setReading(null)}
+            onClick={() => setReading(false)}
             className="border border-white/30 px-4 py-2 rounded-xl text-sm"
           >
             ← Back to insights
           </button>
           <span className="block text-primary-orange text-sm mt-8 tracking-widest">
-            {reading.category.toUpperCase()}
+            {article.category.toUpperCase()}
           </span>
           <h1 className="text-3xl md:text-5xl font-bold mt-3 leading-tight">
-            {reading.title}
+            {article.title}
           </h1>
           <p className="text-white/60 mt-4">
-            {reading.author} • {reading.date} • {reading.readTime}
+            {article.author} • {article.date} • {article.readTime}
           </p>
-          {reading.id === "performance-agenda-2026" && (
-            <p className="text-white/70 text-lg mt-4">{reading.excerpt}</p>
-          )}
+          <p className="text-white/70 text-lg mt-4">{article.excerpt}</p>
+          <img
+            src={performanceAgendaHero}
+            alt="Leadership team reviewing an organizational system"
+            className="w-full rounded-2xl mt-8 border border-white/10"
+          />
           <div className="mt-8 flex flex-col gap-8">
-            {reading.sections.map((section, index) => (
+            {article.sections.map((section, index) => (
               <section key={index}>
                 {section.heading && (
                   <h2 className="text-2xl font-bold text-primary-orange">
@@ -67,19 +54,24 @@ function Insights() {
                     {paragraph}
                   </p>
                 ))}
+                {index === 1 && (
+                  <img
+                    src={performanceAgendaSystem}
+                    alt="Organization as a connected system of people, processes and AI"
+                    className="w-full rounded-2xl mt-8 border border-white/10"
+                  />
+                )}
               </section>
             ))}
           </div>
-          {reading.source && (
-            <p className="text-white/50 text-sm mt-10 border-t border-white/15 pt-6">
-              Source: {reading.source}
-              <br />
-              Perspective &amp; analysis: {reading.perspective}
-            </p>
-          )}
+          <p className="text-white/50 text-sm mt-10 border-t border-white/15 pt-6">
+            Source: {article.source}
+            <br />
+            Perspective &amp; analysis: {article.perspective}
+          </p>
           <button
             type="button"
-            onClick={() => setReading(null)}
+            onClick={() => setReading(false)}
             className="border border-white/30 px-4 py-2 rounded-xl text-sm mt-8"
           >
             ← Back to insights
@@ -110,7 +102,7 @@ function Insights() {
             href="#latest-insights"
             className="inline-flex items-center gap-2 border border-primary-orange text-primary-orange px-5 py-3 rounded-xl mt-8"
           >
-            Explore All Insights <GoArrowRight />
+            Explore Insights <GoArrowRight />
           </a>
         </div>
         <div className="relative flex justify-center">
@@ -126,134 +118,41 @@ function Insights() {
         </div>
       </section>
 
-      {/* Topics */}
-      <section className="px-4 md:px-10">
-        <div className="border border-white/10 rounded-2xl p-3 flex flex-wrap items-center gap-2">
-          <span className="text-primary-orange text-xs tracking-widest mr-2">
-            EXPLORE TOPICS
-          </span>
-          {topics.map((item) => (
-            <button
-              key={item}
-              type="button"
-              onClick={() => setTopic(item)}
-              className={`px-4 py-2 rounded-xl text-sm border ${
-                topic === item
-                  ? "border-primary-orange text-primary-orange"
-                  : "border-white/15 text-white/70"
-              }`}
-            >
-              {item}
-            </button>
-          ))}
-        </div>
-      </section>
-
-      {/* Featured + Trending */}
-      <section className="grid lg:grid-cols-3 gap-4 px-4 md:px-10 mt-6">
-        <article
-          onClick={() => setReading(featured)}
-          className="lg:col-span-2 border border-white/10 rounded-2xl p-6 cursor-pointer hover:border-primary-orange transition relative overflow-hidden"
-        >
-          <div className="flex justify-between gap-3">
-            <span className="text-primary-orange text-xs tracking-widest">
-              FEATURED INSIGHT
-            </span>
-            <span className="text-xs border border-primary-orange text-primary-orange rounded-full px-3 py-1">
-              STRATEGY
-            </span>
-          </div>
-          <h2 className="text-3xl font-bold mt-4 max-w-xl">{featured.title}</h2>
-          <p className="text-white/60 mt-3 max-w-xl leading-7">{featured.excerpt}</p>
-          <p className="text-white/40 text-sm mt-6">
-            {featured.author} • {featured.date} • {featured.readTime}
-          </p>
-          <span className="text-primary-orange mt-6 inline-flex items-center gap-2">
-            Read More <GoArrowRight />
-          </span>
-          <InsightVisual title="Strategy → Execution" />
-        </article>
-
-        <aside className="border border-white/10 rounded-2xl p-6">
-          <h3 className="text-primary-orange text-xs tracking-widest">
-            TRENDING INSIGHTS
-          </h3>
-          <div className="flex flex-col gap-6 mt-6">
-            {trending.map((item, index) => (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => setReading(item)}
-                className="text-left flex gap-4"
-              >
-                <span className="text-primary-orange text-xl">0{index + 1}</span>
+      {/* The only published article */}
+      <section id="latest-insights" className="px-4 md:px-10 mt-6">
+        <h2 className="text-primary-orange text-xs tracking-widest">
+          LATEST INSIGHTS
+        </h2>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+          <article
+            onClick={() => setReading(true)}
+            className="border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-primary-orange transition"
+          >
+            <img
+              src={performanceAgendaHero}
+              alt="Leadership team reviewing an organizational system"
+              className="w-full h-56 object-cover"
+            />
+            <div className="p-4">
+              <span className="text-primary-orange text-xs tracking-widest">
+                {article.category.toUpperCase()}
+              </span>
+              <h3 className="font-bold text-lg leading-6 mt-2">{article.title}</h3>
+              <p className="text-white/50 text-sm leading-6 mt-2">
+                {article.excerpt}
+              </p>
+              <p className="text-white/40 text-xs mt-4 flex justify-between">
                 <span>
-                  <span className="block font-bold leading-6">{item.title}</span>
-                  <span className="block text-white/40 text-sm mt-1">
-                    {item.readTime}
-                  </span>
+                  {article.date} • {article.readTime}
                 </span>
-              </button>
-            ))}
-          </div>
-          <button
-            type="button"
-            onClick={() => setTopic("All Insights")}
-            className="text-primary-orange mt-8 inline-flex items-center gap-2 text-sm"
-          >
-            View All <GoArrowRight />
-          </button>
-        </aside>
-      </section>
-
-      {/* Latest */}
-      <section id="latest-insights" className="px-4 md:px-10 mt-12">
-        <div className="flex justify-between items-center">
-          <h2 className="text-primary-orange text-xs tracking-widest">
-            LATEST INSIGHTS
-          </h2>
-          <button
-            type="button"
-            onClick={() => setTopic("All Insights")}
-            className="text-primary-orange text-sm inline-flex items-center gap-2"
-          >
-            View All Insights <GoArrowRight />
-          </button>
+                <GoArrowRight className="text-primary-orange" />
+              </p>
+            </div>
+          </article>
         </div>
-        {filteredLatest.length === 0 ? (
-          <p className="text-white/60 mt-6">
-            No insights in this topic yet.
-          </p>
-        ) : (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
-            {filteredLatest.map((item) => (
-              <article
-                key={item.id}
-                onClick={() => setReading(item)}
-                className="border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-primary-orange transition"
-              >
-                <InsightVisual title={item.category} />
-                <div className="p-4">
-                  <span className="text-primary-orange text-xs tracking-widest">
-                    {item.category.toUpperCase()}
-                  </span>
-                  <h3 className="font-bold text-lg leading-6 mt-2 min-h-14">
-                    {item.title}
-                  </h3>
-                  <p className="text-white/50 text-sm leading-6 mt-2">
-                    {item.excerpt}
-                  </p>
-                  <p className="text-white/40 text-xs mt-4 flex justify-between">
-                    <span>
-                      {item.date} • {item.readTime}
-                    </span>
-                    <GoArrowRight className="text-primary-orange" />
-                  </p>
-                </div>
-              </article>
-            ))}
-          </div>
-        )}
+        <p className="text-white/40 text-sm mt-6">
+          New articles will be added here as they are published.
+        </p>
       </section>
 
       {/* Stay inspired — no globe graphic, by request */}
@@ -270,9 +169,7 @@ function Insights() {
             </p>
           </div>
           {subscribed ? (
-            <p className="text-primary-orange">
-              Thank you — you are subscribed.
-            </p>
+            <p className="text-primary-orange">Thank you — you are subscribed.</p>
           ) : (
             <form
               onSubmit={(event) => {
