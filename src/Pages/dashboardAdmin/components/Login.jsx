@@ -22,7 +22,7 @@ function Login({ onLoggedIn }) {
   }
 
   return (
-    <div className="pb-5 bg-black min-h-screen flex items-center justify-center px-4">
+    <div className="pt-28 pb-10 bg-black min-h-screen flex items-center justify-center px-4">
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-md border border-primary-orange rounded-2xl p-6 bg-black"

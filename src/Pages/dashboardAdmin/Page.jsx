@@ -80,7 +80,7 @@ function DashboardAdmin() {
   }
 
   return (
-    <div className="pb-5 bg-black">
+    <div className="pt-24 pb-10 bg-black">
       <div className="grid lg:grid-cols-[240px_1fr] gap-4 mr-4 ml-4">
         <Sidebar
           activeTab={activeTab}
