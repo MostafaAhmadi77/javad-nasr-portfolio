@@ -3,6 +3,9 @@ import Sidebar from "./components/Sidebar";
 import Overview from "./components/Overview";
 import ArticleEditor from "./components/ArticleEditor";
 import ArticlesList from "./components/ArticlesList";
+import Login from "./components/Login";
+import ChangeCredentials from "./components/ChangeCredentials";
+import { isAdminLoggedIn, setAdminLoggedIn } from "./utils/adminAuth";
 import {
   loadArticles,
   saveArticles,
@@ -11,6 +14,7 @@ import {
 import "./dashboardAdmin.css";
 
 function DashboardAdmin() {
+  const [loggedIn, setLoggedIn] = useState(() => isAdminLoggedIn());
   const [activeTab, setActiveTab] = useState("overview");
   const [articles, setArticles] = useState([]);
   const [editingArticle, setEditingArticle] = useState(null);
@@ -66,10 +70,23 @@ function DashboardAdmin() {
     );
   }
 
+  if (!loggedIn) {
+    return <Login onLoggedIn={() => setLoggedIn(true)} />;
+  }
+
+  function handleLogout() {
+    setAdminLoggedIn(false);
+    setLoggedIn(false);
+  }
+
   return (
     <div className="pb-5 bg-black">
       <div className="grid lg:grid-cols-[240px_1fr] gap-4 mr-4 ml-4">
-        <Sidebar activeTab={activeTab} onSelect={setActiveTab} />
+        <Sidebar
+          activeTab={activeTab}
+          onSelect={setActiveTab}
+          onLogout={handleLogout}
+        />
         <main className="min-w-0">
           {activeTab === "overview" && <Overview articles={articles} />}
 
@@ -165,9 +182,9 @@ function DashboardAdmin() {
             </div>
           )}
 
-          {(activeTab === "caseStudies" ||
-            activeTab === "services" ||
-            activeTab === "settings") && (
+          {activeTab === "settings" && <ChangeCredentials />}
+
+          {(activeTab === "caseStudies" || activeTab === "services") && (
             <div className="border border-white/15 rounded-2xl p-6 bg-black text-white/70">
               This section is a placeholder in the dashboard layout. The
               Articles section is the working section in this version.
