@@ -5,7 +5,6 @@ const headerData = [
     {id:4 , title:'Process' , path:'/process'} ,
     {id:5 , title:'Insights' , path:'/insights'} ,
     {id:6 , title:'About' , path:'/about'} ,
-    {id:7 , title:'Dashboard' , path:'/dashboardAdmin'} ,
 ]
 
 export default headerData

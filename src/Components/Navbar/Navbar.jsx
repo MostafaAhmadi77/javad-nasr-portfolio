@@ -1,15 +1,38 @@
 import { GoArrowRight } from "react-icons/go";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
-import { NavLink, Link } from "react-router";
+import { NavLink, Link, useLocation, useNavigate } from "react-router";
 import Button from "../Button/Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import headerData from "../../data/headerData";
+import {
+  isAdminLoggedIn,
+  setAdminLoggedIn,
+} from "../../Pages/dashboardAdmin/utils/adminAuth";
 
 import Logo from "../../assets/Images/Logo.webp";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(() => isAdminLoggedIn());
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setLoggedIn(isAdminLoggedIn());
+  }, [location.pathname]);
+
+  function handleLogout() {
+    setAdminLoggedIn(false);
+    setLoggedIn(false);
+    setIsOpen(false);
+    navigate("/");
+  }
+
+  // Dashboard appears in the menu only after the admin logs in.
+  const menuItems = loggedIn
+    ? [...headerData, { id: 7, title: "Dashboard", path: "/dashboardAdmin" }]
+    : headerData;
 
   return (
     <>
@@ -23,9 +46,9 @@ function Navbar() {
           </h1>
         </div>
 
-        <div className="hidden xl:block min-w-0">
-          <ul className="flex items-center gap-6 2xl:gap-8 text-sm 2xl:text-base cursor-pointer whitespace-nowrap">
-            {headerData.map((x) => (
+        <div className="hidden lg:block min-w-0">
+          <ul className="flex items-center gap-8 text-base cursor-pointer whitespace-nowrap">
+            {menuItems.map((x) => (
               <li key={x.id} className="shrink-0">
                 <NavLink
                   to={x.path}
@@ -38,13 +61,23 @@ function Navbar() {
           </ul>
         </div>
 
-        <div className="hidden xl:flex items-center gap-2 shrink-0">
-          <Link
-            to="/dashboardAdmin"
-            className="border border-primary-orange text-primary-orange px-4 py-2 rounded-xl text-sm whitespace-nowrap"
-          >
-            Login
-          </Link>
+        <div className="hidden lg:flex items-center gap-2 shrink-0">
+          {loggedIn ? (
+            <button
+              type="button"
+              onClick={handleLogout}
+              className="border border-primary-orange text-primary-orange px-4 py-2 rounded-xl text-sm whitespace-nowrap"
+            >
+              Logout
+            </button>
+          ) : (
+            <Link
+              to="/dashboardAdmin"
+              className="border border-primary-orange text-primary-orange px-4 py-2 rounded-xl text-sm whitespace-nowrap"
+            >
+              Login
+            </Link>
+          )}
           <Button
             title="Let's Work Together"
             icon={<GoArrowRight />}
@@ -53,7 +86,7 @@ function Navbar() {
         </div>
 
         <button
-          className="xl:hidden text-4xl shrink-0"
+          className="lg:hidden text-4xl shrink-0"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <HiOutlineX /> : <HiOutlineMenu />}
@@ -68,16 +101,15 @@ function Navbar() {
       />
 
       <div
-        className={`fixed  flex flex-col  top-0 left-0 h-screen rounded-r-2xl rounded-tr-2xl w-72 bg-[#111111] text-white z-50 transform transition-transform duration-500 ease-in-out ${
+        className={`fixed flex flex-col top-0 left-0 h-screen rounded-r-2xl rounded-tr-2xl w-72 bg-[#111111] text-white z-50 transform transition-transform duration-500 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="">
-          <div className=" flex items-center justify-between ss p-6 border-b border-gray-700">
+          <div className="flex items-center justify-between ss p-6 border-b border-gray-700">
             <h2 className="text-2xl font-bold text-primary-orange">
               <img className="size-14" src={Logo} alt="" />
             </h2>
-
             <button onClick={() => setIsOpen(false)} className="text-3xl">
               <HiOutlineX />
             </button>
@@ -88,7 +120,7 @@ function Navbar() {
               setIsOpen(false);
             }}
           >
-            {headerData.map((x) => (
+            {menuItems.map((x) => (
               <li key={x.id}>
                 <NavLink
                   to={x.path}
@@ -102,13 +134,23 @@ function Navbar() {
         </div>
 
         <div className="px-8 mt-10 flex flex-col gap-3">
-          <Link
-            to="/dashboardAdmin"
-            onClick={() => setIsOpen(false)}
-            className="flex justify-center items-center gap-3 border border-primary-orange text-primary-orange rounded-xl py-3"
-          >
-            Login
-          </Link>
+          {loggedIn ? (
+            <button
+              type="button"
+              onClick={handleLogout}
+              className="flex justify-center items-center gap-3 border border-primary-orange text-primary-orange rounded-xl py-3"
+            >
+              Logout
+            </button>
+          ) : (
+            <Link
+              to="/dashboardAdmin"
+              onClick={() => setIsOpen(false)}
+              className="flex justify-center items-center gap-3 border border-primary-orange text-primary-orange rounded-xl py-3"
+            >
+              Login
+            </Link>
+          )}
           <Button
             title="Let's Work Together"
             icon={<GoArrowRight />}
