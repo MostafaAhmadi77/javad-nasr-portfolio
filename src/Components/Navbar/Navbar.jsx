@@ -13,20 +13,20 @@ function Navbar() {
 
   return (
     <>
-      <nav className=" w-full  bg-[#000000] text-white p-3  flex items-center justify-between fixed z-50">
-        <div className="flex items-center justify-center">
-          <h1 className="flex items-center  gap-2">
-            <span className="text-primary-orange text-5xl">
-              <img className=" w-[4rem] h-[4rem]" src={Logo} alt="" />
+      <nav className="w-full bg-[#000000] text-white px-4 py-2 flex items-center justify-between gap-4 fixed z-50">
+        <div className="flex items-center shrink-0">
+          <h1 className="flex items-center gap-2 whitespace-nowrap">
+            <span className="text-primary-orange">
+              <img className="w-12 h-12" src={Logo} alt="" />
             </span>
-            <span className="text-3xl"> Javad Nasr</span>
+            <span className="text-2xl">Javad Nasr</span>
           </h1>
         </div>
 
-        <div className="hidden lg:block">
-          <ul className="2xl:text-[1.5rem] flex items-center gap-12 text-base cursor-pointer">
+        <div className="hidden xl:block min-w-0">
+          <ul className="flex items-center gap-6 2xl:gap-8 text-sm 2xl:text-base cursor-pointer whitespace-nowrap">
             {headerData.map((x) => (
-              <li key={x.id}>
+              <li key={x.id} className="shrink-0">
                 <NavLink
                   to={x.path}
                   className={(link) => (link.isActive ? "text-primary-orange" : "")}
@@ -38,22 +38,22 @@ function Navbar() {
           </ul>
         </div>
 
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="hidden xl:flex items-center gap-2 shrink-0">
           <Link
             to="/dashboardAdmin"
-            className="border border-primary-orange text-primary-orange px-5 py-3 rounded-2xl"
+            className="border border-primary-orange text-primary-orange px-4 py-2 rounded-xl text-sm whitespace-nowrap"
           >
             Login
           </Link>
           <Button
             title="Let's Work Together"
             icon={<GoArrowRight />}
-            styleBtn="flex items-center gap-4 border border-pritext-primary-orange px-5 py-3 rounded-2xl"
+            styleBtn="flex items-center gap-2 border border-pritext-primary-orange px-4 py-2 rounded-xl text-sm whitespace-nowrap"
           />
         </div>
 
         <button
-          className="lg:hidden text-4xl"
+          className="xl:hidden text-4xl shrink-0"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <HiOutlineX /> : <HiOutlineMenu />}
