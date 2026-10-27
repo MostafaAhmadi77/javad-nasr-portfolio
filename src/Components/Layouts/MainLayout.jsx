@@ -5,16 +5,16 @@ import Footer from "../Footer/Footer";
 function MainLayout() {
   return (
     <>
-      <div className="bg-black">
+      <div className="bg-black min-h-screen flex flex-col">
         <header className="w-full bg-black ">
           <div className="sticky top-0  z-50">
             <Navbar />
           </div>
         </header>
-        <div className="w-full bg-black ">
+        <div className="w-full bg-black flex-1">
           <Outlet />
         </div>
-        <footer className="bg-black text-white flex flex-1 z-10">
+        <footer className="bg-black text-white z-10">
           <Footer />
         </footer>
       </div>
