@@ -15,10 +15,13 @@ function ArticlesList({ articles, onEdit, onDelete, onToggleStatus, onView }) {
       {articles.map((article) => (
         <article
           key={article.id}
-          className="border border-white/15 rounded-2xl p-4 bg-black"
+          onClick={() => onView(article)}
+          className="border border-white/15 rounded-2xl p-4 bg-black cursor-pointer hover:border-primary-orange transition"
         >
           <div className="flex flex-wrap justify-between gap-3">
-            <h3 className="text-white text-xl font-bold">{article.title}</h3>
+            <h3 className="text-white text-xl font-bold hover:text-primary-orange transition">
+              {article.title}
+            </h3>
             <span className="text-primary-orange text-sm border border-primary-orange rounded-full px-3 py-1 h-fit">
               {article.status === "published" ? "Published" : "Draft"}
             </span>
@@ -33,28 +36,40 @@ function ArticlesList({ articles, onEdit, onDelete, onToggleStatus, onView }) {
           <div className="flex flex-wrap gap-2 mt-4">
             <button
               type="button"
-              onClick={() => onView(article)}
+              onClick={(event) => {
+                event.stopPropagation();
+                onView(article);
+              }}
               className="border border-white/30 text-white px-3 py-1 rounded-lg text-sm"
             >
               View
             </button>
             <button
               type="button"
-              onClick={() => onEdit(article)}
+              onClick={(event) => {
+                event.stopPropagation();
+                onEdit(article);
+              }}
               className="border border-primary-orange text-primary-orange px-3 py-1 rounded-lg text-sm"
             >
               Edit
             </button>
             <button
               type="button"
-              onClick={() => onToggleStatus(article)}
+              onClick={(event) => {
+                event.stopPropagation();
+                onToggleStatus(article);
+              }}
               className="border border-white/30 text-white px-3 py-1 rounded-lg text-sm"
             >
               {article.status === "published" ? "Move to draft" : "Publish"}
             </button>
             <button
               type="button"
-              onClick={() => onDelete(article.id)}
+              onClick={(event) => {
+                event.stopPropagation();
+                onDelete(article.id);
+              }}
               className="text-red-400 px-3 py-1 rounded-lg text-sm"
             >
               Delete

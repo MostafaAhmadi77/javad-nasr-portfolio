@@ -109,9 +109,35 @@ function DashboardAdmin() {
 
               {viewingArticle && (
                 <div className="border border-white/15 rounded-2xl p-6 bg-black">
-                  <h2 className="text-white text-3xl font-bold">
+                  <div className="flex flex-wrap justify-between gap-3 mb-4">
+                    <button
+                      type="button"
+                      onClick={() => setViewingArticle(null)}
+                      className="border border-white/30 text-white px-4 py-2 rounded-xl text-sm"
+                    >
+                      ← Back to articles
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setViewingArticle(null);
+                        setIsCreating(false);
+                        setEditingArticle(viewingArticle);
+                      }}
+                      className="border border-primary-orange text-primary-orange px-4 py-2 rounded-xl text-sm"
+                    >
+                      Edit
+                    </button>
+                  </div>
+                  <span className="text-primary-orange text-sm border border-primary-orange rounded-full px-3 py-1">
+                    {viewingArticle.status === "published" ? "Published" : "Draft"}
+                  </span>
+                  <h2 className="text-white text-3xl font-bold mt-4">
                     {viewingArticle.title}
                   </h2>
+                  <p className="text-white/40 text-xs mt-2">
+                    Updated: {new Date(viewingArticle.updatedAt).toLocaleString()}
+                  </p>
                   <div
                     className="text-white/80 mt-4 dashboard-article-content"
                     dangerouslySetInnerHTML={{ __html: viewingArticle.content }}
@@ -119,17 +145,23 @@ function DashboardAdmin() {
                 </div>
               )}
 
-              <ArticlesList
-                articles={articles}
-                onEdit={(article) => {
-                  setViewingArticle(null);
-                  setIsCreating(false);
-                  setEditingArticle(article);
-                }}
-                onDelete={handleDelete}
-                onToggleStatus={handleToggleStatus}
-                onView={setViewingArticle}
-              />
+              {!viewingArticle && (
+                <ArticlesList
+                  articles={articles}
+                  onEdit={(article) => {
+                    setViewingArticle(null);
+                    setIsCreating(false);
+                    setEditingArticle(article);
+                  }}
+                  onDelete={handleDelete}
+                  onToggleStatus={handleToggleStatus}
+                  onView={(article) => {
+                    setEditingArticle(null);
+                    setIsCreating(false);
+                    setViewingArticle(article);
+                  }}
+                />
+              )}
             </div>
           )}
 
