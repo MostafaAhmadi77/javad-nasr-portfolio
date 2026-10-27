@@ -9,6 +9,8 @@ import { isAdminLoggedIn, setAdminLoggedIn } from "./utils/adminAuth";
 import {
   loadArticles,
   saveArticles,
+  mergePublicArticles,
+  markPublicArticleDeleted,
   newArticleId,
 } from "./utils/articlesStorage";
 import "./dashboardAdmin.css";
@@ -22,7 +24,7 @@ function DashboardAdmin() {
   const [viewingArticle, setViewingArticle] = useState(null);
 
   useEffect(() => {
-    setArticles(loadArticles());
+    setArticles(mergePublicArticles(loadArticles()));
   }, []);
 
   function persist(nextArticles) {
@@ -52,6 +54,7 @@ function DashboardAdmin() {
   }
 
   function handleDelete(id) {
+    markPublicArticleDeleted(id);
     persist(articles.filter((item) => item.id !== id));
     if (viewingArticle && viewingArticle.id === id) setViewingArticle(null);
   }
