@@ -45,7 +45,7 @@ export const brand = [
     Icon: FaSlack,
   },
   {
-    title: "ebflow",
+    title: "Webflow",
     Icon: FaWebflow,
   },
   {
@@ -57,7 +57,7 @@ export const brand = [
     Icon: SiLoom,
   },
   {
-    title: "work",
+    title: "Upwork",
     Icon: BiLogoUpwork,
   },
 ];
@@ -75,9 +75,9 @@ export const cartData = [
   {
     id: 2,
     title: "Project Astral",
-    btn: "Luxury Hospitallty",
+    btn: "Luxury Hospitality",
     description:
-      "A Aluxury resort website that capture trust, emotion and elegance.",
+      "A luxury resort website that captures trust, emotion and elegance.",
     img: "src/assets/Images/53706b66b9b1f4753e14df0990779300.jpg",
   },
   {
@@ -85,7 +85,7 @@ export const cartData = [
     title: "NovaPay",
     btn: "Fintech",
     description:
-      "A next-gen fintech app simpliflying global payments and transfers.",
+      "A next-gen fintech app simplifying global payments and transfers.",
     img: "src/assets/Images/b69d80d6fb4359f3b0e598e4128fc108.jpg",
   },
 ];
@@ -98,7 +98,7 @@ export const textIcon = [
   },
   {
     id: 2,
-    discription: "Organizational Developmrnt",
+    discription: "Organizational Development",
     icon: RiOrganizationChart,
   },
   {
@@ -186,31 +186,31 @@ export const topicItems = [
   {
     id: 1,
     title: "DIAGNOSE",
-    des: "Understand the real challanges and root causes.",
+    des: "Understand the real challenges and root causes.",
     icon: CiSearch,
   },
   {
     id: 2,
-    title: "DISIGN",
-    des: "Create practical strategies and solutions teilored to your context.",
+    title: "DESIGN",
+    des: "Create practical strategies and solutions tailored to your context.",
     icon: BsPencil,
   },
   {
     id: 3,
     title: "IMPLEMENT",
-    des: "Execute with dicipline and align people processes and systems.",
+    des: "Execute with discipline and align people processes and systems.",
     icon: CiSettings,
   },
   {
     id: 4,
     title: "EDUCATE",
-    des: "Build capabilites through training and knowledge transfer",
+    des: "Build capabilities through training and knowledge transfer",
     icon: PiGraduationCap,
   },
   {
     id: 5,
     title: "SUSTAIN",
-    des: "Understand the real challanges and root causes.",
+    des: "Understand the real challenges and root causes.",
     icon: IoIosInfinite,
   },
 ];
@@ -224,20 +224,20 @@ export const secoundItems = [
   },
   {
     id: 2,
-    title: "Practical Not Theorical",
-    des: "Solutions that are realistic , applicationable and effective.",
+    title: "Practical Not Theoretical",
+    des: "Solutions that are realistic , applicable and effective.",
     icon: IoExtensionPuzzleOutline,
   },
   {
     id: 3,
     title: "Systems That Last",
-    des: "Building oranization that outlast individuals.",
+    des: "Building organization that outlast individuals.",
     icon: FaUsers,
   },
   {
     id: 4,
     title: "Measurable Impact",
-    des: "Focused on results that create lasing value.",
+    des: "Focused on results that create lasting value.",
     icon: LuChartNoAxesCombined,
   },
 ];
@@ -247,7 +247,7 @@ export const dataServices = [
     id: 1,
     title: "Strategy Development",
     description:
-      "Crafting bold, actionable strategies tht align visionwith market realities and drive competitive advantage",
+      "Crafting bold, actionable strategies that align vision with market realities and drive competitive advantage",
 
     itemService: [
       "Business Strategy",
@@ -274,7 +274,7 @@ export const dataServices = [
     id: 3,
     title: "Business Process Management",
     description:
-      "Oprimizing processes to imporve efficiency, reduce costs, and enhance customer experience.",
+      "Optimizing processes to improve efficiency, reduce costs, and enhance customer experience.",
     itemService: [
       "Process Mapping & Analysis",
       "Process Redesign",
@@ -287,12 +287,12 @@ export const dataServices = [
     id: 4,
     title: "Performance Management",
     description:
-      "Implementing systems and kpls thar trun goals into measurable and sustainable results.",
+      "Implementing systems and KPIs that turn goals into measurable and sustainable results.",
     itemService: [
-      "KPL Development",
+      "KPI Development",
       "Performance Dashboards",
       "OKR Implementation",
-      "Performance Optimaization",
+      "Performance Optimization",
     ],
     icon: PiChartLineUp,
   },
@@ -318,7 +318,7 @@ export const dataServices = [
       "Executive Coaching",
       "Leadership Development",
       "Board Advisory",
-      "Pecision Support",
+      "Precision Support",
     ],
     icon: PiGraduationCap,
   },
@@ -327,12 +327,12 @@ export const titleService = [
   "Strategic thinking with hands-on execution",
   "Proven methodology with measurable outcomes",
   "Tailored solutions for your unique challenges",
-  "Long-trem partnership for sustainable growth",
+  "Long-term partnership for sustainable growth",
 ];
 
 export const Aboutmain = [
   { id: 1, Icon: MdHandshake, title: "Beyond Recommendations", description: "I don't just deliver advice, I work alongside your team until strategy becomes capability." },
-  { id: 2, Icon: MdOutlineNetworkWifi3Bar, title: "System that Scale", description: "I design systems and structures that enable organizations to grow, adapt, and thrive over time." },
+  { id: 2, Icon: MdOutlineNetworkWifi3Bar, title: "Systems that Scale", description: "I design systems and structures that enable organizations to grow, adapt, and thrive over time." },
   { id: 3, Icon: MdCenterFocusWeak, title: "People at the center", description: "I believe in empowering people, building leadership, and creating a culture of accountability." },
   { id: 4, Icon: TbTargetArrow, title: "Measurable Impact", description: "Every initiative is focused on delivering clear, measurable, and sustainable results." },
 ];

@@ -25,9 +25,9 @@ function About() {
         textPageDescription={
           <div className="text-justify ">
             <span className="flex text-justify ">
-              I partner with ieadership teams to turn challenges into
-              opportunities through strategy, system, and execution.My approach
-              combines deep analytical thinking with hande-on implementation to
+              I partner with leadership teams to turn challenges into
+              opportunities through strategy, system, and execution. My approach
+              combines deep analytical thinking with hands-on implementation to
               deliver measurable and sustainable results.
             </span>
           </div>
