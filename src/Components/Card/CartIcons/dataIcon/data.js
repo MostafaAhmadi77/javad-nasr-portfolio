@@ -13,14 +13,14 @@ export const dataIcon =[
     },
       {
         id:2,
-        title:"System That Scale",
+        title:"Systems That Scale",
         decription:"Processes and structures that drive performance.",
         icon: LuUsersRound
     },
     {
         id:3,
         title:"Execution That Delivers",
-        decription:"From plans to results withe discipline.",
+        decription:"From plans to results with discipline.",
         icon:HiOutlineChartBar
     },
     {

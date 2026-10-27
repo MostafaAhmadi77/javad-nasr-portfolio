@@ -30,14 +30,14 @@ export default function CaseStudies() {
           <div className="text-justify ">
             <span className="flex text-justify ">
               Real projects. Real impact. See how I partner with organizations
-              to solve complex challenges and deliver measurable , lasing
+              to solve complex challenges and deliver measurable , lasting
               results.
             </span>
           </div>
         }
         buttons={
           <Button
-            title="Let 's Discuss Your Case "
+            title="Let's Discuss Your Case"
             icon={<GoArrowRight />}
             styleBtn="
             flex
@@ -91,7 +91,7 @@ export default function CaseStudies() {
             </p>
             <div className="w-[24rem] ss:text-center sm:text-center xl:w-160 xl:text-start">
               <span className=" text-white text-4xl ss:text-[0.9rem] sm:text-4xl font-family-CormorantGaramondBold">
-                Let's Bulid Transformation{" "}
+                Let's Build Transformation{" "}
               </span>
               <span className="text-primary-orange text-4xl ss:text-[0.9rem] sm:text-4xl font-family-CormorantGaramondBold ">
                 Together.
