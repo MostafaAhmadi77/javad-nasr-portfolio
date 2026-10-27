@@ -9,11 +9,24 @@ import {
 import "./insights.css";
 
 const article = insightsData[0];
+const topics = [
+  "All Insights",
+  "Leadership",
+  "Transformation",
+  "Operations",
+  "Culture",
+  "Innovation",
+];
+const articleTopics = ["Leadership", "Transformation"];
 
 function Insights() {
+  const [topic, setTopic] = useState("All Insights");
   const [reading, setReading] = useState(false);
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+
+  const matchesTopic =
+    topic === "All Insights" || articleTopics.includes(topic);
 
   if (reading) {
     return (
@@ -83,7 +96,6 @@ function Insights() {
 
   return (
     <div className="bg-black text-white">
-      {/* Hero */}
       <section className="grid lg:grid-cols-2 gap-10 items-center px-4 md:px-10 pt-28 pb-16">
         <div>
           <p className="text-primary-orange tracking-widest text-sm">INSIGHTS</p>
@@ -102,7 +114,7 @@ function Insights() {
             href="#latest-insights"
             className="inline-flex items-center gap-2 border border-primary-orange text-primary-orange px-5 py-3 rounded-xl mt-8"
           >
-            Explore Insights <GoArrowRight />
+            Explore All Insights <GoArrowRight />
           </a>
         </div>
         <div className="relative flex justify-center">
@@ -118,44 +130,131 @@ function Insights() {
         </div>
       </section>
 
-      {/* The only published article */}
-      <section id="latest-insights" className="px-4 md:px-10 mt-6">
-        <h2 className="text-primary-orange text-xs tracking-widest">
-          LATEST INSIGHTS
-        </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
-          <article
-            onClick={() => setReading(true)}
-            className="border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-primary-orange transition"
-          >
-            <img
-              src={performanceAgendaHero}
-              alt="Leadership team reviewing an organizational system"
-              className="w-full h-56 object-cover"
-            />
-            <div className="p-4">
-              <span className="text-primary-orange text-xs tracking-widest">
-                {article.category.toUpperCase()}
-              </span>
-              <h3 className="font-bold text-lg leading-6 mt-2">{article.title}</h3>
-              <p className="text-white/50 text-sm leading-6 mt-2">
-                {article.excerpt}
-              </p>
-              <p className="text-white/40 text-xs mt-4 flex justify-between">
-                <span>
-                  {article.date} • {article.readTime}
-                </span>
-                <GoArrowRight className="text-primary-orange" />
-              </p>
-            </div>
-          </article>
+      <section className="px-4 md:px-10">
+        <div className="border border-white/10 rounded-2xl p-3 flex flex-wrap items-center gap-2">
+          <span className="text-primary-orange text-xs tracking-widest mr-2">
+            EXPLORE TOPICS
+          </span>
+          {topics.map((item) => (
+            <button
+              key={item}
+              type="button"
+              onClick={() => setTopic(item)}
+              className={`px-4 py-2 rounded-xl text-sm border ${
+                topic === item
+                  ? "border-primary-orange text-primary-orange"
+                  : "border-white/15 text-white/70"
+              }`}
+            >
+              {item}
+            </button>
+          ))}
         </div>
-        <p className="text-white/40 text-sm mt-6">
-          New articles will be added here as they are published.
-        </p>
       </section>
 
-      {/* Stay inspired — no globe graphic, by request */}
+      {!matchesTopic ? (
+        <section className="px-4 md:px-10 mt-12">
+          <p className="text-white/60 border border-white/10 rounded-2xl p-6">
+            No insights in this topic yet. New articles will appear here as
+            they are published.
+          </p>
+        </section>
+      ) : (
+        <>
+          <section className="grid lg:grid-cols-3 gap-4 px-4 md:px-10 mt-6">
+            <article
+              onClick={() => setReading(true)}
+              className="lg:col-span-2 border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-primary-orange transition"
+            >
+              <img
+                src={performanceAgendaHero}
+                alt="Leadership team reviewing an organizational system"
+                className="w-full h-72 object-cover"
+              />
+              <div className="p-6">
+                <div className="flex justify-between gap-3">
+                  <span className="text-primary-orange text-xs tracking-widest">
+                    FEATURED INSIGHT
+                  </span>
+                  <span className="text-xs border border-primary-orange text-primary-orange rounded-full px-3 py-1">
+                    STRATEGY
+                  </span>
+                </div>
+                <h2 className="text-3xl font-bold mt-4">{article.title}</h2>
+                <p className="text-white/60 mt-3 leading-7">{article.excerpt}</p>
+                <p className="text-white/40 text-sm mt-6">
+                  {article.author} • {article.date} • {article.readTime}
+                </p>
+                <span className="text-primary-orange mt-6 inline-flex items-center gap-2">
+                  Read More <GoArrowRight />
+                </span>
+              </div>
+            </article>
+
+            <aside className="border border-white/10 rounded-2xl p-6">
+              <h3 className="text-primary-orange text-xs tracking-widest">
+                TRENDING INSIGHTS
+              </h3>
+              <p className="text-white/50 leading-7 mt-6">
+                More trending insights will appear here as new articles are
+                published.
+              </p>
+              <button
+                type="button"
+                onClick={() => setTopic("All Insights")}
+                className="text-primary-orange mt-8 inline-flex items-center gap-2 text-sm"
+              >
+                View All <GoArrowRight />
+              </button>
+            </aside>
+          </section>
+
+          <section id="latest-insights" className="px-4 md:px-10 mt-12">
+            <div className="flex justify-between items-center">
+              <h2 className="text-primary-orange text-xs tracking-widest">
+                LATEST INSIGHTS
+              </h2>
+              <button
+                type="button"
+                onClick={() => setTopic("All Insights")}
+                className="text-primary-orange text-sm inline-flex items-center gap-2"
+              >
+                View All Insights <GoArrowRight />
+              </button>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+              <article
+                onClick={() => setReading(true)}
+                className="border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-primary-orange transition"
+              >
+                <img
+                  src={performanceAgendaHero}
+                  alt="Leadership team reviewing an organizational system"
+                  className="w-full h-56 object-cover"
+                />
+                <div className="p-4">
+                  <span className="text-primary-orange text-xs tracking-widest">
+                    {article.category.toUpperCase()}
+                  </span>
+                  <h3 className="font-bold text-lg leading-6 mt-2">
+                    {article.title}
+                  </h3>
+                  <p className="text-white/50 text-sm leading-6 mt-2">
+                    {article.excerpt}
+                  </p>
+                  <p className="text-white/40 text-xs mt-4 flex justify-between">
+                    <span>
+                      {article.date} • {article.readTime}
+                    </span>
+                    <GoArrowRight className="text-primary-orange" />
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+        </>
+      )}
+
       <section className="mx-4 md:mx-10 mt-12 mb-10 border border-white/10 rounded-2xl p-6 md:p-10">
         <h2 className="text-primary-orange text-xs tracking-widest">
           STAY INSPIRED
