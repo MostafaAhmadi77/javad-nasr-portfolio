@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { GoArrowRight } from "react-icons/go";
-import HeroImg from "../../assets/Images/H1.webp";
+import Hero from "../../Components/Hero/Hero";
 import insightsData from "./data/insightsData";
 import {
   performanceAgendaHero,
@@ -96,39 +96,25 @@ function Insights() {
 
   return (
     <div className="bg-black text-white pb-10">
-      <section className="grid lg:grid-cols-2 gap-10 items-center px-4 md:px-10 pt-28 pb-16">
-        <div>
-          <p className="text-primary-orange tracking-widest text-sm">INSIGHTS</p>
-          <div className="w-10 h-px bg-primary-orange my-4" />
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+      <Hero
+        titlePage="INSIGHTS"
+        textHyper={
+          <>
             Ideas That Move
             <br />
             Organizations <span className="text-primary-orange">Forward.</span>
-          </h1>
-          <p className="text-white/60 leading-7 mt-6 max-w-xl">
-            Research, perspectives, and practical insights on strategy,
-            leadership, and organizational transformation. Knowledge to
-            inspire. Insights to create impact.
-          </p>
+          </>
+        }
+        textPageDescription="Research, perspectives, and practical insights on strategy, leadership, and organizational transformation. Knowledge to inspire. Insights to create impact."
+        buttons={
           <a
             href="#latest-insights"
-            className="inline-flex items-center gap-2 border border-primary-orange text-primary-orange px-5 py-3 rounded-xl mt-8"
+            className="inline-flex items-center gap-2 border border-primary-orange text-primary-orange px-5 py-3 rounded-xl"
           >
             Explore All Insights <GoArrowRight />
           </a>
-        </div>
-        <div className="relative flex justify-center">
-          <div className="insights-hero-ring" />
-          <img
-            src={HeroImg}
-            alt="Javad Nasr"
-            className="relative w-72 md:w-96 object-cover rounded-full border border-primary-orange/40"
-          />
-          <span className="absolute bottom-2 right-4 md:right-16 font-family-GreatVibesRegular text-primary-orange text-4xl rotate-[-8deg]">
-            Javad Nasr
-          </span>
-        </div>
-      </section>
+        }
+      />
 
       <section className="px-4 md:px-10">
         <div className="border border-white/10 rounded-2xl p-3 flex flex-wrap items-center gap-2">
