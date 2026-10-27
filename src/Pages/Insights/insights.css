@@ -1,0 +1,43 @@
+.insights-hero-ring {
+  position: absolute;
+  width: 22rem;
+  height: 22rem;
+  border: 1px solid rgba(251, 87, 1, 0.6);
+  border-radius: 9999px;
+  box-shadow: 0 0 60px rgba(251, 87, 1, 0.35);
+  pointer-events: none;
+}
+
+.insights-visual {
+  position: relative;
+  height: 10rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a0d05 0%, #000 55%, #2b1203 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.insights-visual-ring {
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  border: 1px solid rgba(251, 87, 1, 0.7);
+  border-radius: 9999px;
+  box-shadow: 0 0 40px rgba(251, 87, 1, 0.4);
+}
+
+.insights-visual-path {
+  position: absolute;
+  width: 140%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #fb5701, transparent);
+  transform: rotate(-18deg);
+}
+
+.insights-visual-label {
+  position: relative;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}

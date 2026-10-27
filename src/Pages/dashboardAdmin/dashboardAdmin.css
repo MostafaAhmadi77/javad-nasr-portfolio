@@ -1,0 +1,40 @@
+.dashboard-editor .ql-toolbar {
+  background: #111111;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.dashboard-editor .ql-toolbar .ql-stroke {
+  stroke: #ffffff;
+}
+
+.dashboard-editor .ql-toolbar .ql-fill {
+  fill: #ffffff;
+}
+
+.dashboard-editor .ql-toolbar .ql-picker-label {
+  color: #ffffff;
+}
+
+.dashboard-editor .ql-container {
+  background: #000000;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 0 0 0.75rem 0.75rem;
+  min-height: 320px;
+  font-size: 1rem;
+}
+
+.dashboard-editor .ql-editor {
+  min-height: 320px;
+}
+
+.dashboard-editor .ql-editor img {
+  max-width: 100%;
+  border-radius: 0.75rem;
+}
+
+.dashboard-article-content img {
+  max-width: 100%;
+  border-radius: 0.75rem;
+}
