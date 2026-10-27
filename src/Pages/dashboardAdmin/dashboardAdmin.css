@@ -38,3 +38,26 @@
   max-width: 100%;
   border-radius: 0.75rem;
 }
+
+.dashboard-article-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fb5701;
+  margin-top: 2rem;
+}
+
+.dashboard-article-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 1.5rem;
+}
+
+.dashboard-article-content p {
+  line-height: 2;
+  margin-top: 1rem;
+}
+
+.dashboard-article-content img {
+  margin-top: 1.5rem;
+}
