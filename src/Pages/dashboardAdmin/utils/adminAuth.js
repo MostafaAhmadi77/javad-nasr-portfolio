@@ -69,4 +69,9 @@ export function setAdminLoggedIn(value) {
   } catch {
     // Session state is best-effort only.
   }
+  try {
+    window.dispatchEvent(new Event("admin-auth-changed"));
+  } catch {
+    // The navbar also re-checks on navigation.
+  }
 }

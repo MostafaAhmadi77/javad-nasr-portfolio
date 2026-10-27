@@ -22,6 +22,12 @@ function Navbar() {
     setLoggedIn(isAdminLoggedIn());
   }, [location.pathname]);
 
+  useEffect(() => {
+    const update = () => setLoggedIn(isAdminLoggedIn());
+    window.addEventListener("admin-auth-changed", update);
+    return () => window.removeEventListener("admin-auth-changed", update);
+  }, []);
+
   function handleLogout() {
     setAdminLoggedIn(false);
     setLoggedIn(false);
