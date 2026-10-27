@@ -2,21 +2,17 @@ import { Outlet } from "react-router";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
-
 function MainLayout() {
   return (
     <>
-      <div className="bg-bla ">
+      <div className="bg-black">
         <header className="w-full bg-black ">
           <div className="sticky top-0  z-50">
-            
-          <Navbar  />
+            <Navbar />
           </div>
-          
         </header>
         <div className="w-full bg-black ">
           <Outlet />
-       
         </div>
         <footer className="bg-black text-white flex flex-1 z-10">
           <Footer />

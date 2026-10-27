@@ -95,7 +95,7 @@ function Insights() {
   }
 
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white pb-10">
       <section className="grid lg:grid-cols-2 gap-10 items-center px-4 md:px-10 pt-28 pb-16">
         <div>
           <p className="text-primary-orange tracking-widest text-sm">INSIGHTS</p>
@@ -255,7 +255,7 @@ function Insights() {
         </>
       )}
 
-      <section className="mx-4 md:mx-10 mt-12 mb-10 border border-white/10 rounded-2xl p-6 md:p-10">
+      <section className="mx-4 md:mx-10 mt-12 border border-white/10 rounded-2xl p-6 md:p-10">
         <h2 className="text-primary-orange text-xs tracking-widest">
           STAY INSPIRED
         </h2>
