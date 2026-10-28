@@ -1,13 +1,23 @@
+import {
+  LuLayoutDashboard,
+  LuNewspaper,
+  LuMessagesSquare,
+  LuListChecks,
+  LuBriefcase,
+  LuLayers,
+  LuSettings,
+  LuLogOut,
+} from "react-icons/lu";
 import { adminAvatar } from "../data/adminAvatar";
 
 const items = [
-  { key: "overview", label: "Dashboard" },
-  { key: "articles", label: "Articles" },
-  { key: "leads", label: "Consultations" },
-  { key: "todos", label: "Todos" },
-  { key: "caseStudies", label: "Case Studies" },
-  { key: "services", label: "Services" },
-  { key: "settings", label: "Settings" },
+  { key: "overview", label: "Dashboard", icon: LuLayoutDashboard },
+  { key: "articles", label: "Articles", icon: LuNewspaper },
+  { key: "leads", label: "Consultations", icon: LuMessagesSquare },
+  { key: "todos", label: "Todos", icon: LuListChecks },
+  { key: "caseStudies", label: "Case Studies", icon: LuBriefcase },
+  { key: "services", label: "Services", icon: LuLayers },
+  { key: "settings", label: "Settings", icon: LuSettings },
 ];
 
 function Sidebar({ activeTab, onSelect, onLogout }) {
@@ -27,26 +37,30 @@ function Sidebar({ activeTab, onSelect, onLogout }) {
         </div>
       </div>
       <nav className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-1 lg:pb-0">
-        {items.map((item) => (
-          <button
-            key={item.key}
-            type="button"
-            onClick={() => onSelect(item.key)}
-            className={`shrink-0 whitespace-nowrap border border-primary-orange px-4 py-2 rounded-xl transition ${
-              activeTab === item.key
-                ? "bg-primary-orange text-white"
-                : "text-white/70 hover:text-white"
-            }`}
-          >
-            {item.label}
-          </button>
-        ))}
+        {items.map((item) => {
+          const Icon = item.icon;
+          const active = activeTab === item.key;
+          return (
+            <button
+              key={item.key}
+              type="button"
+              onClick={() => onSelect(item.key)}
+              className={`shrink-0 whitespace-nowrap border border-primary-orange px-4 py-2 rounded-xl transition flex items-center justify-center gap-2 ${
+                active ? "bg-primary-orange text-white" : "text-white/70 hover:text-white"
+              }`}
+            >
+              <Icon className={`text-lg shrink-0 ${active ? "text-white" : "text-primary-orange"}`} />
+              {item.label}
+            </button>
+          );
+        })}
         {onLogout && (
           <button
             type="button"
             onClick={onLogout}
-            className="shrink-0 whitespace-nowrap border border-primary-orange px-4 py-2 rounded-xl text-white/70 hover:text-white transition"
+            className="shrink-0 whitespace-nowrap border border-primary-orange px-4 py-2 rounded-xl text-white/70 hover:text-white transition flex items-center justify-center gap-2"
           >
+            <LuLogOut className="text-lg shrink-0 text-primary-orange" />
             Logout
           </button>
         )}
