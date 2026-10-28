@@ -44,12 +44,16 @@ function Navbar() {
     <>
       <nav className="w-full bg-[#000000] text-white px-3 lg:px-4 xl:px-6 py-2 flex items-center justify-between gap-3 fixed z-50">
         <div className="flex items-center shrink-0">
-          <h1 className="flex items-center gap-2 whitespace-nowrap">
+          <Link
+            to="/dashboardAdmin"
+            className="flex items-center gap-2 whitespace-nowrap"
+            title="Admin login"
+          >
             <span className="text-primary-orange">
               <img className="w-10 h-10 xl:w-12 xl:h-12 shrink-0" src={Logo} alt="" />
             </span>
             <span className="text-xl xl:text-2xl">Javad Nasr</span>
-          </h1>
+          </Link>
         </div>
 
         <div className="hidden lg:flex flex-1 justify-center min-w-0">
@@ -68,7 +72,7 @@ function Navbar() {
         </div>
 
         <div className="hidden lg:flex items-center gap-2 shrink-0">
-          {loggedIn ? (
+          {loggedIn && (
             <button
               type="button"
               onClick={handleLogout}
@@ -76,13 +80,6 @@ function Navbar() {
             >
               Logout
             </button>
-          ) : (
-            <Link
-              to="/dashboardAdmin"
-              className="border border-primary-orange text-primary-orange px-3 py-2 rounded-xl text-sm whitespace-nowrap"
-            >
-              Login
-            </Link>
           )}
           {!loggedIn && (
             <span>
@@ -118,9 +115,13 @@ function Navbar() {
       >
         <div className="">
           <div className="flex items-center justify-between ss p-6 border-b border-gray-700">
-            <h2 className="text-2xl font-bold text-primary-orange">
+            <Link
+              to="/dashboardAdmin"
+              onClick={() => setIsOpen(false)}
+              title="Admin login"
+            >
               <img className="size-14" src={Logo} alt="" />
-            </h2>
+            </Link>
             <button onClick={() => setIsOpen(false)} className="text-3xl">
               <HiOutlineX />
             </button>
@@ -145,7 +146,7 @@ function Navbar() {
         </div>
 
         <div className="px-8 mt-10 flex flex-col gap-3">
-          {loggedIn ? (
+          {loggedIn && (
             <button
               type="button"
               onClick={handleLogout}
@@ -153,14 +154,6 @@ function Navbar() {
             >
               Logout
             </button>
-          ) : (
-            <Link
-              to="/dashboardAdmin"
-              onClick={() => setIsOpen(false)}
-              className="flex justify-center items-center gap-3 border border-primary-orange text-primary-orange rounded-xl py-3"
-            >
-              Login
-            </Link>
           )}
           <Button
           link="/consultation"
