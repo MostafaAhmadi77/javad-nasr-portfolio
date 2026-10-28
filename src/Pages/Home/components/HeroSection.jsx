@@ -77,11 +77,13 @@ function HeroSection() {
             data-aos-delay="500"
           >
             <Button
+              link="/consultation"
               title="Let's Work Together"
               icon={<GoArrowRight />}
               styleBtn="flex justify-center items-center bg-primary-orange px-8 py-3 gap-3 rounded-2xl text-white transition duration-300"
             />
             <Button
+              link="/services"
               title="Explore Services"
               icon={<GoArrowRight />}
               styleBtn="flex justify-center items-center border border-white px-10 py-3 gap-3 rounded-2xl text-white hover:text-white transition duration-300"
