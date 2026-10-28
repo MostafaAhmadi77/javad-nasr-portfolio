@@ -1,3 +1,5 @@
+import { adminAvatar } from "../data/adminAvatar";
+
 const items = [
   { key: "overview", label: "Dashboard" },
   { key: "articles", label: "Articles" },
@@ -12,8 +14,17 @@ function Sidebar({ activeTab, onSelect, onLogout }) {
   return (
     <aside className="border border-white/15 rounded-2xl ss:p-3 lg:p-4 bg-black h-fit">
       <div className="hidden lg:block border-b border-white/10 pb-4 mb-4">
-        <p className="text-white font-bold text-xl">JAVAD NASR</p>
-        <p className="text-primary-orange text-sm tracking-widest">ADMIN</p>
+        <div className="flex items-center gap-3">
+          <img
+            src={adminAvatar}
+            alt="Admin"
+            className="w-14 h-14 rounded-full border-2 border-primary-orange object-cover shrink-0"
+          />
+          <div>
+            <p className="text-white font-bold text-xl">JAVAD NASR</p>
+            <p className="text-primary-orange text-sm tracking-widest">ADMIN</p>
+          </div>
+        </div>
       </div>
       <nav className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-1 lg:pb-0">
         {items.map((item) => (

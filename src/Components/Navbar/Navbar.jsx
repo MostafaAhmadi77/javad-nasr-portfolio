@@ -11,6 +11,7 @@ import {
 } from "../../Pages/dashboardAdmin/utils/adminAuth";
 
 import Logo from "../../assets/Images/Logo.webp";
+import { adminAvatar } from "../../Pages/dashboardAdmin/data/adminAvatar";
 import { prefetchRoute } from "../../utils/prefetchRoutes";
 
 function Navbar() {
@@ -78,13 +79,20 @@ function Navbar() {
 
         <div className="hidden lg:flex items-center gap-2 shrink-0">
           {loggedIn && (
-            <button
-              type="button"
-              onClick={handleLogout}
-              className="border border-primary-orange text-primary-orange px-3 py-2 rounded-xl text-sm whitespace-nowrap"
-            >
-              Logout
-            </button>
+            <div className="flex items-center gap-2">
+              <img
+                src={adminAvatar}
+                alt="Admin"
+                className="w-10 h-10 rounded-full border-2 border-primary-orange object-cover shrink-0"
+              />
+              <button
+                type="button"
+                onClick={handleLogout}
+                className="border border-primary-orange text-primary-orange px-3 py-2 rounded-xl text-sm whitespace-nowrap"
+              >
+                Logout
+              </button>
+            </div>
           )}
           {!loggedIn && (
             <span
@@ -160,6 +168,16 @@ function Navbar() {
         </div>
 
         <div className="px-8 mt-10 flex flex-col gap-3">
+          {loggedIn && (
+            <div className="flex items-center gap-3">
+              <img
+                src={adminAvatar}
+                alt="Admin"
+                className="w-12 h-12 rounded-full border-2 border-primary-orange object-cover shrink-0"
+              />
+              <span className="text-white font-bold">Admin</span>
+            </div>
+          )}
           {loggedIn && (
             <button
               type="button"
