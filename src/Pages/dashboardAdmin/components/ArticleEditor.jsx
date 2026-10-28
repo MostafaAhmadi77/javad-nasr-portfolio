@@ -63,7 +63,7 @@ function ArticleEditor({ article, onSave, onCancel }) {
   }
 
   return (
-    <div className="border border-primary-orange rounded-2xl p-4 bg-black">
+    <div className="border border-primary-orange rounded-2xl ss:p-3 sm:p-4 bg-black">
       <input
         type="text"
         value={title}

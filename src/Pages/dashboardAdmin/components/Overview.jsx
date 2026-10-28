@@ -36,8 +36,8 @@ function Overview({ articles }) {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="border border-primary-orange rounded-2xl p-6 bg-black">
-        <h1 className="font-family-CormorantGaramondBold text-4xl md:text-5xl text-white">
+      <div className="border border-primary-orange rounded-2xl ss:p-4 sm:p-6 bg-black">
+        <h1 className="font-family-CormorantGaramondBold ss:text-3xl sm:text-4xl md:text-5xl text-white">
           {dashboardData.heroTitle}
         </h1>
         <p className="text-primary-orange tracking-widest mt-3">
@@ -50,17 +50,17 @@ function Overview({ articles }) {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid ss:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {stats.map((stat) => (
           <div key={stat.label} className="border border-white/15 rounded-2xl p-4 bg-black">
             <p className="text-white/50 text-sm">{stat.label}</p>
-            <p className="text-white text-4xl font-bold mt-2">{stat.value}</p>
+            <p className="text-white ss:text-3xl sm:text-4xl font-bold mt-2">{stat.value}</p>
             <p className="text-white/40 text-xs mt-1">{stat.note}</p>
           </div>
         ))}
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-4">
+      <div className="grid ss:grid-cols-1 lg:grid-cols-3 gap-4">
         <div className="lg:col-span-2 border border-white/15 rounded-2xl p-4 bg-black">
           <h2 className="text-white font-bold">Content Overview</h2>
           <LineChart points={dashboardData.consistency} />
@@ -79,7 +79,7 @@ function Overview({ articles }) {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-4">
+      <div className="grid ss:grid-cols-1 lg:grid-cols-3 gap-4">
         <div className="border border-white/15 rounded-2xl p-4 bg-black">
           <h2 className="text-white font-bold">Focus Areas</h2>
           <ul className="mt-3 flex flex-col gap-3">

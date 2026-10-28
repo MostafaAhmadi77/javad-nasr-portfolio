@@ -30,7 +30,7 @@ function Insights() {
 
   if (reading) {
     return (
-      <div className="bg-black text-white px-4 py-10">
+      <div className="bg-black text-white ss:px-4 sm:px-6 px-4 py-10">
         <div className="max-w-4xl mx-auto">
           <button
             type="button"
@@ -42,13 +42,13 @@ function Insights() {
           <span className="block text-primary-orange text-sm mt-8 tracking-widest">
             {article.category.toUpperCase()}
           </span>
-          <h1 className="text-3xl md:text-5xl font-bold mt-3 leading-tight">
+          <h1 className="ss:text-2xl sm:text-3xl md:text-5xl font-bold mt-3 leading-tight">
             {article.title}
           </h1>
           <p className="text-white/60 mt-4">
             {article.author} • {article.date} • {article.readTime}
           </p>
-          <p className="text-white/70 text-lg mt-4">{article.excerpt}</p>
+          <p className="text-white/70 ss:text-base sm:text-lg mt-4">{article.excerpt}</p>
           <img
             src={performanceAgendaHero}
             alt="Leadership team reviewing an organizational system"
@@ -116,7 +116,7 @@ function Insights() {
         }
       />
 
-      <section className="px-4 md:px-10">
+      <section className="ss:px-4 sm:px-6 md:px-10">
         <div className="border border-white/10 rounded-2xl p-3 flex flex-wrap items-center gap-2">
           <span className="text-primary-orange text-xs tracking-widest mr-2">
             EXPLORE TOPICS
@@ -147,7 +147,7 @@ function Insights() {
         </section>
       ) : (
         <>
-          <section className="grid lg:grid-cols-3 gap-4 px-4 md:px-10 mt-6">
+          <section className="grid ss:grid-cols-1 lg:grid-cols-3 gap-4 ss:px-4 sm:px-6 md:px-10 mt-6">
             <article
               onClick={() => setReading(true)}
               className="lg:col-span-2 border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-primary-orange transition"
@@ -155,9 +155,9 @@ function Insights() {
               <img
                 src={performanceAgendaHero}
                 alt="Leadership team reviewing an organizational system"
-                className="w-full h-72 object-cover"
+                className="w-full ss:h-56 sm:h-72 object-cover"
               />
-              <div className="p-6">
+              <div className="ss:p-4 sm:p-6">
                 <div className="flex justify-between gap-3">
                   <span className="text-primary-orange text-xs tracking-widest">
                     FEATURED INSIGHT
@@ -166,7 +166,7 @@ function Insights() {
                     STRATEGY
                   </span>
                 </div>
-                <h2 className="text-3xl font-bold mt-4">{article.title}</h2>
+                <h2 className="ss:text-2xl sm:text-3xl font-bold mt-4">{article.title}</h2>
                 <p className="text-white/60 mt-3 leading-7">{article.excerpt}</p>
                 <p className="text-white/40 text-sm mt-6">
                   {article.author} • {article.date} • {article.readTime}
@@ -177,7 +177,7 @@ function Insights() {
               </div>
             </article>
 
-            <aside className="border border-white/10 rounded-2xl p-6">
+            <aside className="border border-white/10 rounded-2xl ss:p-4 sm:p-6">
               <h3 className="text-primary-orange text-xs tracking-widest">
                 TRENDING INSIGHTS
               </h3>
@@ -195,7 +195,7 @@ function Insights() {
             </aside>
           </section>
 
-          <section id="latest-insights" className="px-4 md:px-10 mt-12">
+          <section id="latest-insights" className="ss:px-4 sm:px-6 md:px-10 mt-12">
             <div className="flex justify-between items-center">
               <h2 className="text-primary-orange text-xs tracking-widest">
                 LATEST INSIGHTS
@@ -208,7 +208,7 @@ function Insights() {
                 View All Insights <GoArrowRight />
               </button>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+            <div className="grid ss:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
               <article
                 onClick={() => setReading(true)}
                 className="border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-primary-orange transition"
@@ -241,13 +241,13 @@ function Insights() {
         </>
       )}
 
-      <section className="mx-4 md:mx-10 mt-12 border border-white/10 rounded-2xl p-6 md:p-10">
+      <section className="ss:mx-4 sm:mx-6 md:mx-10 mt-12 border border-white/10 rounded-2xl ss:p-4 sm:p-6 md:p-10">
         <h2 className="text-primary-orange text-xs tracking-widest">
           STAY INSPIRED
         </h2>
-        <div className="grid lg:grid-cols-2 gap-8 items-center mt-4">
+        <div className="grid ss:grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-4">
           <div>
-            <h3 className="text-3xl font-bold">Insights Delivered to Your Inbox</h3>
+            <h3 className="ss:text-2xl sm:text-3xl font-bold">Insights Delivered to Your Inbox</h3>
             <p className="text-white/50 leading-7 mt-3">
               Subscribe to receive the latest articles, frameworks, and
               perspectives on strategy and transformation.
@@ -262,18 +262,18 @@ function Insights() {
                 if (email.trim()) setSubscribed(true);
               }}
             >
-              <div className="flex">
+              <div className="flex ss:flex-col sm:flex-row">
                 <input
                   type="email"
                   required
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
                   placeholder="Your email address"
-                  className="flex-1 min-w-0 bg-black border border-white/20 rounded-l-xl px-4 py-3 text-white placeholder:text-white/40"
+                  className="flex-1 min-w-0 bg-black border border-white/20 ss:rounded-xl sm:rounded-l-xl sm:rounded-r-none px-4 py-3 text-white placeholder:text-white/40"
                 />
                 <button
                   type="submit"
-                  className="bg-primary-orange text-white px-5 py-3 rounded-r-xl inline-flex items-center gap-2"
+                  className="bg-primary-orange text-white px-5 py-3 ss:rounded-xl sm:rounded-r-xl sm:rounded-l-none ss:mt-3 sm:mt-0 inline-flex items-center justify-center gap-2"
                 >
                   Subscribe <GoArrowRight />
                 </button>
