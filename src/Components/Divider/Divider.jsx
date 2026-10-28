@@ -1,10 +1,9 @@
 import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 function Divider({ title }) {
   useEffect(() => {
-    AOS.init({
+    if (!window.AOS) return;
+    window.AOS.init({
       duration: 900,
       easing: "ease-out-cubic",
       once: false,
@@ -14,12 +13,12 @@ function Divider({ title }) {
     });
 
     const refreshAOS = () => {
-      AOS.refreshHard();
+      window.AOS && window.AOS.refreshHard();
     };
 
     
     const timer = setTimeout(() => {
-      AOS.refreshHard();
+      window.AOS && window.AOS.refreshHard();
     }, 300);
 
     

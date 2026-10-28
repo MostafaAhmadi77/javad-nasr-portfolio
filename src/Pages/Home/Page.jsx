@@ -1,6 +1,4 @@
 import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
@@ -11,7 +9,7 @@ import CTASection from "./components/CTASection";
 
 function Home() {
   useEffect(() => {
-    AOS.init({
+    window.AOS && window.AOS.init({
       duration: 800,
       easing: "ease-out-cubic",
       once: true,
