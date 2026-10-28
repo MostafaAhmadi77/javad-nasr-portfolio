@@ -22,7 +22,7 @@ function Detail() {
   const back = (
     <Link
       to="/insights"
-      className="border border-white/30 px-4 py-2 rounded-xl text-sm inline-block"
+      className="border border-white/30 px-4 py-2 rounded-xl text-sm inline-block mt-12"
     >
       ← Back to insights
     </Link>

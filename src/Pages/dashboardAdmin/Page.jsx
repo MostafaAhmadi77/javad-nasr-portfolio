@@ -88,7 +88,7 @@ function DashboardAdmin() {
                     <button
                       type="button"
                       onClick={closeViewing}
-                      className="border border-white/30 text-white px-4 py-2 rounded-xl text-sm"
+                      className="border border-white/30 text-white px-4 py-2 rounded-xl text-sm mt-12"
                     >
                       ← Back to articles
                     </button>
