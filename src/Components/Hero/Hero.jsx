@@ -9,27 +9,27 @@ function Hero({
   brand,
 }) {
   return (
-    <div className="" data-aos="fade" data-aos-duration="1200">
+    <div className="">
       <div className="bg-black px-5 ss:pt-20 sm:px-8 sm:pt-24 lg:px-12 xl:px-10 pt-8 lg:pt-30 lg:pb-5 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 min-h-[calc(100vh-auto)]">
         
         {/* Left Content */}
         <div className="w-full lg:w-1/2 flex flex-col gap-8 text-center lg:text-left">
           <div className="flex flex-col gap-4">
             <span
-              data-aos="zoom-in"
+             
               className="text-primary-orange font-bold tracking-widest text-sm sm:text-base"
             >
               {titlePage}
             </span>
 
-            <h2 className="font-bold leading-tight" data-aos="fade-right">
+            <h2 className="font-bold leading-tight">
               <span className="text-white text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">
                 {textHyper}
               </span>
             </h2>
 
             <p
-              data-aos="zoom-in"
+             
               className="text-gray-300 max-w-95 mx-auto lg:mx-0 text-sm sm:text-base leading-8"
             >
               {textPageDescription}
@@ -37,7 +37,7 @@ function Hero({
           </div>
 
           <div
-            data-aos="zoom-in-down"
+           
             className="flex flex-col ss:flex-col sm:flex-row gap-4 justify-center lg:justify-start"
           >
             {buttons}
