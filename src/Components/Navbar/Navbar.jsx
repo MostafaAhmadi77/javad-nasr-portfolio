@@ -42,18 +42,18 @@ function Navbar() {
 
   return (
     <>
-      <nav className="w-full bg-[#000000] text-white px-4 py-2 flex items-center justify-between gap-4 fixed z-50">
+      <nav className="w-full bg-[#000000] text-white px-3 lg:px-4 xl:px-6 py-2 flex items-center justify-between gap-3 fixed z-50">
         <div className="flex items-center shrink-0">
           <h1 className="flex items-center gap-2 whitespace-nowrap">
             <span className="text-primary-orange">
-              <img className="w-12 h-12" src={Logo} alt="" />
+              <img className="w-10 h-10 xl:w-12 xl:h-12 shrink-0" src={Logo} alt="" />
             </span>
-            <span className="text-2xl">Javad Nasr</span>
+            <span className="text-xl xl:text-2xl">Javad Nasr</span>
           </h1>
         </div>
 
-        <div className="hidden lg:block min-w-0">
-          <ul className="flex items-center gap-8 text-base cursor-pointer whitespace-nowrap">
+        <div className="hidden lg:flex flex-1 justify-center min-w-0">
+          <ul className="flex items-center gap-4 xl:gap-6 2xl:gap-8 text-sm xl:text-base cursor-pointer whitespace-nowrap">
             {menuItems.map((x) => (
               <li key={x.id} className="shrink-0">
                 <NavLink
@@ -72,23 +72,25 @@ function Navbar() {
             <button
               type="button"
               onClick={handleLogout}
-              className="border border-primary-orange text-primary-orange px-4 py-2 rounded-xl text-sm whitespace-nowrap"
+              className="border border-primary-orange text-primary-orange px-3 py-2 rounded-xl text-sm whitespace-nowrap"
             >
               Logout
             </button>
           ) : (
             <Link
               to="/dashboardAdmin"
-              className="border border-primary-orange text-primary-orange px-4 py-2 rounded-xl text-sm whitespace-nowrap"
+              className="border border-primary-orange text-primary-orange px-3 py-2 rounded-xl text-sm whitespace-nowrap"
             >
               Login
             </Link>
           )}
-          <Button
-            title="Let's Work Together"
-            icon={<GoArrowRight />}
-            styleBtn="flex items-center gap-2 border border-pritext-primary-orange px-4 py-2 rounded-xl text-sm whitespace-nowrap"
-          />
+          <span className="hidden xl:block">
+            <Button
+              title="Let's Work Together"
+              icon={<GoArrowRight />}
+              styleBtn="flex items-center gap-2 border border-white px-4 py-2 rounded-xl text-sm whitespace-nowrap"
+            />
+          </span>
         </div>
 
         <button
@@ -160,7 +162,7 @@ function Navbar() {
           <Button
             title="Let's Work Together"
             icon={<GoArrowRight />}
-            styleBtn="flex justify-center items-center gap-3 border border-pritext-primary-orange rounded-xl py-3"
+            styleBtn="flex justify-center items-center gap-3 border border-white rounded-xl py-3"
           />
         </div>
       </div>
