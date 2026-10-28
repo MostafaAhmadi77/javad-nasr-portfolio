@@ -203,6 +203,7 @@ export default function MainTable({
 
         <div className="w-40">
           <Button
+            link={`/caseStudies/${id}`}
             title="View Case Study"
             icon={<FaArrowRight />}
             styleBtn="flex items-center gap-2  text-primary-orange ss:justify-center"
