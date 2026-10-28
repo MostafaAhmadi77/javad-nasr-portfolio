@@ -24,6 +24,7 @@ function IndustrySection() {
         </section>
         <section>
           <Button
+            link="/caseStudies"
             title="View All Case Studies"
             icon={<GoArrowRight />}
             styleBtn="flex items-center justify-center gap-3 text-sm sm:text-base lg:text-lg transition duration-300"
@@ -73,6 +74,7 @@ function IndustrySection() {
               } lg:group-hover:opacity-100 lg:group-hover:translate-y-0`}
             >
               <Button
+                link="/caseStudies"
                 title="View Case Study"
                 icon={<GoArrowRight />}
                 styleBtn="flex items-center gap-3 text-primary-orange"
