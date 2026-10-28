@@ -45,11 +45,11 @@ function Sidebar({ activeTab, onSelect, onLogout }) {
               key={item.key}
               type="button"
               onClick={() => onSelect(item.key)}
-              className={`shrink-0 whitespace-nowrap border border-primary-orange px-4 py-2 rounded-xl transition flex items-center justify-center gap-2 ${
+              className={`shrink-0 whitespace-nowrap border border-primary-orange px-4 py-2.5 rounded-xl transition flex items-center justify-start gap-3 text-left ${
                 active ? "bg-primary-orange text-white" : "text-white/70 hover:text-white"
               }`}
             >
-              <Icon className={`text-lg shrink-0 ${active ? "text-white" : "text-primary-orange"}`} />
+              <Icon className={`size-5 shrink-0 ${active ? "text-white" : "text-primary-orange"}`} />
               {item.label}
             </button>
           );
@@ -58,9 +58,9 @@ function Sidebar({ activeTab, onSelect, onLogout }) {
           <button
             type="button"
             onClick={onLogout}
-            className="shrink-0 whitespace-nowrap border border-primary-orange px-4 py-2 rounded-xl text-white/70 hover:text-white transition flex items-center justify-center gap-2"
+            className="shrink-0 whitespace-nowrap border border-primary-orange px-4 py-2.5 rounded-xl text-white/70 hover:text-white transition flex items-center justify-start gap-3 text-left"
           >
-            <LuLogOut className="text-lg shrink-0 text-primary-orange" />
+            <LuLogOut className="size-5 shrink-0 text-primary-orange" />
             Logout
           </button>
         )}
