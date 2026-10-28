@@ -37,6 +37,7 @@ export default function CaseStudies() {
         }
         buttons={
           <Button
+            link="/consultation"
             title="Let's Discuss Your Case"
             icon={<GoArrowRight />}
             styleBtn="
@@ -104,6 +105,7 @@ export default function CaseStudies() {
 
           <div className="w-full sm:w-[35%] flex justify-center items-center xl:w-[20%]">
             <Button
+              link="/consultation"
               title="Book a Consultation"
               styleBtn="
         
