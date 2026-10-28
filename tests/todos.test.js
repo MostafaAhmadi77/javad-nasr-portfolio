@@ -7,6 +7,7 @@ import {
   newTodoId,
   sortTodos,
   isOverdue,
+  todoState,
 } from "../src/utils/todosStorage.js";
 
 const store = new Map();
@@ -48,4 +49,12 @@ test("todos: overdue means a past date that is not completed", () => {
   assert.equal(isOverdue({ date: "2026-12-01", completed: false }, "2026-10-28"), false);
   assert.equal(isOverdue({ date: "2026-10-28", completed: false }, "2026-10-28"), false);
   assert.equal(isOverdue({ date: "", completed: false }, "2026-10-28"), false);
+});
+
+test("todos: color state is new, then edited, then completed", () => {
+  assert.equal(todoState({ completed: false, edited: false }), "new");
+  assert.equal(todoState({ completed: false }), "new");
+  assert.equal(todoState({ completed: false, edited: true }), "edited");
+  assert.equal(todoState({ completed: true, edited: true }), "completed");
+  assert.equal(todoState({ completed: true, edited: false }), "completed");
 });
