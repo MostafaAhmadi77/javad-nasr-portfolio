@@ -13,7 +13,7 @@ function Footer() {
       <div className=" flex  flex-1 items-start justify-between pt-5 pb-5 pr-5 pl-2 gap-10 z-  border-primary-orange border-t ss:flex-col  ss:items-center
       md:flex-row md:items-start">
         <div className="flex items-center ss:flex-col ss:items-center md:flex-row ">
-          <img src={Logo} className="size-20 bg-cover" alt="" />
+          <img src={Logo} className="size-20 bg-cover" alt="Javad Nasr" />
           <section className="w-[16.5rem] flex flex-col justify-center items-center sm:items-center ss:items-center ss:mt-2 md:items-start ">
             <span className="font-family-CormorantGaramondBold font-bold text-3xl">
               JAVAD NASR

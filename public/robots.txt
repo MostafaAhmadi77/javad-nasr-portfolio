@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /dashboardAdmin
+
+Sitemap: https://javad-nasr.vercel.app/sitemap.xml

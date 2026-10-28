@@ -71,6 +71,7 @@ function Insights() {
                   <img
                     src={performanceAgendaSystem}
                     alt="Organization as a connected system of people, processes and AI"
+                    loading="lazy"
                     className="w-full rounded-2xl mt-8 border border-white/10"
                   />
                 )}
@@ -216,6 +217,7 @@ function Insights() {
                 <img
                   src={performanceAgendaHero}
                   alt="Leadership team reviewing an organizational system"
+                  loading="lazy"
                   className="w-full h-56 object-cover"
                 />
                 <div className="p-4">

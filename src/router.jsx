@@ -1,14 +1,20 @@
+import { Suspense, lazy } from "react";
 import { createBrowserRouter } from "react-router";
 import MainLayout from "./Components/Layouts/MainLayout";
-import Home from "./Pages/Home/Page";
-import NotFound from "./Components/404/NotFound";
-import Services from "./Pages/Services/Page";
-import About from "./Pages/About/Page";
-import CaseStudies from "./Pages/CaseStudies/Page";
-import CaseStudyDetail from "./Pages/CaseStudies/Detail";
-import DashboardAdmin from "./Pages/dashboardAdmin/Page";
-import Insights from "./Pages/Insights/Page";
-import Consultation from "./Pages/Consultation/Page";
+
+const Home = lazy(() => import("./Pages/Home/Page"));
+const NotFound = lazy(() => import("./Components/404/NotFound"));
+const Services = lazy(() => import("./Pages/Services/Page"));
+const About = lazy(() => import("./Pages/About/Page"));
+const CaseStudies = lazy(() => import("./Pages/CaseStudies/Page"));
+const CaseStudyDetail = lazy(() => import("./Pages/CaseStudies/Detail"));
+const DashboardAdmin = lazy(() => import("./Pages/dashboardAdmin/Page"));
+const Insights = lazy(() => import("./Pages/Insights/Page"));
+const Consultation = lazy(() => import("./Pages/Consultation/Page"));
+
+function withSuspense(element) {
+  return <Suspense fallback={<div className="bg-black text-white min-h-screen" />}>{element}</Suspense>;
+}
 
 const router = createBrowserRouter([
   {
@@ -17,39 +23,39 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: withSuspense(<Home />),
       },
       {
         path: "/caseStudies",
-        element: <CaseStudies />,
+        element: withSuspense(<CaseStudies />),
       },
       {
         path: "/caseStudies/:id",
-        element: <CaseStudyDetail />,
+        element: withSuspense(<CaseStudyDetail />),
       },
       {
         path: "/services",
-        element: <Services />,
+        element: withSuspense(<Services />),
       },
       {
         path: "/about",
-        element: <About />,
+        element: withSuspense(<About />),
       },
       {
         path: "/dashboardAdmin",
-        element: <DashboardAdmin />,
+        element: withSuspense(<DashboardAdmin />),
       },
       {
         path: "/methodology",
-        element: <NotFound />,
+        element: withSuspense(<NotFound />),
       },
       {
         path: "/insights",
-        element: <Insights />,
+        element: withSuspense(<Insights />),
       },
       {
         path: "/consultation",
-        element: <Consultation />,
+        element: withSuspense(<Consultation />),
       },
     ],
   },
