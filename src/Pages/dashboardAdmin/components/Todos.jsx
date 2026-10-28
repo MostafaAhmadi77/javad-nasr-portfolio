@@ -1,7 +1,15 @@
 import { useMemo, useState } from "react";
-import { loadTodos, saveTodos, newTodoId, sortTodos, isOverdue } from "../../../utils/todosStorage";
+import { loadTodos, saveTodos, newTodoId, sortTodos, isOverdue, todoState } from "../../../utils/todosStorage";
 
 const EMPTY_FORM = { title: "", note: "", date: "", time: "" };
+
+// Project palette for todo states: brand orange for new, gold for edited,
+// white (the project's text color, dimmed for a finished item) for completed.
+const STATE_COLORS = {
+  new: { hex: "#FB5701", label: "New" },
+  edited: { hex: "#F2A93B", label: "Edited" },
+  completed: { hex: "#FFFFFF", label: "Completed" },
+};
 
 function monthGrid(year, month) {
   const first = new Date(year, month, 1);
@@ -73,7 +81,7 @@ function Todos() {
     if (editingId) {
       next = todos.map((item) =>
         item.id === editingId
-          ? { ...item, title: form.title.trim(), note: form.note.trim(), date: form.date || "", time: form.time || "", updatedAt: now }
+          ? { ...item, title: form.title.trim(), note: form.note.trim(), date: form.date || "", time: form.time || "", edited: true, updatedAt: now }
           : item
       );
     } else {
@@ -261,6 +269,15 @@ function Todos() {
             </form>
           )}
 
+          <div className="flex flex-wrap gap-3 border border-white/15 rounded-2xl px-4 py-2.5 bg-black">
+            {Object.entries(STATE_COLORS).map(([key, value]) => (
+              <span key={key} className="flex items-center gap-1.5 text-white/70 text-xs">
+                <span className="inline-block size-2.5 rounded-full" style={{ backgroundColor: value.hex }} />
+                {value.label}
+              </span>
+            ))}
+          </div>
+
           <div className="flex flex-wrap gap-2">
             {[
               { key: "all", label: "All" },
@@ -289,8 +306,11 @@ function Todos() {
             </p>
           ) : (
             <ul className="flex flex-col gap-3">
-              {visible.map((todo) => (
-                <li key={todo.id} className="border border-white/15 rounded-2xl ss:p-4 sm:p-5 bg-black">
+              {visible.map((todo) => {
+                const state = todoState(todo);
+                const color = STATE_COLORS[state];
+                return (
+                <li key={todo.id} className="border border-white/15 border-l-4 rounded-2xl ss:p-4 sm:p-5 bg-black" style={{ borderLeftColor: color.hex }}>
                   <div className="flex flex-wrap justify-between gap-2 items-start">
                     <div className="min-w-0">
                       <p className={`text-white font-bold ss:text-base sm:text-lg ${todo.completed ? "line-through text-white/50" : ""}`}>
@@ -299,8 +319,8 @@ function Todos() {
                       <p className="text-white/50 text-sm mt-1">{displayDate(todo.date, todo.time)}</p>
                       {todo.note && <p className="text-white/70 text-sm mt-2 whitespace-pre-wrap">{todo.note}</p>}
                       <div className="flex flex-wrap gap-2 mt-2">
-                        <span className={`text-xs border rounded-full px-2 py-0.5 ${todo.completed ? "border-white/30 text-white/60" : "border-primary-orange text-primary-orange"}`}>
-                          {todo.completed ? "Completed" : "Pending"}
+                        <span className="text-xs border rounded-full px-2 py-0.5" style={{ borderColor: color.hex, color: color.hex }}>
+                          {color.label}
                         </span>
                         {isOverdue(todo) && (
                           <span className="text-xs border border-red-400 text-red-400 rounded-full px-2 py-0.5">Overdue</span>
@@ -344,7 +364,8 @@ function Todos() {
                     )}
                   </div>
                 </li>
-              ))}
+                );
+              })}
             </ul>
           )}
         </div>

@@ -42,3 +42,12 @@ export function isOverdue(todo, today = localToday()) {
   if (!todo || todo.completed || !todo.date) return false;
   return todo.date < today;
 }
+
+// Color state of a todo, in order of priority:
+// completed wins over edited, edited wins over new.
+export function todoState(todo) {
+  if (!todo) return "new";
+  if (todo.completed) return "completed";
+  if (todo.edited) return "edited";
+  return "new";
+}
