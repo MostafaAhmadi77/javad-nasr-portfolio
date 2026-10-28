@@ -42,7 +42,7 @@ function Insights() {
           <span className="block text-primary-orange text-sm mt-8 tracking-widest">
             {article.category.toUpperCase()}
           </span>
-          <h1 className="ss:text-2xl sm:text-3xl md:text-5xl font-bold mt-3 leading-tight">
+          <h1 className="font-family-CormorantGaramondBold ss:text-2xl sm:text-3xl md:text-5xl font-bold mt-3 leading-tight">
             {article.title}
           </h1>
           <p className="text-white/60 mt-4">
@@ -58,7 +58,7 @@ function Insights() {
             {article.sections.map((section, index) => (
               <section key={index}>
                 {section.heading && (
-                  <h2 className="text-2xl font-bold text-primary-orange">
+                  <h2 className="font-family-CormorantGaramondBold text-2xl font-bold text-primary-orange">
                     {section.heading}
                   </h2>
                 )}
@@ -99,11 +99,11 @@ function Insights() {
       <Hero
         titlePage="INSIGHTS"
         textHyper={
-          <>
+          <span className="font-family-CormorantGaramondBold">
             Ideas That Move
             <br />
             Organizations <span className="text-primary-orange">Forward.</span>
-          </>
+          </span>
         }
         textPageDescription="Research, perspectives, and practical insights on strategy, leadership, and organizational transformation. Knowledge to inspire. Insights to create impact."
         buttons={
@@ -166,7 +166,7 @@ function Insights() {
                     STRATEGY
                   </span>
                 </div>
-                <h2 className="ss:text-2xl sm:text-3xl font-bold mt-4">{article.title}</h2>
+                <h2 className="font-family-CormorantGaramondBold ss:text-2xl sm:text-3xl font-bold mt-4">{article.title}</h2>
                 <p className="text-white/60 mt-3 leading-7">{article.excerpt}</p>
                 <p className="text-white/40 text-sm mt-6">
                   {article.author} • {article.date} • {article.readTime}
@@ -222,7 +222,7 @@ function Insights() {
                   <span className="text-primary-orange text-xs tracking-widest">
                     {article.category.toUpperCase()}
                   </span>
-                  <h3 className="font-bold text-lg leading-6 mt-2">
+                  <h3 className="font-family-CormorantGaramondBold font-bold text-lg leading-6 mt-2">
                     {article.title}
                   </h3>
                   <p className="text-white/50 text-sm leading-6 mt-2">
@@ -247,7 +247,7 @@ function Insights() {
         </h2>
         <div className="grid ss:grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-4">
           <div>
-            <h3 className="ss:text-2xl sm:text-3xl font-bold">Insights Delivered to Your Inbox</h3>
+            <h3 className="font-family-CormorantGaramondBold ss:text-2xl sm:text-3xl font-bold">Insights Delivered to Your Inbox</h3>
             <p className="text-white/50 leading-7 mt-3">
               Subscribe to receive the latest articles, frameworks, and
               perspectives on strategy and transformation.
