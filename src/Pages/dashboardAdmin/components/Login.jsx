@@ -25,10 +25,10 @@ function Login({ onLoggedIn }) {
     <div className="pt-28 pb-10 bg-black min-h-screen flex items-center justify-center px-4">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md border border-primary-orange rounded-2xl p-6 bg-black"
+        className="w-full max-w-md border border-primary-orange rounded-2xl ss:p-4 sm:p-6 bg-black"
       >
         <p className="text-primary-orange text-sm tracking-widest">ADMIN</p>
-        <h1 className="text-white text-3xl font-bold mt-2">Dashboard Login</h1>
+        <h1 className="text-white ss:text-2xl sm:text-3xl font-bold mt-2">Dashboard Login</h1>
         <p className="text-white/50 text-sm mt-2">
           Admin only. No new accounts can be created here.
         </p>

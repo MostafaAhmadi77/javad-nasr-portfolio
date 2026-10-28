@@ -3,7 +3,7 @@ import { stripHtml } from "../utils/articlesStorage";
 function ArticlesList({ articles, onEdit, onDelete, onToggleStatus, onView }) {
   if (articles.length === 0) {
     return (
-      <div className="border border-primary-orange rounded-2xl p-6 text-white/70">
+      <div className="border border-primary-orange rounded-2xl ss:p-4 sm:p-6 text-white/70">
         No articles yet. Use &quot;New article&quot; to write your first one.
         Articles are saved in this browser, in the dashboard only.
       </div>
@@ -19,7 +19,7 @@ function ArticlesList({ articles, onEdit, onDelete, onToggleStatus, onView }) {
           className="border border-white/15 rounded-2xl p-4 bg-black cursor-pointer hover:border-primary-orange transition"
         >
           <div className="flex flex-wrap justify-between gap-3">
-            <h3 className="text-white text-xl font-bold hover:text-primary-orange transition">
+            <h3 className="text-white ss:text-lg sm:text-xl font-bold hover:text-primary-orange transition">
               {article.title}
             </h3>
             <span className="text-primary-orange text-sm border border-primary-orange rounded-full px-3 py-1 h-fit">

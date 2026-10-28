@@ -49,9 +49,9 @@ function ChangeCredentials() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="border border-white/15 rounded-2xl p-6 bg-black"
+      className="border border-white/15 rounded-2xl ss:p-4 sm:p-6 bg-black"
     >
-      <h2 className="text-white text-2xl font-bold">Change Admin Login</h2>
+      <h2 className="text-white ss:text-xl sm:text-2xl font-bold">Change Admin Login</h2>
       <p className="text-white/50 text-sm mt-2">
         Only the admin account exists. Enter the current password to change
         the username, the password, or both. Leave the new password empty to

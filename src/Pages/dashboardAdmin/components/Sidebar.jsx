@@ -8,7 +8,7 @@ const items = [
 
 function Sidebar({ activeTab, onSelect, onLogout }) {
   return (
-    <aside className="border border-white/15 rounded-2xl p-3 lg:p-4 bg-black h-fit">
+    <aside className="border border-white/15 rounded-2xl ss:p-3 lg:p-4 bg-black h-fit">
       <div className="hidden lg:block border-b border-white/10 pb-4 mb-4">
         <p className="text-white font-bold text-xl">JAVAD NASR</p>
         <p className="text-primary-orange text-sm tracking-widest">ADMIN</p>
