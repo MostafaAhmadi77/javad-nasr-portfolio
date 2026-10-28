@@ -34,6 +34,7 @@ function About() {
         }
         buttons={
           <Button
+            link="/services"
             title="Explore Services"
             icon={<GoArrowRight />}
             styleBtn="

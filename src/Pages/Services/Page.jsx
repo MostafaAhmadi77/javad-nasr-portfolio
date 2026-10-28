@@ -145,6 +145,7 @@ function Services() {
               </div>
               <div className="">
                 <Button
+                  link="/consultation"
                   title="Book a Consultation"
                   styleBtn="w-[13rem] bg-primary-orange flex justify-center items-center gap-3 p-4 text-white rounded-2xl"
                   icon={<GoArrowRight />}

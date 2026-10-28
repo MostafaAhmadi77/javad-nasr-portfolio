@@ -43,7 +43,7 @@ function AboutSection() {
           data-aos-delay="400"
         >
           <Button
-            link="/"
+            link="/about"
             title="Learn more about me"
             icon={<GoArrowRight />}
             styleBtn="flex items-center gap-4 text-primary-orange transition duration-300"

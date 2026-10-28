@@ -32,6 +32,7 @@ function CTASection() {
           data-aos-delay="200"
         >
           <Button
+            link="/consultation"
             title="Book a Consultation"
             icon={<GoArrowRight />}
             styleBtn="bg-primary-orange rounded-2xl px-7 py-4 flex mb-12 items-center gap-3 whitespace-nowrap transition-all duration-300 hover:scale-105"
