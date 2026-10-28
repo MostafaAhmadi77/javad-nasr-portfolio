@@ -1,9 +1,9 @@
 
 import { Link } from 'react-router'
 
-function Button({link="#",title, icon, styleBtn}) {
+function Button({link="#",title, icon, styleBtn, ...rest}) {
   return (
-    <Link to={link} className={styleBtn}>{title}{icon}</Link>
+    <Link to={link} className={styleBtn} {...rest}>{title}{icon}</Link>
   )
 }
 

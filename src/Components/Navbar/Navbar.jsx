@@ -11,6 +11,7 @@ import {
 } from "../../Pages/dashboardAdmin/utils/adminAuth";
 
 import Logo from "../../assets/Images/Logo.webp";
+import { prefetchRoute } from "../../utils/prefetchRoutes";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,6 +49,8 @@ function Navbar() {
             to="/dashboardAdmin"
             className="flex items-center gap-2 whitespace-nowrap"
             title="Admin login"
+            onMouseEnter={() => prefetchRoute("/dashboardAdmin")}
+            onFocus={() => prefetchRoute("/dashboardAdmin")}
           >
             <span className="text-primary-orange">
               <img className="w-10 h-10 xl:w-12 xl:h-12 shrink-0" src={Logo} alt="Javad Nasr" />
@@ -63,6 +66,8 @@ function Navbar() {
                 <NavLink
                   to={x.path}
                   className={(link) => (link.isActive ? "text-primary-orange" : "")}
+                  onMouseEnter={() => prefetchRoute(x.path)}
+                  onFocus={() => prefetchRoute(x.path)}
                 >
                   {x.title}
                 </NavLink>
@@ -82,12 +87,17 @@ function Navbar() {
             </button>
           )}
           {!loggedIn && (
-            <span>
+            <span
+              onMouseEnter={() => prefetchRoute("/consultation")}
+              onFocus={() => prefetchRoute("/consultation")}
+            >
               <Button
                 link="/consultation"
                 title="Let's Work Together"
                 icon={<GoArrowRight />}
                 styleBtn="flex items-center gap-2 border border-white px-4 py-2 rounded-xl text-sm whitespace-nowrap"
+                onMouseEnter={() => prefetchRoute("/consultation")}
+                onFocus={() => prefetchRoute("/consultation")}
               />
             </span>
           )}
@@ -119,6 +129,8 @@ function Navbar() {
               to="/dashboardAdmin"
               onClick={() => setIsOpen(false)}
               title="Admin login"
+              onMouseEnter={() => prefetchRoute("/dashboardAdmin")}
+              onFocus={() => prefetchRoute("/dashboardAdmin")}
             >
               <img className="size-14" src={Logo} alt="Javad Nasr" />
             </Link>
@@ -137,6 +149,8 @@ function Navbar() {
                 <NavLink
                   to={x.path}
                   className={(link) => (link.isActive ? "text-primary-orange" : "")}
+                  onMouseEnter={() => prefetchRoute(x.path)}
+                  onFocus={() => prefetchRoute(x.path)}
                 >
                   {x.title}
                 </NavLink>
@@ -160,6 +174,8 @@ function Navbar() {
             title="Let's Work Together"
             icon={<GoArrowRight />}
             styleBtn="flex justify-center items-center gap-3 border border-white rounded-xl py-3"
+            onMouseEnter={() => prefetchRoute("/consultation")}
+            onFocus={() => prefetchRoute("/consultation")}
           />
         </div>
       </div>

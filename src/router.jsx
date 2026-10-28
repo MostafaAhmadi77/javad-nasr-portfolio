@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react";
 import { createBrowserRouter } from "react-router";
 import MainLayout from "./Components/Layouts/MainLayout";
+import PageLoading from "./Components/PageLoading";
 
 const Home = lazy(() => import("./Pages/Home/Page"));
 const NotFound = lazy(() => import("./Components/404/NotFound"));
@@ -13,7 +14,7 @@ const Insights = lazy(() => import("./Pages/Insights/Page"));
 const Consultation = lazy(() => import("./Pages/Consultation/Page"));
 
 function withSuspense(element) {
-  return <Suspense fallback={<div className="bg-black text-white min-h-screen" />}>{element}</Suspense>;
+  return <Suspense fallback={<PageLoading />}>{element}</Suspense>;
 }
 
 const router = createBrowserRouter([

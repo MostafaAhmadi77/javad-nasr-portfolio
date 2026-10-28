@@ -1,5 +1,6 @@
 import {  NavLink } from "react-router";
 import headerData from "../../../data/headerData";
+import { prefetchRoute } from "../../../utils/prefetchRoutes";
 
 function Navigation() {
   return (
@@ -9,7 +10,7 @@ function Navigation() {
        
 {headerData.map(x=>(
   <li>
-    <NavLink key={x.id} to={x.path}  className={(x)=>x.isActive ? 'text-primary-orange' :''}>{x.title}</NavLink>
+    <NavLink key={x.id} to={x.path}  className={(x)=>x.isActive ? 'text-primary-orange' :''} onMouseEnter={()=>prefetchRoute(x.path)} onFocus={()=>prefetchRoute(x.path)}>{x.title}</NavLink>
   </li>
 ))}
 
