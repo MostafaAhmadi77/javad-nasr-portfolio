@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 import { casestudiesTable } from "../data/caseStudiesData";
+import insightsData from "../Pages/Insights/data/insightsData";
 
 const SITE = "https://javad-nasr.vercel.app";
 const DEFAULT_TITLE = "Javad Nasr | Management Consultant & Business Strategist";
@@ -35,6 +36,10 @@ function PageMeta() {
     let description = DEFAULT_DESCRIPTION;
     if (PAGES[pathname]) {
       [title, description] = PAGES[pathname];
+    } else if (pathname.startsWith("/insights/")) {
+      const insight = insightsData.find((item) => item.id === pathname.split("/")[2]);
+      title = insight ? `${insight.title} | Javad Nasr` : "Insight | Javad Nasr";
+      description = insight ? insight.excerpt : DEFAULT_DESCRIPTION;
     } else if (pathname.startsWith("/caseStudies/")) {
       const study = casestudiesTable.find((item) => item.id === pathname.split("/")[2]);
       title = study ? `${study.longTitle} | Javad Nasr` : "Case Study | Javad Nasr";

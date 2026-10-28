@@ -11,6 +11,7 @@ const CaseStudies = lazy(() => import("./Pages/CaseStudies/Page"));
 const CaseStudyDetail = lazy(() => import("./Pages/CaseStudies/Detail"));
 const DashboardAdmin = lazy(() => import("./Pages/dashboardAdmin/Page"));
 const Insights = lazy(() => import("./Pages/Insights/Page"));
+const InsightsDetail = lazy(() => import("./Pages/Insights/Detail"));
 const Consultation = lazy(() => import("./Pages/Consultation/Page"));
 
 function withSuspense(element) {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: "/insights",
         element: withSuspense(<Insights />),
+      },
+      {
+        path: "/insights/:id",
+        element: withSuspense(<InsightsDetail />),
       },
       {
         path: "/consultation",
