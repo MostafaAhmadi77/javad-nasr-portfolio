@@ -34,7 +34,7 @@ const router = createBrowserRouter([
         element: <DashboardAdmin />,
       },
       {
-        path: "/process",
+        path: "/methodology",
         element: <NotFound />,
       },
       {
