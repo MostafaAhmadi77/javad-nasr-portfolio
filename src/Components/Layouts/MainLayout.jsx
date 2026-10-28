@@ -2,6 +2,7 @@ import { Outlet } from "react-router";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import ScrollToTop from "../ScrollToTop";
+import PageMeta from "../PageMeta";
 
 function MainLayout() {
   return (
@@ -13,6 +14,7 @@ function MainLayout() {
           </div>
         </header>
         <ScrollToTop />
+        <PageMeta />
         <div className="w-full bg-black flex-1">
           <Outlet />
         </div>

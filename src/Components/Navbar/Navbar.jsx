@@ -50,7 +50,7 @@ function Navbar() {
             title="Admin login"
           >
             <span className="text-primary-orange">
-              <img className="w-10 h-10 xl:w-12 xl:h-12 shrink-0" src={Logo} alt="" />
+              <img className="w-10 h-10 xl:w-12 xl:h-12 shrink-0" src={Logo} alt="Javad Nasr" />
             </span>
             <span className="text-xl xl:text-2xl">Javad Nasr</span>
           </Link>
@@ -120,7 +120,7 @@ function Navbar() {
               onClick={() => setIsOpen(false)}
               title="Admin login"
             >
-              <img className="size-14" src={Logo} alt="" />
+              <img className="size-14" src={Logo} alt="Javad Nasr" />
             </Link>
             <button onClick={() => setIsOpen(false)} className="text-3xl">
               <HiOutlineX />

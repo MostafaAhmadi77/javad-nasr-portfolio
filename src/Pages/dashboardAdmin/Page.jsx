@@ -6,6 +6,7 @@ import ArticlesList from "./components/ArticlesList";
 import Login from "./components/Login";
 import ChangeCredentials from "./components/ChangeCredentials";
 import Leads from "./components/Leads";
+import Todos from "./components/Todos";
 import { isAdminLoggedIn, setAdminLoggedIn } from "./utils/adminAuth";
 import {
   loadArticles,
@@ -189,6 +190,8 @@ function DashboardAdmin() {
           {activeTab === "settings" && <ChangeCredentials />}
 
           {activeTab === "leads" && <Leads />}
+
+          {activeTab === "todos" && <Todos />}
 
           {(activeTab === "caseStudies" || activeTab === "services") && (
             <div className="border border-white/15 rounded-2xl p-6 bg-black text-white/70">
