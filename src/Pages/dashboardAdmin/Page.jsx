@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Overview from "./components/Overview";
 import ArticleEditor from "./components/ArticleEditor";
@@ -8,71 +8,31 @@ import ChangeCredentials from "./components/ChangeCredentials";
 import Leads from "./components/Leads";
 import Todos from "./components/Todos";
 import { isAdminLoggedIn, setAdminLoggedIn } from "./utils/adminAuth";
-import {
-  loadArticles,
-  saveArticles,
-  mergePublicArticles,
-  markPublicArticleDeleted,
-  newArticleId,
-} from "./utils/articlesStorage";
+import { useArticles } from "./hooks/useArticles";
 import "./dashboardAdmin.css";
 
 function DashboardAdmin() {
   const [loggedIn, setLoggedIn] = useState(() => isAdminLoggedIn());
   const [activeTab, setActiveTab] = useState("overview");
-  const [articles, setArticles] = useState([]);
-  const [editingArticle, setEditingArticle] = useState(null);
-  const [isCreating, setIsCreating] = useState(false);
-  const [viewingArticle, setViewingArticle] = useState(null);
+  const {
+    articles,
+    editingArticle,
+    isCreating,
+    viewingArticle,
+    handleSave,
+    handleDelete,
+    handleToggleStatus,
+    beginCreate,
+    beginEdit,
+    beginView,
+    cancelForm,
+    closeViewing,
+  } = useArticles();
 
-  useEffect(() => {
-    setArticles(mergePublicArticles(loadArticles()));
-  }, []);
-
-  function persist(nextArticles) {
-    setArticles(nextArticles);
-    saveArticles(nextArticles);
-  }
-
-  function handleSave({ id, title, content, status }) {
-    const now = new Date().toISOString();
-    let nextArticles;
-    if (id) {
-      nextArticles = articles.map((item) =>
-        item.id === id
-          ? { ...item, title, content, status, updatedAt: now }
-          : item
-      );
-    } else {
-      nextArticles = [
-        { id: newArticleId(), title, content, status, createdAt: now, updatedAt: now },
-        ...articles,
-      ];
-    }
-    persist(nextArticles);
-    setEditingArticle(null);
-    setIsCreating(false);
+  // Saving returns to the articles list, as before the refactor.
+  function handleSaveAndShow(data) {
+    handleSave(data);
     setActiveTab("articles");
-  }
-
-  function handleDelete(id) {
-    markPublicArticleDeleted(id);
-    persist(articles.filter((item) => item.id !== id));
-    if (viewingArticle && viewingArticle.id === id) setViewingArticle(null);
-  }
-
-  function handleToggleStatus(article) {
-    persist(
-      articles.map((item) =>
-        item.id === article.id
-          ? {
-              ...item,
-              status: item.status === "published" ? "draft" : "published",
-              updatedAt: new Date().toISOString(),
-            }
-          : item
-      )
-    );
   }
 
   if (!loggedIn) {
@@ -107,11 +67,7 @@ function DashboardAdmin() {
                 </div>
                 <button
                   type="button"
-                  onClick={() => {
-                    setEditingArticle(null);
-                    setViewingArticle(null);
-                    setIsCreating(true);
-                  }}
+                  onClick={beginCreate}
                   className="bg-primary-orange text-white px-4 py-2 rounded-xl"
                 >
                   New article
@@ -121,11 +77,8 @@ function DashboardAdmin() {
               {(isCreating || editingArticle) && (
                 <ArticleEditor
                   article={editingArticle}
-                  onSave={handleSave}
-                  onCancel={() => {
-                    setEditingArticle(null);
-                    setIsCreating(false);
-                  }}
+                  onSave={handleSaveAndShow}
+                  onCancel={cancelForm}
                 />
               )}
 
@@ -134,18 +87,14 @@ function DashboardAdmin() {
                   <div className="flex flex-wrap justify-between gap-3 mb-4">
                     <button
                       type="button"
-                      onClick={() => setViewingArticle(null)}
+                      onClick={closeViewing}
                       className="border border-white/30 text-white px-4 py-2 rounded-xl text-sm"
                     >
                       ← Back to articles
                     </button>
                     <button
                       type="button"
-                      onClick={() => {
-                        setViewingArticle(null);
-                        setIsCreating(false);
-                        setEditingArticle(viewingArticle);
-                      }}
+                      onClick={() => beginEdit(viewingArticle)}
                       className="border border-primary-orange text-primary-orange px-4 py-2 rounded-xl text-sm"
                     >
                       Edit
@@ -170,18 +119,10 @@ function DashboardAdmin() {
               {!viewingArticle && (
                 <ArticlesList
                   articles={articles}
-                  onEdit={(article) => {
-                    setViewingArticle(null);
-                    setIsCreating(false);
-                    setEditingArticle(article);
-                  }}
+                  onEdit={beginEdit}
                   onDelete={handleDelete}
                   onToggleStatus={handleToggleStatus}
-                  onView={(article) => {
-                    setEditingArticle(null);
-                    setIsCreating(false);
-                    setViewingArticle(article);
-                  }}
+                  onView={beginView}
                 />
               )}
             </div>
