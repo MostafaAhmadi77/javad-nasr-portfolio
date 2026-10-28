@@ -3,12 +3,12 @@ import { loadTodos, saveTodos, newTodoId, sortTodos, isOverdue, todoState } from
 
 const EMPTY_FORM = { title: "", note: "", date: "", time: "" };
 
-// Project palette for todo states: brand orange for new, gold for edited,
-// white (the project's text color, dimmed for a finished item) for completed.
+// Todo states: brand orange for new, gold for edited, and green — the
+// standard color for done/complete — for completed.
 const STATE_COLORS = {
   new: { hex: "#FB5701", label: "New" },
   edited: { hex: "#F2A93B", label: "Edited" },
-  completed: { hex: "#FFFFFF", label: "Completed" },
+  completed: { hex: "#22C55E", label: "Completed" },
 };
 
 function monthGrid(year, month) {
