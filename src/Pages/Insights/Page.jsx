@@ -35,7 +35,7 @@ function Insights() {
           <button
             type="button"
             onClick={() => setReading(false)}
-            className="border border-white/30 px-4 py-2 rounded-xl text-sm"
+            className="border border-white/30 px-4 py-2 rounded-xl text-sm mt-12"
           >
             ← Back to insights
           </button>
