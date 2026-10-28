@@ -86,7 +86,8 @@ function Navbar() {
           )}
           <span className="hidden xl:block">
             <Button
-              title="Let's Work Together"
+            link="/consultation"
+              title="Let\'s Work Together"
               icon={<GoArrowRight />}
               styleBtn="flex items-center gap-2 border border-white px-4 py-2 rounded-xl text-sm whitespace-nowrap"
             />
@@ -160,7 +161,8 @@ function Navbar() {
             </Link>
           )}
           <Button
-            title="Let's Work Together"
+          link="/consultation"
+            title="Let\'s Work Together"
             icon={<GoArrowRight />}
             styleBtn="flex justify-center items-center gap-3 border border-white rounded-xl py-3"
           />

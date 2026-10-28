@@ -1,6 +1,7 @@
 const items = [
   { key: "overview", label: "Dashboard" },
   { key: "articles", label: "Articles" },
+  { key: "leads", label: "Consultations" },
   { key: "caseStudies", label: "Case Studies" },
   { key: "services", label: "Services" },
   { key: "settings", label: "Settings" },

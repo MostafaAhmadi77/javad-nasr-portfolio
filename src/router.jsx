@@ -7,6 +7,7 @@ import About from "./Pages/About/Page";
 import CaseStudies from "./Pages/CaseStudies/Page";
 import DashboardAdmin from "./Pages/dashboardAdmin/Page";
 import Insights from "./Pages/Insights/Page";
+import Consultation from "./Pages/Consultation/Page";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/insights",
         element: <Insights />,
+      },
+      {
+        path: "/consultation",
+        element: <Consultation />,
       },
     ],
   },
