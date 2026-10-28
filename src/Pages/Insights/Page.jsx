@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 import { GoArrowRight } from "react-icons/go";
 import Hero from "../../Components/Hero/Hero";
 import insightsData from "./data/insightsData";
@@ -7,6 +8,8 @@ import {
   performanceAgendaSystem,
 } from "./data/insightsImages";
 import "./insights.css";
+import { loadArticles, stripHtml } from "../dashboardAdmin/utils/articlesStorage";
+import { firstImageSrc, publishedLocalArticles } from "./articleLookup";
 
 const article = insightsData[0];
 const topics = [
@@ -21,78 +24,17 @@ const articleTopics = ["Leadership", "Transformation"];
 
 function Insights() {
   const [topic, setTopic] = useState("All Insights");
-  const [reading, setReading] = useState(false);
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
   const matchesTopic =
     topic === "All Insights" || articleTopics.includes(topic);
 
-  if (reading) {
-    return (
-      <div className="bg-black text-white ss:px-4 sm:px-6 px-4 py-10">
-        <div className="max-w-4xl mx-auto">
-          <button
-            type="button"
-            onClick={() => setReading(false)}
-            className="border border-white/30 px-4 py-2 rounded-xl text-sm"
-          >
-            ← Back to insights
-          </button>
-          <span className="block text-primary-orange text-sm mt-8 tracking-widest">
-            {article.category.toUpperCase()}
-          </span>
-          <h1 className="font-family-CormorantGaramondBold ss:text-2xl sm:text-3xl md:text-5xl font-bold mt-3 leading-tight">
-            {article.title}
-          </h1>
-          <p className="text-white/60 mt-4">
-            {article.author} • {article.date} • {article.readTime}
-          </p>
-          <p className="text-white/70 ss:text-base sm:text-lg mt-4">{article.excerpt}</p>
-          <img
-            src={performanceAgendaHero}
-            alt="Leadership team reviewing an organizational system"
-            className="w-full rounded-2xl mt-8 border border-white/10"
-          />
-          <div className="mt-8 flex flex-col gap-8">
-            {article.sections.map((section, index) => (
-              <section key={index}>
-                {section.heading && (
-                  <h2 className="font-family-CormorantGaramondBold text-2xl font-bold text-primary-orange">
-                    {section.heading}
-                  </h2>
-                )}
-                {section.paragraphs.map((paragraph, paragraphIndex) => (
-                  <p key={paragraphIndex} className="text-white/80 leading-8 mt-4">
-                    {paragraph}
-                  </p>
-                ))}
-                {index === 1 && (
-                  <img
-                    src={performanceAgendaSystem}
-                    alt="Organization as a connected system of people, processes and AI"
-                    loading="lazy"
-                    className="w-full rounded-2xl mt-8 border border-white/10"
-                  />
-                )}
-              </section>
-            ))}
-          </div>
-          <p className="text-white/50 text-sm mt-10 border-t border-white/15 pt-6">
-            Source: {article.source}
-            <br />
-            Perspective &amp; analysis: {article.perspective}
-          </p>
-          <button
-            type="button"
-            onClick={() => setReading(false)}
-            className="border border-white/30 px-4 py-2 rounded-xl text-sm mt-8"
-          >
-            ← Back to insights
-          </button>
-        </div>
-      </div>
-    );
+  let localArticles = [];
+  try {
+    localArticles = publishedLocalArticles(loadArticles());
+  } catch {
+    localArticles = [];
   }
 
   return (
@@ -149,9 +91,9 @@ function Insights() {
       ) : (
         <>
           <section className="grid ss:grid-cols-1 lg:grid-cols-3 gap-4 ss:px-4 sm:px-6 md:px-10 mt-6">
-            <article
-              onClick={() => setReading(true)}
-              className="lg:col-span-2 border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-primary-orange transition"
+            <Link
+              to={`/insights/${article.id}`}
+              className="lg:col-span-2 border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-primary-orange transition block"
             >
               <img
                 src={performanceAgendaHero}
@@ -176,7 +118,7 @@ function Insights() {
                   Read More <GoArrowRight />
                 </span>
               </div>
-            </article>
+            </Link>
 
             <aside className="border border-white/10 rounded-2xl ss:p-4 sm:p-6">
               <h3 className="text-primary-orange text-xs tracking-widest">
@@ -210,9 +152,9 @@ function Insights() {
               </button>
             </div>
             <div className="grid ss:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
-              <article
-                onClick={() => setReading(true)}
-                className="border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-primary-orange transition"
+              <Link
+                to={`/insights/${article.id}`}
+                className="border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-primary-orange transition block"
               >
                 <img
                   src={performanceAgendaHero}
@@ -237,7 +179,47 @@ function Insights() {
                     <GoArrowRight className="text-primary-orange" />
                   </p>
                 </div>
-              </article>
+              </Link>
+              {topic === "All Insights" &&
+                localArticles.map((local) => {
+                  const image = firstImageSrc(local.content);
+                  const excerpt = stripHtml(local.content).slice(0, 160);
+                  return (
+                    <Link
+                      key={local.id}
+                      to={`/insights/${local.id}`}
+                      className="border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-primary-orange transition block"
+                    >
+                      {image && (
+                        <img
+                          src={image}
+                          alt={local.title}
+                          loading="lazy"
+                          className="w-full h-56 object-cover"
+                        />
+                      )}
+                      <div className="p-4">
+                        <span className="text-primary-orange text-xs tracking-widest">
+                          ARTICLE
+                        </span>
+                        <h3 className="font-family-CormorantGaramondBold font-bold text-lg leading-6 mt-2">
+                          {local.title}
+                        </h3>
+                        <p className="text-white/50 text-sm leading-6 mt-2">
+                          {excerpt}
+                        </p>
+                        <p className="text-white/40 text-xs mt-4 flex justify-between">
+                          <span>
+                            {local.updatedAt
+                              ? new Date(local.updatedAt).toLocaleDateString()
+                              : ""}
+                          </span>
+                          <GoArrowRight className="text-primary-orange" />
+                        </p>
+                      </div>
+                    </Link>
+                  );
+                })}
             </div>
           </section>
         </>
