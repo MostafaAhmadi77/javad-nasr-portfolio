@@ -7,6 +7,8 @@ import Login from "./components/Login";
 import ChangeCredentials from "./components/ChangeCredentials";
 import Leads from "./components/Leads";
 import Todos from "./components/Todos";
+import Services from "./components/Services";
+import CaseStudies from "./components/CaseStudies";
 import { isAdminLoggedIn, setAdminLoggedIn } from "./utils/adminAuth";
 import { useArticles } from "./hooks/useArticles";
 import "./dashboardAdmin.css";
@@ -134,12 +136,9 @@ function DashboardAdmin() {
 
           {activeTab === "todos" && <Todos />}
 
-          {(activeTab === "caseStudies" || activeTab === "services") && (
-            <div className="border border-white/15 rounded-2xl p-6 bg-black text-white/70">
-              This section is a placeholder in the dashboard layout. The
-              Articles section is the working section in this version.
-            </div>
-          )}
+          {activeTab === "caseStudies" && <CaseStudies />}
+
+          {activeTab === "services" && <Services />}
         </main>
       </div>
     </div>
