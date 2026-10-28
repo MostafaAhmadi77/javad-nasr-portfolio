@@ -1,6 +1,7 @@
 import { Outlet } from "react-router";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import ScrollToTop from "../ScrollToTop";
 
 function MainLayout() {
   return (
@@ -11,6 +12,7 @@ function MainLayout() {
             <Navbar />
           </div>
         </header>
+        <ScrollToTop />
         <div className="w-full bg-black flex-1">
           <Outlet />
         </div>
