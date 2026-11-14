@@ -47,10 +47,11 @@ const router = createBrowserRouter([
         path: "/dashboardAdmin",
         element: withSuspense(<DashboardAdmin />),
       },
-      {
-        path: "/methodology",
-        element: withSuspense(<NotFound />),
-      },
+      // Methodology route hidden for now (no page built yet)
+      // {
+      //   path: "/methodology",
+      //   element: withSuspense(<NotFound />),
+      // },
       {
         path: "/insights",
         element: withSuspense(<Insights />),
